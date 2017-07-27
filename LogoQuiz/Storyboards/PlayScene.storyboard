@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Yuj-gz-2bH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Eurostile.ttf">
+            <string>EurostileRegular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Play Scene View Controller-->
+        <scene sceneID="08f-d1-fuu">
+            <objects>
+                <viewController id="Yuj-gz-2bH" customClass="PlaySceneViewController" customModule="LogoQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Fm-Mu-sB3"/>
+                        <viewControllerLayoutGuide type="bottom" id="aIM-b5-pNf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lAm-8R-gor">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sdf-YC-23U">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" red="0.077577359974384294" green="0.23701548303167019" blue="0.35893875360488892" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="cvm-e5-VUW"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DwW-rB-f6J">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="PMZ-GX-c4h"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36e-ae-RRF">
+                                <rect key="frame" x="148" y="20" width="80" height="80.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agb-s3-v7b">
+                                        <rect key="frame" x="24" y="8" width="31.5" height="15"/>
+                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.077577359969999996" green="0.2379811406" blue="0.35893875359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Agb-s3-v7b" firstAttribute="centerX" secondItem="36e-ae-RRF" secondAttribute="centerX" id="37F-au-yGh"/>
+                                    <constraint firstAttribute="width" constant="80" id="efq-qf-10k"/>
+                                    <constraint firstItem="Agb-s3-v7b" firstAttribute="top" secondItem="36e-ae-RRF" secondAttribute="top" constant="8" id="oBR-JE-3s6"/>
+                                    <constraint firstAttribute="width" secondItem="36e-ae-RRF" secondAttribute="height" multiplier="1:1" id="yl2-3G-K8h"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8M-ob-yZ3">
+                                <rect key="frame" x="156" y="50.5" width="64.5" height="35"/>
+                                <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="example" translatesAutoresizingMaskIntoConstraints="NO" id="rHt-ON-cre">
+                                <rect key="frame" x="54" y="108" width="267" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rHt-ON-cre" secondAttribute="height" multiplier="4:3" id="2wv-cc-bWE"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="p26-V0-pYx">
+                                <rect key="frame" x="49" y="316" width="277" height="53"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="FUO-n7-9UW">
+                                        <rect key="frame" x="0.0" y="0.0" width="277" height="25.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d7g-qP-BGb">
+                                                <rect key="frame" x="0.0" y="0.0" width="25" height="25.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5r-dQ-68D">
+                                                        <rect key="frame" x="4" y="4.5" width="17" height="17"/>
+                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="j5r-dQ-68D" firstAttribute="centerX" secondItem="d7g-qP-BGb" secondAttribute="centerX" id="0FB-tg-DGd"/>
+                                                    <constraint firstItem="j5r-dQ-68D" firstAttribute="centerY" secondItem="d7g-qP-BGb" secondAttribute="centerY" id="9VM-1Y-wca"/>
+                                                    <constraint firstAttribute="width" constant="25" id="Wmk-6a-Wi1"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1q5-wX-2PL">
+                                                <rect key="frame" x="28" y="0.0" width="25" height="25.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1C-zs-qum">
+                                                        <rect key="frame" x="4" y="4.5" width="17" height="17"/>
+                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="6b1-kF-XUg"/>
+                                                    <constraint firstItem="q1C-zs-qum" firstAttribute="centerX" secondItem="1q5-wX-2PL" secondAttribute="centerX" id="8Zv-tf-bOr"/>
+                                                    <constraint firstItem="q1C-zs-qum" firstAttribute="centerY" secondItem="1q5-wX-2PL" secondAttribute="centerY" id="Jvs-Mh-WtA"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yG9-IQ-O3C">
+                                                <rect key="frame" x="56" y="0.0" width="25" height="25.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhp-Np-dJp">
+                                                        <rect key="frame" x="4" y="4.5" width="17" height="17"/>
+                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="xhp-Np-dJp" firstAttribute="centerX" secondItem="yG9-IQ-O3C" secondAttribute="centerX" id="8Zo-K7-ZBl"/>
+                                                    <constraint firstItem="xhp-Np-dJp" firstAttribute="centerY" secondItem="yG9-IQ-O3C" secondAttribute="centerY" id="dkQ-g6-pab"/>
+                                                    <constraint firstAttribute="width" constant="25" id="rbd-MU-AbH"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EnA-bu-dBf">
+                                                <rect key="frame" x="84" y="0.0" width="25" height="25.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lq1-48-ct5">
+                                                        <rect key="frame" x="4" y="4.5" width="17" height="17"/>
+                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="Lq1-48-ct5" firstAttribute="centerX" secondItem="EnA-bu-dBf" secondAttribute="centerX" id="6Q9-Pa-kYp"/>
+                                                    <constraint firstAttribute="width" constant="25" id="OUy-dG-6Lx"/>
+                                                    <constraint firstItem="Lq1-48-ct5" firstAttribute="centerY" secondItem="EnA-bu-dBf" secondAttribute="centerY" id="b9C-qA-C6R"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EwH-iK-uY9">
+                                                <rect key="frame" x="112" y="0.0" width="25" height="25.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SX5-j2-1ug">
+                                                        <rect key="frame" x="4" y="4.5" width="17" height="17"/>
+                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="1b0-SJ-VvY"/>
+                                                    <constraint firstItem="SX5-j2-1ug" firstAttribute="centerX" secondItem="EwH-iK-uY9" secondAttribute="centerX" id="IoP-7G-g7H"/>
+                                                    <constraint firstItem="SX5-j2-1ug" firstAttribute="centerY" secondItem="EwH-iK-uY9" secondAttribute="centerY" id="cmj-Om-GPY"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oVH-8d-jAH">
+                                                <rect key="frame" x="140" y="0.0" width="25" height="25.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rvq-bN-8D7">
+                                                        <rect key="frame" x="4" y="4.5" width="17" height="17"/>
+                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="Rvq-bN-8D7" firstAttribute="centerX" secondItem="oVH-8d-jAH" secondAttribute="centerX" id="1fG-fg-K37"/>
+                                                    <constraint firstAttribute="width" constant="25" id="fXO-cJ-XMR"/>
+                                                    <constraint firstItem="Rvq-bN-8D7" firstAttribute="centerY" secondItem="oVH-8d-jAH" secondAttribute="centerY" id="ycT-Uz-QaH"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aZj-P5-MfU">
+                                                <rect key="frame" x="168" y="0.0" width="25" height="25.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvI-Yu-vt3">
+                                                        <rect key="frame" x="4" y="4.5" width="17" height="17"/>
+                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="VvI-Yu-vt3" firstAttribute="centerX" secondItem="aZj-P5-MfU" secondAttribute="centerX" id="I2T-ke-Kad"/>
+                                                    <constraint firstItem="VvI-Yu-vt3" firstAttribute="centerY" secondItem="aZj-P5-MfU" secondAttribute="centerY" id="Wqn-vf-VMs"/>
+                                                    <constraint firstAttribute="width" constant="25" id="rSu-3a-Qlb"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="7" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tI7-vY-f1h">
+                                                <rect key="frame" x="196" y="0.0" width="25" height="25.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNX-R2-4OR">
+                                                        <rect key="frame" x="4" y="4.5" width="17" height="17"/>
+                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="DNX-R2-4OR" firstAttribute="centerX" secondItem="tI7-vY-f1h" secondAttribute="centerX" id="ON5-KE-nxp"/>
+                                                    <constraint firstItem="DNX-R2-4OR" firstAttribute="centerY" secondItem="tI7-vY-f1h" secondAttribute="centerY" id="ic7-8s-1TQ"/>
+                                                    <constraint firstAttribute="width" constant="25" id="k9q-ER-VwO"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="8" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yDx-xO-pkN">
+                                                <rect key="frame" x="224" y="0.0" width="25" height="25.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgy-wn-vZ6">
+                                                        <rect key="frame" x="4" y="4.5" width="17" height="17"/>
+                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="Wgy-wn-vZ6" firstAttribute="centerX" secondItem="yDx-xO-pkN" secondAttribute="centerX" id="dU1-7X-kWS"/>
+                                                    <constraint firstAttribute="width" constant="25" id="gS7-P3-T4E"/>
+                                                    <constraint firstItem="Wgy-wn-vZ6" firstAttribute="centerY" secondItem="yDx-xO-pkN" secondAttribute="centerY" id="rhW-yF-tBp"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7U-vc-jTD">
+                                                <rect key="frame" x="252" y="0.0" width="25" height="25.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38J-vu-0uL">
+                                                        <rect key="frame" x="4" y="4.5" width="17" height="17"/>
+                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="38J-vu-0uL" firstAttribute="centerY" secondItem="E7U-vc-jTD" secondAttribute="centerY" id="FvF-XW-Bm3"/>
+                                                    <constraint firstAttribute="width" constant="25" id="oK4-1c-OHh"/>
+                                                    <constraint firstItem="38J-vu-0uL" firstAttribute="centerX" secondItem="E7U-vc-jTD" secondAttribute="centerX" id="ybi-mt-twY"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="t05-IU-l5d">
+                                        <rect key="frame" x="0.0" y="27.5" width="277" height="25.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2X-dV-WL7">
+                                                <rect key="frame" x="0.0" y="0.0" width="25" height="25.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiQ-Hf-Z3a">
+                                                        <rect key="frame" x="4" y="4.5" width="17" height="17"/>
+                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="JiQ-Hf-Z3a" firstAttribute="centerX" secondItem="a2X-dV-WL7" secondAttribute="centerX" id="5DC-Ir-IE6"/>
+                                                    <constraint firstItem="JiQ-Hf-Z3a" firstAttribute="centerY" secondItem="a2X-dV-WL7" secondAttribute="centerY" id="ZRq-Zv-7da"/>
+                                                    <constraint firstAttribute="width" constant="25" id="pWT-YI-Dru"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yoj-oF-umD">
+                                                <rect key="frame" x="28" y="0.0" width="25" height="25.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Orp-Tb-NBV">
+                                                        <rect key="frame" x="4" y="4.5" width="17" height="17"/>
+                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="6Xc-i0-tWb"/>
+                                                    <constraint firstItem="Orp-Tb-NBV" firstAttribute="centerY" secondItem="Yoj-oF-umD" secondAttribute="centerY" id="FR3-O4-LWX"/>
+                                                    <constraint firstItem="Orp-Tb-NBV" firstAttribute="centerX" secondItem="Yoj-oF-umD" secondAttribute="centerX" id="LbJ-Th-fgi"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WW4-PF-1WQ">
+                                                <rect key="frame" x="56" y="0.0" width="25" height="25.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cf0-kN-gUj">
+                                                        <rect key="frame" x="4" y="4.5" width="17" height="17"/>
+                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="NTa-hx-W77"/>
+                                                    <constraint firstItem="cf0-kN-gUj" firstAttribute="centerY" secondItem="WW4-PF-1WQ" secondAttribute="centerY" id="PPo-L9-m3u"/>
+                                                    <constraint firstItem="cf0-kN-gUj" firstAttribute="centerX" secondItem="WW4-PF-1WQ" secondAttribute="centerX" id="cqV-ss-Tfb"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FgL-Tt-lnu">
+                                                <rect key="frame" x="84" y="0.0" width="25" height="25.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFY-jf-yJ8">
+                                                        <rect key="frame" x="4" y="4.5" width="17" height="17"/>
+                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="IFY-jf-yJ8" firstAttribute="centerX" secondItem="FgL-Tt-lnu" secondAttribute="centerX" id="luI-aV-2L7"/>
+                                                    <constraint firstAttribute="width" constant="25" id="uva-Jn-322"/>
+                                                    <constraint firstItem="IFY-jf-yJ8" firstAttribute="centerY" secondItem="FgL-Tt-lnu" secondAttribute="centerY" id="w4R-hC-GZu"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LpI-9h-0sy">
+                                                <rect key="frame" x="112" y="0.0" width="25" height="25.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhU-Ro-23c">
+                                                        <rect key="frame" x="4" y="4.5" width="17" height="17"/>
+                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="bhU-Ro-23c" firstAttribute="centerY" secondItem="LpI-9h-0sy" secondAttribute="centerY" id="3YM-aT-Ugy"/>
+                                                    <constraint firstItem="bhU-Ro-23c" firstAttribute="centerX" secondItem="LpI-9h-0sy" secondAttribute="centerX" id="GdT-4u-4bS"/>
+                                                    <constraint firstAttribute="width" constant="25" id="beD-gF-3rT"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aza-ZO-VZx">
+                                                <rect key="frame" x="140" y="0.0" width="25" height="25.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilz-Ed-IGe">
+                                                        <rect key="frame" x="4" y="4.5" width="17" height="17"/>
+                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="ilz-Ed-IGe" firstAttribute="centerX" secondItem="aza-ZO-VZx" secondAttribute="centerX" id="ANg-BQ-lke"/>
+                                                    <constraint firstItem="ilz-Ed-IGe" firstAttribute="centerY" secondItem="aza-ZO-VZx" secondAttribute="centerY" id="YSu-cL-5h3"/>
+                                                    <constraint firstAttribute="width" constant="25" id="gcN-0j-awV"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bo-jg-pvH">
+                                                <rect key="frame" x="168" y="0.0" width="25" height="25.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEV-EU-Pgs">
+                                                        <rect key="frame" x="4" y="4.5" width="17" height="17"/>
+                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="QEV-EU-Pgs" firstAttribute="centerX" secondItem="6bo-jg-pvH" secondAttribute="centerX" id="MvC-Zv-BGG"/>
+                                                    <constraint firstAttribute="width" constant="25" id="OG0-e9-GjH"/>
+                                                    <constraint firstItem="QEV-EU-Pgs" firstAttribute="centerY" secondItem="6bo-jg-pvH" secondAttribute="centerY" id="xer-QC-Hj8"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="7" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEY-Q7-K30">
+                                                <rect key="frame" x="196" y="0.0" width="25" height="25.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anZ-k2-sEX">
+                                                        <rect key="frame" x="4" y="4.5" width="17" height="17"/>
+                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="7Mr-gp-wFj"/>
+                                                    <constraint firstItem="anZ-k2-sEX" firstAttribute="centerY" secondItem="GEY-Q7-K30" secondAttribute="centerY" id="LcQ-EC-KeQ"/>
+                                                    <constraint firstItem="anZ-k2-sEX" firstAttribute="centerX" secondItem="GEY-Q7-K30" secondAttribute="centerX" id="xZh-g9-9N5"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="8" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MYz-Z5-coN">
+                                                <rect key="frame" x="224" y="0.0" width="25" height="25.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4Y-sC-Z3M">
+                                                        <rect key="frame" x="4" y="4.5" width="17" height="17"/>
+                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="s4Y-sC-Z3M" firstAttribute="centerX" secondItem="MYz-Z5-coN" secondAttribute="centerX" id="HaR-hW-D5J"/>
+                                                    <constraint firstAttribute="width" constant="25" id="KSS-OQ-Rin"/>
+                                                    <constraint firstItem="s4Y-sC-Z3M" firstAttribute="centerY" secondItem="MYz-Z5-coN" secondAttribute="centerY" id="xOo-tK-S23"/>
+                                                </constraints>
+                                            </view>
+                                            <view tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UoF-vR-yKO">
+                                                <rect key="frame" x="252" y="0.0" width="25" height="25.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWY-Ql-fyr">
+                                                        <rect key="frame" x="4" y="4.5" width="17" height="17"/>
+                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="CWY-Ql-fyr" firstAttribute="centerX" secondItem="UoF-vR-yKO" secondAttribute="centerX" id="WZ7-N8-vxL"/>
+                                                    <constraint firstItem="CWY-Ql-fyr" firstAttribute="centerY" secondItem="UoF-vR-yKO" secondAttribute="centerY" id="Wz9-iu-Yjx"/>
+                                                    <constraint firstAttribute="width" constant="25" id="jJp-Xh-L9x"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="prc-xw-lqS"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="FUO-n7-9UW" firstAttribute="top" secondItem="p26-V0-pYx" secondAttribute="top" id="G0x-g3-Khx"/>
+                                    <constraint firstAttribute="height" constant="53" id="z1Y-fn-dra"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="translatesAutoresizingMaskIntoConstraints" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.33371838927268982" green="0.51054686307907104" blue="0.68785446882247925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Sdf-YC-23U" firstAttribute="top" secondItem="lAm-8R-gor" secondAttribute="top" id="2Y8-Pn-6pL"/>
+                            <constraint firstAttribute="trailing" secondItem="DwW-rB-f6J" secondAttribute="trailing" id="3S0-zb-vUX"/>
+                            <constraint firstItem="rHt-ON-cre" firstAttribute="height" secondItem="lAm-8R-gor" secondAttribute="height" multiplier="0.3" id="4hy-QX-JiN"/>
+                            <constraint firstAttribute="trailing" secondItem="Sdf-YC-23U" secondAttribute="trailing" id="FOw-nr-7Mj"/>
+                            <constraint firstItem="rHt-ON-cre" firstAttribute="centerX" secondItem="lAm-8R-gor" secondAttribute="centerX" id="JWT-tZ-rhF"/>
+                            <constraint firstItem="rHt-ON-cre" firstAttribute="top" secondItem="36e-ae-RRF" secondAttribute="bottom" constant="8" id="TCm-UM-dQI"/>
+                            <constraint firstItem="S8M-ob-yZ3" firstAttribute="centerX" secondItem="36e-ae-RRF" secondAttribute="centerX" id="UFe-g1-lDn"/>
+                            <constraint firstItem="36e-ae-RRF" firstAttribute="baseline" secondItem="S8M-ob-yZ3" secondAttribute="firstBaseline" constant="22" id="Wqf-Ax-1uX"/>
+                            <constraint firstItem="36e-ae-RRF" firstAttribute="centerX" secondItem="lAm-8R-gor" secondAttribute="centerX" id="YSK-b8-clg"/>
+                            <constraint firstItem="aIM-b5-pNf" firstAttribute="top" secondItem="DwW-rB-f6J" secondAttribute="bottom" id="bAR-N8-d4w"/>
+                            <constraint firstItem="DwW-rB-f6J" firstAttribute="leading" secondItem="lAm-8R-gor" secondAttribute="leading" id="ha0-gW-Sbb"/>
+                            <constraint firstItem="Sdf-YC-23U" firstAttribute="leading" secondItem="lAm-8R-gor" secondAttribute="leading" id="jLa-uL-Jpr"/>
+                            <constraint firstItem="36e-ae-RRF" firstAttribute="top" secondItem="6Fm-Mu-sB3" secondAttribute="bottom" id="lEj-ue-qHX"/>
+                            <constraint firstItem="p26-V0-pYx" firstAttribute="centerX" secondItem="lAm-8R-gor" secondAttribute="centerX" id="pUU-gi-7Ya"/>
+                            <constraint firstItem="p26-V0-pYx" firstAttribute="top" secondItem="rHt-ON-cre" secondAttribute="bottom" constant="8" id="xnn-oz-3Ib"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logoImageView" destination="rHt-ON-cre" id="aKN-rO-alS"/>
+                        <outlet property="navCircleView" destination="36e-ae-RRF" id="U0T-Cm-xNq"/>
+                        <outlet property="verticalStackView" destination="p26-V0-pYx" id="8WG-ZF-Vkt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GFi-Eq-2uA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="381.60000000000002" y="79.610194902548727"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="example" width="240" height="192"/>
+    </resources>
+</document>
