@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38281D031F2A74B8009E41D7 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38281D021F2A74B8009E41D7 /* SquareView.swift */; };
+		38920D3D1F2A8E2B00824E5F /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38920D3C1F2A8E2B00824E5F /* Array.swift */; };
 		38921F7A1F2A17D6003A8F3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38921F791F2A17D6003A8F3A /* AppDelegate.swift */; };
 		38921F7C1F2A17D6003A8F3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38921F7B1F2A17D6003A8F3A /* ViewController.swift */; };
 		38921F7F1F2A17D6003A8F3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38921F7D1F2A17D6003A8F3A /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		38281D021F2A74B8009E41D7 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
+		38920D3C1F2A8E2B00824E5F /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		38921F761F2A17D6003A8F3A /* LogoQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogoQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38921F791F2A17D6003A8F3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38921F7B1F2A17D6003A8F3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,15 @@
 			path = "Custom Views";
 			sourceTree = "<group>";
 		};
+		38920D3B1F2A8E1300824E5F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				38920D3C1F2A8E2B00824E5F /* Array.swift */,
+			);
+			name = Extensions;
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		38921F6D1F2A17D6003A8F3A = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +124,7 @@
 		38921F781F2A17D6003A8F3A /* LogoQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				38920D3B1F2A8E1300824E5F /* Extensions */,
 				38281D011F2A7498009E41D7 /* Custom Views */,
 				38921FAE1F2A2F3E003A8F3A /* Controllers */,
 				38921FAB1F2A1B72003A8F3A /* Resources */,
@@ -303,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38921FB01F2A2F52003A8F3A /* PlaySceneViewController.swift in Sources */,
+				38920D3D1F2A8E2B00824E5F /* Array.swift in Sources */,
 				38921F7C1F2A17D6003A8F3A /* ViewController.swift in Sources */,
 				38921F7A1F2A17D6003A8F3A /* AppDelegate.swift in Sources */,
 				38281D031F2A74B8009E41D7 /* SquareView.swift in Sources */,

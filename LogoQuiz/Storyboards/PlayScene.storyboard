@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -171,217 +172,87 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iYQ-cx-HGx" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pC-Ci-VkH">
-                                                        <rect key="frame" x="4" y="4" width="17" height="17"/>
-                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="00F-E4-vs9"/>
-                                                    <constraint firstAttribute="bottom" secondItem="4pC-Ci-VkH" secondAttribute="bottom" constant="4" id="CNI-m1-E8U"/>
-                                                    <constraint firstAttribute="trailing" secondItem="4pC-Ci-VkH" secondAttribute="trailing" constant="4" id="LQI-Ty-10q"/>
-                                                    <constraint firstItem="4pC-Ci-VkH" firstAttribute="leading" secondItem="iYQ-cx-HGx" secondAttribute="leading" constant="4" id="Ptm-iN-r7d"/>
-                                                    <constraint firstItem="4pC-Ci-VkH" firstAttribute="centerX" secondItem="iYQ-cx-HGx" secondAttribute="centerX" id="S3i-KL-SaI"/>
-                                                    <constraint firstItem="4pC-Ci-VkH" firstAttribute="centerY" secondItem="iYQ-cx-HGx" secondAttribute="centerY" id="hsR-Bb-5V9"/>
-                                                    <constraint firstItem="4pC-Ci-VkH" firstAttribute="top" secondItem="iYQ-cx-HGx" secondAttribute="top" constant="4" id="t62-5h-ZHI"/>
                                                 </constraints>
                                             </view>
                                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cxO-9i-00X" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgU-66-XCZ">
-                                                        <rect key="frame" x="4" y="4" width="17" height="17"/>
-                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="kgU-66-XCZ" secondAttribute="bottom" constant="4" id="98G-Ky-AzU"/>
-                                                    <constraint firstAttribute="trailing" secondItem="kgU-66-XCZ" secondAttribute="trailing" constant="4" id="CCk-Br-Pqg"/>
                                                     <constraint firstAttribute="width" constant="25" id="Kgx-dn-tTa"/>
-                                                    <constraint firstItem="kgU-66-XCZ" firstAttribute="centerX" secondItem="cxO-9i-00X" secondAttribute="centerX" id="UVB-YM-rbN"/>
-                                                    <constraint firstItem="kgU-66-XCZ" firstAttribute="centerY" secondItem="cxO-9i-00X" secondAttribute="centerY" id="n1a-c4-iI8"/>
-                                                    <constraint firstItem="kgU-66-XCZ" firstAttribute="top" secondItem="cxO-9i-00X" secondAttribute="top" constant="4" id="vNI-op-bvo"/>
-                                                    <constraint firstItem="kgU-66-XCZ" firstAttribute="leading" secondItem="cxO-9i-00X" secondAttribute="leading" constant="4" id="z0y-UF-BPU"/>
                                                 </constraints>
                                             </view>
                                             <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGX-Ud-43E" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
                                                 <rect key="frame" x="60" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14q-uD-36W">
-                                                        <rect key="frame" x="4" y="4" width="17" height="17"/>
-                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="14q-uD-36W" firstAttribute="centerY" secondItem="LGX-Ud-43E" secondAttribute="centerY" id="03W-P6-QtM"/>
-                                                    <constraint firstItem="14q-uD-36W" firstAttribute="leading" secondItem="LGX-Ud-43E" secondAttribute="leading" constant="4" id="Avd-yO-22s"/>
                                                     <constraint firstAttribute="width" constant="25" id="Hve-XQ-EOi"/>
-                                                    <constraint firstItem="14q-uD-36W" firstAttribute="centerX" secondItem="LGX-Ud-43E" secondAttribute="centerX" id="gCd-58-dz2"/>
-                                                    <constraint firstAttribute="trailing" secondItem="14q-uD-36W" secondAttribute="trailing" constant="4" id="gDr-uJ-8gr"/>
-                                                    <constraint firstItem="14q-uD-36W" firstAttribute="top" secondItem="LGX-Ud-43E" secondAttribute="top" constant="4" id="rEG-YE-Y4q"/>
-                                                    <constraint firstAttribute="bottom" secondItem="14q-uD-36W" secondAttribute="bottom" constant="4" id="sm0-r2-rjv"/>
                                                 </constraints>
                                             </view>
                                             <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHb-cm-LBu" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
                                                 <rect key="frame" x="90" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYE-Vk-U4c">
-                                                        <rect key="frame" x="4" y="4" width="17" height="17"/>
-                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="pYE-Vk-U4c" firstAttribute="top" secondItem="zHb-cm-LBu" secondAttribute="top" constant="4" id="0p3-OM-pOU"/>
                                                     <constraint firstAttribute="width" constant="25" id="93G-jc-0ii"/>
-                                                    <constraint firstAttribute="trailing" secondItem="pYE-Vk-U4c" secondAttribute="trailing" constant="4" id="AU7-Ez-LbW"/>
-                                                    <constraint firstItem="pYE-Vk-U4c" firstAttribute="leading" secondItem="zHb-cm-LBu" secondAttribute="leading" constant="4" id="OJa-j1-pqN"/>
-                                                    <constraint firstItem="pYE-Vk-U4c" firstAttribute="centerY" secondItem="zHb-cm-LBu" secondAttribute="centerY" id="Otx-Bd-Eg9"/>
-                                                    <constraint firstAttribute="bottom" secondItem="pYE-Vk-U4c" secondAttribute="bottom" constant="4" id="SHn-bR-T0X"/>
-                                                    <constraint firstItem="pYE-Vk-U4c" firstAttribute="centerX" secondItem="zHb-cm-LBu" secondAttribute="centerX" id="WEC-eT-MB5"/>
                                                 </constraints>
                                             </view>
                                             <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U0b-W9-FiS" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
                                                 <rect key="frame" x="120" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6M-HP-p8P">
-                                                        <rect key="frame" x="4" y="4" width="17" height="17"/>
-                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="L6M-HP-p8P" firstAttribute="centerY" secondItem="U0b-W9-FiS" secondAttribute="centerY" id="ISk-aw-s4f"/>
-                                                    <constraint firstItem="L6M-HP-p8P" firstAttribute="centerX" secondItem="U0b-W9-FiS" secondAttribute="centerX" id="NuE-Vw-DzI"/>
                                                     <constraint firstAttribute="width" constant="25" id="VFp-RX-jUZ"/>
-                                                    <constraint firstItem="L6M-HP-p8P" firstAttribute="top" secondItem="U0b-W9-FiS" secondAttribute="top" constant="4" id="ZOD-hc-U4L"/>
-                                                    <constraint firstAttribute="trailing" secondItem="L6M-HP-p8P" secondAttribute="trailing" constant="4" id="Za1-CC-mtU"/>
-                                                    <constraint firstAttribute="bottom" secondItem="L6M-HP-p8P" secondAttribute="bottom" constant="4" id="mOj-d1-dzK"/>
-                                                    <constraint firstItem="L6M-HP-p8P" firstAttribute="leading" secondItem="U0b-W9-FiS" secondAttribute="leading" constant="4" id="w8u-fK-9o0"/>
                                                 </constraints>
                                             </view>
                                             <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7A0-gp-N2w" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
                                                 <rect key="frame" x="150" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G76-hU-h0n">
-                                                        <rect key="frame" x="4" y="4" width="17" height="17"/>
-                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="G76-hU-h0n" firstAttribute="top" secondItem="7A0-gp-N2w" secondAttribute="top" constant="4" id="7U1-83-igY"/>
-                                                    <constraint firstItem="G76-hU-h0n" firstAttribute="centerY" secondItem="7A0-gp-N2w" secondAttribute="centerY" id="9gQ-9l-jmk"/>
-                                                    <constraint firstItem="G76-hU-h0n" firstAttribute="centerX" secondItem="7A0-gp-N2w" secondAttribute="centerX" id="GkH-LZ-ZeB"/>
                                                     <constraint firstAttribute="width" constant="25" id="ICS-Tp-WMe"/>
-                                                    <constraint firstItem="G76-hU-h0n" firstAttribute="leading" secondItem="7A0-gp-N2w" secondAttribute="leading" constant="4" id="MTs-ww-6oK"/>
-                                                    <constraint firstAttribute="trailing" secondItem="G76-hU-h0n" secondAttribute="trailing" constant="4" id="lIb-eT-n9l"/>
-                                                    <constraint firstAttribute="bottom" secondItem="G76-hU-h0n" secondAttribute="bottom" constant="4" id="tK8-Sh-DKQ"/>
                                                 </constraints>
                                             </view>
                                             <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UwY-Gv-dWj" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
                                                 <rect key="frame" x="180" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gu3-tK-bka">
-                                                        <rect key="frame" x="4" y="4" width="17" height="17"/>
-                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="0me-eg-E1i"/>
-                                                    <constraint firstItem="gu3-tK-bka" firstAttribute="centerY" secondItem="UwY-Gv-dWj" secondAttribute="centerY" id="7O0-il-rEF"/>
-                                                    <constraint firstAttribute="trailing" secondItem="gu3-tK-bka" secondAttribute="trailing" constant="4" id="DgQ-wW-3AK"/>
-                                                    <constraint firstItem="gu3-tK-bka" firstAttribute="leading" secondItem="UwY-Gv-dWj" secondAttribute="leading" constant="4" id="hXh-ju-JIp"/>
-                                                    <constraint firstItem="gu3-tK-bka" firstAttribute="top" secondItem="UwY-Gv-dWj" secondAttribute="top" constant="4" id="pNE-gz-Tw9"/>
-                                                    <constraint firstAttribute="bottom" secondItem="gu3-tK-bka" secondAttribute="bottom" constant="4" id="tHC-mG-z5K"/>
-                                                    <constraint firstItem="gu3-tK-bka" firstAttribute="centerX" secondItem="UwY-Gv-dWj" secondAttribute="centerX" id="tfQ-ls-OUQ"/>
                                                 </constraints>
                                             </view>
                                             <view tag="7" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7n8-bl-cWP" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
                                                 <rect key="frame" x="210" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8h-of-Wgz">
-                                                        <rect key="frame" x="4" y="4" width="17" height="17"/>
-                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="p8h-of-Wgz" firstAttribute="centerY" secondItem="7n8-bl-cWP" secondAttribute="centerY" id="Tbc-RS-UY6"/>
-                                                    <constraint firstItem="p8h-of-Wgz" firstAttribute="top" secondItem="7n8-bl-cWP" secondAttribute="top" constant="4" id="Tdw-Yc-fEE"/>
-                                                    <constraint firstAttribute="trailing" secondItem="p8h-of-Wgz" secondAttribute="trailing" constant="4" id="eG4-8Z-fUL"/>
-                                                    <constraint firstItem="p8h-of-Wgz" firstAttribute="centerX" secondItem="7n8-bl-cWP" secondAttribute="centerX" id="fu5-L8-2ec"/>
-                                                    <constraint firstItem="p8h-of-Wgz" firstAttribute="leading" secondItem="7n8-bl-cWP" secondAttribute="leading" constant="4" id="m1y-xY-M6P"/>
-                                                    <constraint firstAttribute="bottom" secondItem="p8h-of-Wgz" secondAttribute="bottom" constant="4" id="qS7-Ic-VIr"/>
                                                     <constraint firstAttribute="width" constant="25" id="vnh-X3-qw2"/>
                                                 </constraints>
                                             </view>
                                             <view tag="8" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvh-Cb-5Jt" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
                                                 <rect key="frame" x="240" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LSu-fI-uJX">
-                                                        <rect key="frame" x="4" y="4" width="17" height="17"/>
-                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="0zZ-77-39g"/>
-                                                    <constraint firstItem="LSu-fI-uJX" firstAttribute="leading" secondItem="dvh-Cb-5Jt" secondAttribute="leading" constant="4" id="GBZ-dJ-OfN"/>
-                                                    <constraint firstItem="LSu-fI-uJX" firstAttribute="centerX" secondItem="dvh-Cb-5Jt" secondAttribute="centerX" id="S4h-gg-HDH"/>
-                                                    <constraint firstItem="LSu-fI-uJX" firstAttribute="top" secondItem="dvh-Cb-5Jt" secondAttribute="top" constant="4" id="Y6E-PD-kZA"/>
-                                                    <constraint firstItem="LSu-fI-uJX" firstAttribute="centerY" secondItem="dvh-Cb-5Jt" secondAttribute="centerY" id="YVu-GL-9n6"/>
-                                                    <constraint firstAttribute="bottom" secondItem="LSu-fI-uJX" secondAttribute="bottom" constant="4" id="hPJ-u8-Llh"/>
-                                                    <constraint firstAttribute="trailing" secondItem="LSu-fI-uJX" secondAttribute="trailing" constant="4" id="pMn-c1-Ftb"/>
                                                 </constraints>
                                             </view>
                                             <view tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKi-72-B62" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
                                                 <rect key="frame" x="270" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67R-0i-jmL">
-                                                        <rect key="frame" x="4" y="4" width="17" height="17"/>
-                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="67R-0i-jmL" firstAttribute="leading" secondItem="lKi-72-B62" secondAttribute="leading" constant="4" id="0hK-q5-vGs"/>
-                                                    <constraint firstItem="67R-0i-jmL" firstAttribute="centerX" secondItem="lKi-72-B62" secondAttribute="centerX" id="5Nj-Ja-29f"/>
                                                     <constraint firstAttribute="width" constant="25" id="7Pf-vN-5D3"/>
-                                                    <constraint firstItem="67R-0i-jmL" firstAttribute="top" secondItem="lKi-72-B62" secondAttribute="top" constant="4" id="MC0-eF-shg"/>
-                                                    <constraint firstAttribute="trailing" secondItem="67R-0i-jmL" secondAttribute="trailing" constant="4" id="PIW-d8-2qv"/>
-                                                    <constraint firstAttribute="bottom" secondItem="67R-0i-jmL" secondAttribute="bottom" constant="4" id="ffc-1C-Obw"/>
-                                                    <constraint firstItem="67R-0i-jmL" firstAttribute="centerY" secondItem="lKi-72-B62" secondAttribute="centerY" id="kjO-ZI-iLU"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="7n8-bl-cWP" firstAttribute="top" secondItem="YVm-GQ-Jg8" secondAttribute="top" id="KUQ-q8-mLL"/>
+                                            <constraint firstItem="iYQ-cx-HGx" firstAttribute="top" secondItem="YVm-GQ-Jg8" secondAttribute="top" id="Kry-bG-OEZ"/>
+                                            <constraint firstItem="7A0-gp-N2w" firstAttribute="top" secondItem="YVm-GQ-Jg8" secondAttribute="top" id="S8Y-Tt-n7c"/>
+                                            <constraint firstItem="U0b-W9-FiS" firstAttribute="top" secondItem="YVm-GQ-Jg8" secondAttribute="top" id="U3A-Db-IFd"/>
+                                            <constraint firstItem="zHb-cm-LBu" firstAttribute="top" secondItem="YVm-GQ-Jg8" secondAttribute="top" id="VPw-Z5-tJW"/>
+                                            <constraint firstItem="cxO-9i-00X" firstAttribute="top" secondItem="YVm-GQ-Jg8" secondAttribute="top" id="ZMP-n1-jW2"/>
+                                            <constraint firstItem="dvh-Cb-5Jt" firstAttribute="top" secondItem="YVm-GQ-Jg8" secondAttribute="top" id="aiS-7P-Gfe"/>
+                                            <constraint firstItem="UwY-Gv-dWj" firstAttribute="top" secondItem="YVm-GQ-Jg8" secondAttribute="top" id="os5-hl-lLN"/>
                                             <constraint firstAttribute="height" constant="25" id="uoM-Nu-MjR"/>
+                                            <constraint firstItem="LGX-Ud-43E" firstAttribute="top" secondItem="YVm-GQ-Jg8" secondAttribute="top" id="w5V-VY-FaN"/>
+                                            <constraint firstItem="lKi-72-B62" firstAttribute="top" secondItem="YVm-GQ-Jg8" secondAttribute="top" id="xWq-OX-T8A"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Mrj-8J-Rby">
@@ -389,217 +260,87 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ni5-8x-TT3" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZy-YF-hlp">
-                                                        <rect key="frame" x="4" y="4" width="17" height="17"/>
-                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="TZy-YF-hlp" firstAttribute="top" secondItem="ni5-8x-TT3" secondAttribute="top" constant="4" id="0tY-6B-Tum"/>
-                                                    <constraint firstAttribute="trailing" secondItem="TZy-YF-hlp" secondAttribute="trailing" constant="4" id="1b0-gL-dTa"/>
-                                                    <constraint firstAttribute="bottom" secondItem="TZy-YF-hlp" secondAttribute="bottom" constant="4" id="34A-OH-uZU"/>
                                                     <constraint firstAttribute="width" constant="25" id="5SV-78-DC5"/>
-                                                    <constraint firstItem="TZy-YF-hlp" firstAttribute="centerX" secondItem="ni5-8x-TT3" secondAttribute="centerX" id="ANa-6P-4nx"/>
-                                                    <constraint firstItem="TZy-YF-hlp" firstAttribute="centerY" secondItem="ni5-8x-TT3" secondAttribute="centerY" id="c9B-UU-lUQ"/>
-                                                    <constraint firstItem="TZy-YF-hlp" firstAttribute="leading" secondItem="ni5-8x-TT3" secondAttribute="leading" constant="4" id="ciy-ww-vMj"/>
                                                 </constraints>
                                             </view>
                                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0uj-ry-VDN" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ay-I9-gij">
-                                                        <rect key="frame" x="4" y="4" width="17" height="17"/>
-                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="7dg-bx-ctV"/>
-                                                    <constraint firstAttribute="trailing" secondItem="4Ay-I9-gij" secondAttribute="trailing" constant="4" id="EZG-IB-zqh"/>
-                                                    <constraint firstItem="4Ay-I9-gij" firstAttribute="centerY" secondItem="0uj-ry-VDN" secondAttribute="centerY" id="GEn-to-RlG"/>
-                                                    <constraint firstItem="4Ay-I9-gij" firstAttribute="centerX" secondItem="0uj-ry-VDN" secondAttribute="centerX" id="Njq-xE-KZK"/>
-                                                    <constraint firstItem="4Ay-I9-gij" firstAttribute="leading" secondItem="0uj-ry-VDN" secondAttribute="leading" constant="4" id="Oyt-wK-anA"/>
-                                                    <constraint firstAttribute="bottom" secondItem="4Ay-I9-gij" secondAttribute="bottom" constant="4" id="P0k-PG-3JM"/>
-                                                    <constraint firstItem="4Ay-I9-gij" firstAttribute="top" secondItem="0uj-ry-VDN" secondAttribute="top" constant="4" id="PTj-mI-sYP"/>
                                                 </constraints>
                                             </view>
                                             <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F2W-R0-CFB" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
                                                 <rect key="frame" x="60" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YA-5j-pDp">
-                                                        <rect key="frame" x="4" y="4" width="17" height="17"/>
-                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="9YA-5j-pDp" secondAttribute="trailing" constant="4" id="0mG-Ii-8pz"/>
-                                                    <constraint firstItem="9YA-5j-pDp" firstAttribute="leading" secondItem="F2W-R0-CFB" secondAttribute="leading" constant="4" id="ZNa-7W-DYe"/>
-                                                    <constraint firstItem="9YA-5j-pDp" firstAttribute="centerY" secondItem="F2W-R0-CFB" secondAttribute="centerY" id="bTF-2V-7rK"/>
-                                                    <constraint firstItem="9YA-5j-pDp" firstAttribute="centerX" secondItem="F2W-R0-CFB" secondAttribute="centerX" id="csw-ps-qfk"/>
-                                                    <constraint firstAttribute="bottom" secondItem="9YA-5j-pDp" secondAttribute="bottom" constant="4" id="dsr-Dc-Oyb"/>
-                                                    <constraint firstItem="9YA-5j-pDp" firstAttribute="top" secondItem="F2W-R0-CFB" secondAttribute="top" constant="4" id="pZp-St-U6A"/>
                                                     <constraint firstAttribute="width" constant="25" id="sZT-DG-Gbq"/>
                                                 </constraints>
                                             </view>
                                             <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAH-Gv-Vtf" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
                                                 <rect key="frame" x="90" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQm-ad-XHc">
-                                                        <rect key="frame" x="4" y="4" width="17" height="17"/>
-                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="KQm-ad-XHc" secondAttribute="trailing" constant="4" id="1tq-Mz-2wD"/>
-                                                    <constraint firstItem="KQm-ad-XHc" firstAttribute="leading" secondItem="PAH-Gv-Vtf" secondAttribute="leading" constant="4" id="HNq-sM-egI"/>
-                                                    <constraint firstItem="KQm-ad-XHc" firstAttribute="centerX" secondItem="PAH-Gv-Vtf" secondAttribute="centerX" id="UWy-aq-kaf"/>
-                                                    <constraint firstAttribute="bottom" secondItem="KQm-ad-XHc" secondAttribute="bottom" constant="4" id="eAb-mQ-O9Q"/>
-                                                    <constraint firstItem="KQm-ad-XHc" firstAttribute="top" secondItem="PAH-Gv-Vtf" secondAttribute="top" constant="4" id="gYz-Ay-s35"/>
-                                                    <constraint firstItem="KQm-ad-XHc" firstAttribute="centerY" secondItem="PAH-Gv-Vtf" secondAttribute="centerY" id="vnU-13-PH8"/>
                                                     <constraint firstAttribute="width" constant="25" id="yBx-ch-jl6"/>
                                                 </constraints>
                                             </view>
                                             <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEV-xZ-yuy" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
                                                 <rect key="frame" x="120" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pED-Br-uJH">
-                                                        <rect key="frame" x="4" y="4" width="17" height="17"/>
-                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="pED-Br-uJH" firstAttribute="top" secondItem="pEV-xZ-yuy" secondAttribute="top" constant="4" id="0fu-0t-rcl"/>
                                                     <constraint firstAttribute="width" constant="25" id="Xjy-pK-1O4"/>
-                                                    <constraint firstItem="pED-Br-uJH" firstAttribute="centerX" secondItem="pEV-xZ-yuy" secondAttribute="centerX" id="Y3b-FK-QT8"/>
-                                                    <constraint firstItem="pED-Br-uJH" firstAttribute="centerY" secondItem="pEV-xZ-yuy" secondAttribute="centerY" id="eWB-y6-PXR"/>
-                                                    <constraint firstItem="pED-Br-uJH" firstAttribute="leading" secondItem="pEV-xZ-yuy" secondAttribute="leading" constant="4" id="hIL-8V-Zwp"/>
-                                                    <constraint firstAttribute="bottom" secondItem="pED-Br-uJH" secondAttribute="bottom" constant="4" id="tNv-gM-45e"/>
-                                                    <constraint firstAttribute="trailing" secondItem="pED-Br-uJH" secondAttribute="trailing" constant="4" id="yD1-g7-fbB"/>
                                                 </constraints>
                                             </view>
                                             <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L79-Bx-7kO" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
                                                 <rect key="frame" x="150" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewb-3z-N3n">
-                                                        <rect key="frame" x="4" y="4" width="17" height="17"/>
-                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="1ih-9t-Qel"/>
-                                                    <constraint firstItem="ewb-3z-N3n" firstAttribute="centerY" secondItem="L79-Bx-7kO" secondAttribute="centerY" id="8OP-bp-0qB"/>
-                                                    <constraint firstAttribute="trailing" secondItem="ewb-3z-N3n" secondAttribute="trailing" constant="4" id="9Lp-Zz-tMT"/>
-                                                    <constraint firstItem="ewb-3z-N3n" firstAttribute="centerX" secondItem="L79-Bx-7kO" secondAttribute="centerX" id="Q6l-Du-vTq"/>
-                                                    <constraint firstItem="ewb-3z-N3n" firstAttribute="top" secondItem="L79-Bx-7kO" secondAttribute="top" constant="4" id="U9a-eT-viB"/>
-                                                    <constraint firstItem="ewb-3z-N3n" firstAttribute="leading" secondItem="L79-Bx-7kO" secondAttribute="leading" constant="4" id="a5v-bM-5Da"/>
-                                                    <constraint firstAttribute="bottom" secondItem="ewb-3z-N3n" secondAttribute="bottom" constant="4" id="za2-8B-AQH"/>
                                                 </constraints>
                                             </view>
                                             <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sQB-yE-QvK" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
                                                 <rect key="frame" x="180" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWB-kM-7Ac">
-                                                        <rect key="frame" x="4" y="4" width="17" height="17"/>
-                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="LWB-kM-7Ac" firstAttribute="centerX" secondItem="sQB-yE-QvK" secondAttribute="centerX" id="0GC-bJ-P6f"/>
-                                                    <constraint firstItem="LWB-kM-7Ac" firstAttribute="centerY" secondItem="sQB-yE-QvK" secondAttribute="centerY" id="GA2-GP-onn"/>
-                                                    <constraint firstItem="LWB-kM-7Ac" firstAttribute="top" secondItem="sQB-yE-QvK" secondAttribute="top" constant="4" id="N7F-gS-MkN"/>
-                                                    <constraint firstItem="LWB-kM-7Ac" firstAttribute="leading" secondItem="sQB-yE-QvK" secondAttribute="leading" constant="4" id="lA8-JK-vwG"/>
-                                                    <constraint firstAttribute="bottom" secondItem="LWB-kM-7Ac" secondAttribute="bottom" constant="4" id="mdc-LD-REQ"/>
-                                                    <constraint firstAttribute="trailing" secondItem="LWB-kM-7Ac" secondAttribute="trailing" constant="4" id="mlY-iY-nRW"/>
                                                     <constraint firstAttribute="width" constant="25" id="okv-bu-FSS"/>
                                                 </constraints>
                                             </view>
                                             <view tag="7" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TFE-Yl-vzF" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
                                                 <rect key="frame" x="210" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6v-hN-qCr">
-                                                        <rect key="frame" x="4" y="4" width="17" height="17"/>
-                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="D6v-hN-qCr" firstAttribute="top" secondItem="TFE-Yl-vzF" secondAttribute="top" constant="4" id="0P1-OQ-k50"/>
-                                                    <constraint firstItem="D6v-hN-qCr" firstAttribute="centerY" secondItem="TFE-Yl-vzF" secondAttribute="centerY" id="GeB-gZ-myX"/>
-                                                    <constraint firstAttribute="bottom" secondItem="D6v-hN-qCr" secondAttribute="bottom" constant="4" id="ZtU-z3-aQF"/>
-                                                    <constraint firstAttribute="trailing" secondItem="D6v-hN-qCr" secondAttribute="trailing" constant="4" id="fvz-UM-K5a"/>
-                                                    <constraint firstItem="D6v-hN-qCr" firstAttribute="centerX" secondItem="TFE-Yl-vzF" secondAttribute="centerX" id="g8f-TR-5jT"/>
                                                     <constraint firstAttribute="width" constant="25" id="nWm-jt-ztt"/>
-                                                    <constraint firstItem="D6v-hN-qCr" firstAttribute="leading" secondItem="TFE-Yl-vzF" secondAttribute="leading" constant="4" id="okh-BM-FN6"/>
                                                 </constraints>
                                             </view>
                                             <view tag="8" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qvq-Wz-IdO" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
                                                 <rect key="frame" x="240" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FpR-H3-G2u">
-                                                        <rect key="frame" x="4" y="4" width="17" height="17"/>
-                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="FpR-H3-G2u" firstAttribute="leading" secondItem="qvq-Wz-IdO" secondAttribute="leading" constant="4" id="72v-RD-1oS"/>
-                                                    <constraint firstItem="FpR-H3-G2u" firstAttribute="centerX" secondItem="qvq-Wz-IdO" secondAttribute="centerX" id="Hcf-Ij-1TO"/>
                                                     <constraint firstAttribute="width" constant="25" id="Vqg-ZL-bdZ"/>
-                                                    <constraint firstItem="FpR-H3-G2u" firstAttribute="top" secondItem="qvq-Wz-IdO" secondAttribute="top" constant="4" id="beo-cU-e9E"/>
-                                                    <constraint firstAttribute="bottom" secondItem="FpR-H3-G2u" secondAttribute="bottom" constant="4" id="hZF-b8-HwV"/>
-                                                    <constraint firstItem="FpR-H3-G2u" firstAttribute="centerY" secondItem="qvq-Wz-IdO" secondAttribute="centerY" id="jlL-Jb-OxN"/>
-                                                    <constraint firstAttribute="trailing" secondItem="FpR-H3-G2u" secondAttribute="trailing" constant="4" id="kcf-Yb-YNa"/>
                                                 </constraints>
                                             </view>
                                             <view tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNw-B9-k0b" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
                                                 <rect key="frame" x="270" y="0.0" width="25" height="25"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcT-6x-f7u">
-                                                        <rect key="frame" x="4" y="4" width="17" height="17"/>
-                                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="RcT-6x-f7u" firstAttribute="top" secondItem="KNw-B9-k0b" secondAttribute="top" constant="4" id="CBu-bw-Xef"/>
-                                                    <constraint firstItem="RcT-6x-f7u" firstAttribute="centerY" secondItem="KNw-B9-k0b" secondAttribute="centerY" id="CkM-nj-8Xc"/>
-                                                    <constraint firstAttribute="bottom" secondItem="RcT-6x-f7u" secondAttribute="bottom" constant="4" id="EKv-t3-XLJ"/>
                                                     <constraint firstAttribute="width" constant="25" id="Ety-vj-01n"/>
-                                                    <constraint firstItem="RcT-6x-f7u" firstAttribute="centerX" secondItem="KNw-B9-k0b" secondAttribute="centerX" id="LtB-ha-hdH"/>
-                                                    <constraint firstItem="RcT-6x-f7u" firstAttribute="leading" secondItem="KNw-B9-k0b" secondAttribute="leading" constant="4" id="SpO-n9-aaB"/>
-                                                    <constraint firstAttribute="trailing" secondItem="RcT-6x-f7u" secondAttribute="trailing" constant="4" id="X4x-dE-0b3"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="qvq-Wz-IdO" firstAttribute="top" secondItem="Mrj-8J-Rby" secondAttribute="top" id="20E-vx-YsN"/>
+                                            <constraint firstItem="TFE-Yl-vzF" firstAttribute="top" secondItem="Mrj-8J-Rby" secondAttribute="top" id="71T-9P-I3b"/>
                                             <constraint firstAttribute="height" constant="25" id="8EO-Yq-csw"/>
+                                            <constraint firstItem="ni5-8x-TT3" firstAttribute="top" secondItem="Mrj-8J-Rby" secondAttribute="top" id="DNE-lG-M9c"/>
+                                            <constraint firstItem="KNw-B9-k0b" firstAttribute="top" secondItem="Mrj-8J-Rby" secondAttribute="top" id="FKo-CY-4yo"/>
+                                            <constraint firstItem="PAH-Gv-Vtf" firstAttribute="top" secondItem="Mrj-8J-Rby" secondAttribute="top" id="JUF-fO-3qm"/>
+                                            <constraint firstItem="F2W-R0-CFB" firstAttribute="top" secondItem="Mrj-8J-Rby" secondAttribute="top" id="PiA-Sq-ViQ"/>
+                                            <constraint firstItem="sQB-yE-QvK" firstAttribute="top" secondItem="Mrj-8J-Rby" secondAttribute="top" id="UUQ-Ia-Vx8"/>
+                                            <constraint firstItem="L79-Bx-7kO" firstAttribute="top" secondItem="Mrj-8J-Rby" secondAttribute="top" id="eyx-ZK-7D9"/>
+                                            <constraint firstItem="0uj-ry-VDN" firstAttribute="top" secondItem="Mrj-8J-Rby" secondAttribute="top" id="oMH-tx-rsl"/>
+                                            <constraint firstItem="pEV-xZ-yuy" firstAttribute="top" secondItem="Mrj-8J-Rby" secondAttribute="top" id="ozY-u8-tqj"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -635,6 +376,7 @@
                     </view>
                     <connections>
                         <outlet property="answerStackView" destination="FUO-n7-9UW" id="8Jv-G9-oMk"/>
+                        <outlet property="bottomVerticalStackView" destination="JMA-up-RNZ" id="jA7-45-Hhp"/>
                         <outlet property="logoImageView" destination="rHt-ON-cre" id="aKN-rO-alS"/>
                         <outlet property="navCircleView" destination="36e-ae-RRF" id="U0T-Cm-xNq"/>
                     </connections>
