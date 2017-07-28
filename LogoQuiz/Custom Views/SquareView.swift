@@ -18,7 +18,24 @@ class SquareView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        addCharLabel()
         configure()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        label.frame = bounds
+        let fontSize = (bounds.width/2) + 5
+        label.font = UIFont(name: "Eurostile", size: fontSize)
+        configure()
+    }
+    
+    fileprivate func addCharLabel() {
+        //add the label that will contain the letter for each box
+        label = UILabel()
+        label.textAlignment = .center
+        
+        addSubview(label)
     }
     
     fileprivate func configure() {
@@ -29,12 +46,5 @@ class SquareView: UIView {
         layer.shadowOffset = CGSize(width: -1, height: 3)
         layer.shadowRadius = 3
         layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
-        
-        //add the label that will contain the letter for each box
-        label = UILabel(frame: bounds)
-        label.font = UIFont(name: "Eurostile", size: 17)
-        label.textAlignment = .center
-        
-        addSubview(label)
     }
 }

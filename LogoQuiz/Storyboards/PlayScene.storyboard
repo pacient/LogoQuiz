@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Yuj-gz-2bH">
-    <device id="retina4_0" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -26,28 +26,28 @@
                         <viewControllerLayoutGuide type="bottom" id="aIM-b5-pNf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lAm-8R-gor">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sdf-YC-23U">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="64"/>
                                 <color key="backgroundColor" red="0.077577359974384294" green="0.23701548303167019" blue="0.35893875360488892" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="cvm-e5-VUW"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DwW-rB-f6J">
-                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="974" width="768" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="PMZ-GX-c4h"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36e-ae-RRF">
-                                <rect key="frame" x="120" y="20" width="80" height="80.5"/>
+                                <rect key="frame" x="344" y="20" width="80" height="80.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agb-s3-v7b">
-                                        <rect key="frame" x="22" y="8" width="35.5" height="17.5"/>
+                                        <rect key="frame" x="24" y="8" width="31.5" height="15"/>
                                         <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -65,292 +65,462 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8M-ob-yZ3">
-                                <rect key="frame" x="131" y="45" width="58.5" height="41"/>
+                                <rect key="frame" x="352" y="50.5" width="64.5" height="35"/>
                                 <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="example" translatesAutoresizingMaskIntoConstraints="NO" id="rHt-ON-cre">
-                                <rect key="frame" x="46" y="108" width="228" height="170.5"/>
+                                <rect key="frame" x="179" y="108" width="410" height="307"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rHt-ON-cre" secondAttribute="height" multiplier="4:3" id="2wv-cc-bWE"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" distribution="fillEqually" alignment="center" spacing="5" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FUO-n7-9UW">
-                                <rect key="frame" x="12.5" y="294.5" width="295" height="25"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CnA-Wf-U8c" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="25" id="zBi-So-jel"/>
-                                        </constraints>
-                                    </view>
-                                    <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wqc-Gz-ltA" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="30" y="0.0" width="25" height="25"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="25" id="bdM-ou-Xl8"/>
-                                        </constraints>
-                                    </view>
-                                    <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eDB-Tx-gTJ" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="60" y="0.0" width="25" height="25"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="25" id="wvx-zl-oOz"/>
-                                        </constraints>
-                                    </view>
-                                    <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yS0-Li-Szg" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="90" y="0.0" width="25" height="25"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="25" id="kgM-qg-SyS"/>
-                                        </constraints>
-                                    </view>
-                                    <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kb1-aH-Ha4" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="120" y="0.0" width="25" height="25"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="25" id="UDD-6g-Rqn"/>
-                                        </constraints>
-                                    </view>
-                                    <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bEh-xm-BoC" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="150" y="0.0" width="25" height="25"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="25" id="iWh-gW-bkt"/>
-                                        </constraints>
-                                    </view>
-                                    <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R41-nv-1cj" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="180" y="0.0" width="25" height="25"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="25" id="x44-DH-PPD"/>
-                                        </constraints>
-                                    </view>
-                                    <view tag="7" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Icc-eG-tTW" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="210" y="0.0" width="25" height="25"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="25" id="oeq-7c-wj9"/>
-                                        </constraints>
-                                    </view>
-                                    <view tag="8" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQU-Gb-Lim" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="240" y="0.0" width="25" height="25"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="25" id="3Hg-lb-b3K"/>
-                                        </constraints>
-                                    </view>
-                                    <view tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIi-4g-qbk" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="270" y="0.0" width="25" height="25"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="25" id="3hj-tW-UjS"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="wqc-Gz-ltA" firstAttribute="top" secondItem="FUO-n7-9UW" secondAttribute="top" id="5c1-gb-UaW"/>
-                                    <constraint firstItem="yS0-Li-Szg" firstAttribute="top" secondItem="FUO-n7-9UW" secondAttribute="top" id="6b5-Yu-Pwh"/>
-                                    <constraint firstItem="R41-nv-1cj" firstAttribute="top" secondItem="FUO-n7-9UW" secondAttribute="top" id="7rk-uS-clZ"/>
-                                    <constraint firstItem="Kb1-aH-Ha4" firstAttribute="top" secondItem="FUO-n7-9UW" secondAttribute="top" id="C8v-xA-CFK"/>
-                                    <constraint firstAttribute="height" constant="25" id="Gbb-b2-Ugz"/>
-                                    <constraint firstItem="GIi-4g-qbk" firstAttribute="top" secondItem="FUO-n7-9UW" secondAttribute="top" id="ISM-yb-Aif"/>
-                                    <constraint firstItem="eDB-Tx-gTJ" firstAttribute="top" secondItem="FUO-n7-9UW" secondAttribute="top" id="Ky6-6T-E5P"/>
-                                    <constraint firstItem="CnA-Wf-U8c" firstAttribute="top" secondItem="FUO-n7-9UW" secondAttribute="top" id="RNX-KE-9SA"/>
-                                    <constraint firstItem="aQU-Gb-Lim" firstAttribute="top" secondItem="FUO-n7-9UW" secondAttribute="top" id="W1q-ua-VDr"/>
-                                    <constraint firstItem="Icc-eG-tTW" firstAttribute="top" secondItem="FUO-n7-9UW" secondAttribute="top" id="uCy-KD-w5w"/>
-                                    <constraint firstItem="bEh-xm-BoC" firstAttribute="top" secondItem="FUO-n7-9UW" secondAttribute="top" id="v9j-B4-vVZ"/>
-                                </constraints>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="JMA-up-RNZ">
-                                <rect key="frame" x="12.5" y="349.5" width="295" height="54"/>
+                                <rect key="frame" x="116.5" y="651" width="535" height="103"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YVm-GQ-Jg8">
-                                        <rect key="frame" x="0.0" y="0.0" width="295" height="25"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" distribution="fillEqually" alignment="center" spacing="5" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zpu-ON-tm4">
+                                        <rect key="frame" x="0.0" y="0.0" width="535" height="49.5"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iYQ-cx-HGx" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMN-NT-MX0" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="49" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="00F-E4-vs9"/>
+                                                    <constraint firstAttribute="width" secondItem="OMN-NT-MX0" secondAttribute="height" multiplier="1:1" id="pZc-bZ-gHv"/>
                                                 </constraints>
                                             </view>
-                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cxO-9i-00X" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="0.0" width="25" height="25"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GH4-Ds-Tx3" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="54" y="0.0" width="49" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="Kgx-dn-tTa"/>
-                                                </constraints>
                                             </view>
-                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LGX-Ud-43E" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="60" y="0.0" width="25" height="25"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MMm-ik-xf1" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="108" y="0.0" width="49" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="Hve-XQ-EOi"/>
-                                                </constraints>
                                             </view>
-                                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zHb-cm-LBu" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="90" y="0.0" width="25" height="25"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQG-WS-nul" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="162" y="0.0" width="49" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="93G-jc-0ii"/>
-                                                </constraints>
                                             </view>
-                                            <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U0b-W9-FiS" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="120" y="0.0" width="25" height="25"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Oo-8D-Kfm" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="216" y="0.0" width="49" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="VFp-RX-jUZ"/>
-                                                </constraints>
                                             </view>
-                                            <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7A0-gp-N2w" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="150" y="0.0" width="25" height="25"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ES-9K-2KQ" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="270" y="0.0" width="49" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="ICS-Tp-WMe"/>
-                                                </constraints>
                                             </view>
-                                            <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UwY-Gv-dWj" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="180" y="0.0" width="25" height="25"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SK6-AL-K29" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="324" y="0.0" width="49" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="0me-eg-E1i"/>
-                                                </constraints>
                                             </view>
-                                            <view tag="7" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7n8-bl-cWP" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="210" y="0.0" width="25" height="25"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2pO-gg-trJ" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="378" y="0.0" width="49" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="vnh-X3-qw2"/>
-                                                </constraints>
                                             </view>
-                                            <view tag="8" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dvh-Cb-5Jt" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="240" y="0.0" width="25" height="25"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fwc-oP-28t" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="432" y="0.0" width="49" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="0zZ-77-39g"/>
-                                                </constraints>
                                             </view>
-                                            <view tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKi-72-B62" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="270" y="0.0" width="25" height="25"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ld6-76-l9Q" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="486" y="0.0" width="49" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="7Pf-vN-5D3"/>
-                                                </constraints>
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="7n8-bl-cWP" firstAttribute="top" secondItem="YVm-GQ-Jg8" secondAttribute="top" id="KUQ-q8-mLL"/>
-                                            <constraint firstItem="iYQ-cx-HGx" firstAttribute="top" secondItem="YVm-GQ-Jg8" secondAttribute="top" id="Kry-bG-OEZ"/>
-                                            <constraint firstItem="7A0-gp-N2w" firstAttribute="top" secondItem="YVm-GQ-Jg8" secondAttribute="top" id="S8Y-Tt-n7c"/>
-                                            <constraint firstItem="U0b-W9-FiS" firstAttribute="top" secondItem="YVm-GQ-Jg8" secondAttribute="top" id="U3A-Db-IFd"/>
-                                            <constraint firstItem="zHb-cm-LBu" firstAttribute="top" secondItem="YVm-GQ-Jg8" secondAttribute="top" id="VPw-Z5-tJW"/>
-                                            <constraint firstItem="cxO-9i-00X" firstAttribute="top" secondItem="YVm-GQ-Jg8" secondAttribute="top" id="ZMP-n1-jW2"/>
-                                            <constraint firstItem="dvh-Cb-5Jt" firstAttribute="top" secondItem="YVm-GQ-Jg8" secondAttribute="top" id="aiS-7P-Gfe"/>
-                                            <constraint firstItem="UwY-Gv-dWj" firstAttribute="top" secondItem="YVm-GQ-Jg8" secondAttribute="top" id="os5-hl-lLN"/>
-                                            <constraint firstAttribute="height" constant="25" id="uoM-Nu-MjR"/>
-                                            <constraint firstItem="LGX-Ud-43E" firstAttribute="top" secondItem="YVm-GQ-Jg8" secondAttribute="top" id="w5V-VY-FaN"/>
-                                            <constraint firstItem="lKi-72-B62" firstAttribute="top" secondItem="YVm-GQ-Jg8" secondAttribute="top" id="xWq-OX-T8A"/>
+                                            <constraint firstItem="2pO-gg-trJ" firstAttribute="top" secondItem="Zpu-ON-tm4" secondAttribute="top" id="37p-UD-dMk"/>
+                                            <constraint firstItem="6ES-9K-2KQ" firstAttribute="top" secondItem="Zpu-ON-tm4" secondAttribute="top" id="3Mo-vW-7Eo"/>
+                                            <constraint firstItem="GH4-Ds-Tx3" firstAttribute="height" secondItem="OMN-NT-MX0" secondAttribute="height" id="55L-KE-C9B"/>
+                                            <constraint firstItem="SK6-AL-K29" firstAttribute="width" secondItem="OMN-NT-MX0" secondAttribute="width" id="6Ox-UP-vrE"/>
+                                            <constraint firstItem="0Oo-8D-Kfm" firstAttribute="width" secondItem="OMN-NT-MX0" secondAttribute="width" id="AV1-bF-sbG"/>
+                                            <constraint firstItem="ld6-76-l9Q" firstAttribute="height" secondItem="OMN-NT-MX0" secondAttribute="height" id="BEd-4t-VLa"/>
+                                            <constraint firstItem="MMm-ik-xf1" firstAttribute="top" secondItem="Zpu-ON-tm4" secondAttribute="top" id="FQf-YL-U6h"/>
+                                            <constraint firstItem="ld6-76-l9Q" firstAttribute="top" secondItem="Zpu-ON-tm4" secondAttribute="top" id="Fr1-1t-7fS"/>
+                                            <constraint firstItem="fwc-oP-28t" firstAttribute="width" secondItem="OMN-NT-MX0" secondAttribute="width" id="G8h-hW-W5W"/>
+                                            <constraint firstItem="fQG-WS-nul" firstAttribute="height" secondItem="OMN-NT-MX0" secondAttribute="height" id="H3R-PD-K1C"/>
+                                            <constraint firstItem="SK6-AL-K29" firstAttribute="height" secondItem="OMN-NT-MX0" secondAttribute="height" id="H8D-2e-QME"/>
+                                            <constraint firstItem="0Oo-8D-Kfm" firstAttribute="height" secondItem="OMN-NT-MX0" secondAttribute="height" id="HqS-3K-Hu8"/>
+                                            <constraint firstItem="fQG-WS-nul" firstAttribute="top" secondItem="Zpu-ON-tm4" secondAttribute="top" id="KZg-NG-Bbc"/>
+                                            <constraint firstItem="ld6-76-l9Q" firstAttribute="width" secondItem="OMN-NT-MX0" secondAttribute="width" id="Qmd-RZ-MVy"/>
+                                            <constraint firstItem="OMN-NT-MX0" firstAttribute="leading" secondItem="Zpu-ON-tm4" secondAttribute="leading" id="TVw-Ua-YW4"/>
+                                            <constraint firstItem="fQG-WS-nul" firstAttribute="width" secondItem="OMN-NT-MX0" secondAttribute="width" id="VIX-Zi-H87"/>
+                                            <constraint firstItem="GH4-Ds-Tx3" firstAttribute="top" secondItem="Zpu-ON-tm4" secondAttribute="top" id="VMH-r1-pxt"/>
+                                            <constraint firstItem="6ES-9K-2KQ" firstAttribute="height" secondItem="OMN-NT-MX0" secondAttribute="height" id="Wrp-Gl-VME"/>
+                                            <constraint firstItem="MMm-ik-xf1" firstAttribute="width" secondItem="OMN-NT-MX0" secondAttribute="width" id="YWb-Ny-VH3"/>
+                                            <constraint firstItem="2pO-gg-trJ" firstAttribute="width" secondItem="OMN-NT-MX0" secondAttribute="width" id="ayA-ls-2Mx"/>
+                                            <constraint firstItem="OMN-NT-MX0" firstAttribute="top" secondItem="Zpu-ON-tm4" secondAttribute="top" id="bRU-Q5-W1t"/>
+                                            <constraint firstItem="fwc-oP-28t" firstAttribute="top" secondItem="Zpu-ON-tm4" secondAttribute="top" id="dAs-r7-RMr"/>
+                                            <constraint firstItem="2pO-gg-trJ" firstAttribute="height" secondItem="OMN-NT-MX0" secondAttribute="height" id="dLC-nB-3w4"/>
+                                            <constraint firstItem="MMm-ik-xf1" firstAttribute="height" secondItem="OMN-NT-MX0" secondAttribute="height" id="deS-m8-KaX"/>
+                                            <constraint firstItem="0Oo-8D-Kfm" firstAttribute="top" secondItem="Zpu-ON-tm4" secondAttribute="top" id="i78-7b-Yb0"/>
+                                            <constraint firstItem="6ES-9K-2KQ" firstAttribute="width" secondItem="OMN-NT-MX0" secondAttribute="width" id="iwN-Dq-03M"/>
+                                            <constraint firstItem="GH4-Ds-Tx3" firstAttribute="width" secondItem="OMN-NT-MX0" secondAttribute="width" id="tHd-ER-Qtq"/>
+                                            <constraint firstItem="SK6-AL-K29" firstAttribute="top" secondItem="Zpu-ON-tm4" secondAttribute="top" id="xZ1-vC-WBr"/>
+                                            <constraint firstItem="fwc-oP-28t" firstAttribute="height" secondItem="OMN-NT-MX0" secondAttribute="height" id="y1c-m8-Uj6"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="YWb-Ny-VH3"/>
+                                                <exclude reference="AV1-bF-sbG"/>
+                                                <exclude reference="ayA-ls-2Mx"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="tHd-ER-Qtq"/>
+                                                <exclude reference="YWb-Ny-VH3"/>
+                                                <exclude reference="VIX-Zi-H87"/>
+                                                <exclude reference="AV1-bF-sbG"/>
+                                                <exclude reference="iwN-Dq-03M"/>
+                                                <exclude reference="6Ox-UP-vrE"/>
+                                                <exclude reference="ayA-ls-2Mx"/>
+                                                <exclude reference="G8h-hW-W5W"/>
+                                            </mask>
+                                        </variation>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Mrj-8J-Rby">
-                                        <rect key="frame" x="0.0" y="29" width="295" height="25"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" distribution="fillEqually" alignment="center" spacing="5" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6kI-U2-NdI">
+                                        <rect key="frame" x="0.0" y="53.5" width="535" height="49.5"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ni5-8x-TT3" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DwR-rf-qjF" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="49" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="5SV-78-DC5"/>
+                                                    <constraint firstAttribute="width" secondItem="DwR-rf-qjF" secondAttribute="height" multiplier="1:1" id="ZIg-qb-oBN"/>
                                                 </constraints>
                                             </view>
-                                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0uj-ry-VDN" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="0.0" width="25" height="25"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ks-Em-TET" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="54" y="0.0" width="49" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="7dg-bx-ctV"/>
-                                                </constraints>
                                             </view>
-                                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F2W-R0-CFB" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="60" y="0.0" width="25" height="25"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ra-ad-DLE" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="108" y="0.0" width="49" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="sZT-DG-Gbq"/>
-                                                </constraints>
                                             </view>
-                                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAH-Gv-Vtf" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="90" y="0.0" width="25" height="25"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQh-IE-AZq" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="162" y="0.0" width="49" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="yBx-ch-jl6"/>
-                                                </constraints>
                                             </view>
-                                            <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEV-xZ-yuy" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="120" y="0.0" width="25" height="25"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2U7-qX-fAb" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="216" y="0.0" width="49" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="Xjy-pK-1O4"/>
-                                                </constraints>
                                             </view>
-                                            <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L79-Bx-7kO" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="150" y="0.0" width="25" height="25"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVH-sr-ht2" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="270" y="0.0" width="49" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="1ih-9t-Qel"/>
-                                                </constraints>
                                             </view>
-                                            <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sQB-yE-QvK" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="180" y="0.0" width="25" height="25"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="buH-dg-IoR" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="324" y="0.0" width="49" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="okv-bu-FSS"/>
-                                                </constraints>
                                             </view>
-                                            <view tag="7" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TFE-Yl-vzF" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="210" y="0.0" width="25" height="25"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x80-O2-wa3" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="378" y="0.0" width="49" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="nWm-jt-ztt"/>
-                                                </constraints>
                                             </view>
-                                            <view tag="8" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qvq-Wz-IdO" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="240" y="0.0" width="25" height="25"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45j-Gn-EEn" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="432" y="0.0" width="49" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="Vqg-ZL-bdZ"/>
-                                                </constraints>
                                             </view>
-                                            <view tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNw-B9-k0b" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="270" y="0.0" width="25" height="25"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m3j-1d-b7C" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="486" y="0.0" width="49" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="Ety-vj-01n"/>
-                                                </constraints>
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="qvq-Wz-IdO" firstAttribute="top" secondItem="Mrj-8J-Rby" secondAttribute="top" id="20E-vx-YsN"/>
-                                            <constraint firstItem="TFE-Yl-vzF" firstAttribute="top" secondItem="Mrj-8J-Rby" secondAttribute="top" id="71T-9P-I3b"/>
-                                            <constraint firstAttribute="height" constant="25" id="8EO-Yq-csw"/>
-                                            <constraint firstItem="ni5-8x-TT3" firstAttribute="top" secondItem="Mrj-8J-Rby" secondAttribute="top" id="DNE-lG-M9c"/>
-                                            <constraint firstItem="KNw-B9-k0b" firstAttribute="top" secondItem="Mrj-8J-Rby" secondAttribute="top" id="FKo-CY-4yo"/>
-                                            <constraint firstItem="PAH-Gv-Vtf" firstAttribute="top" secondItem="Mrj-8J-Rby" secondAttribute="top" id="JUF-fO-3qm"/>
-                                            <constraint firstItem="F2W-R0-CFB" firstAttribute="top" secondItem="Mrj-8J-Rby" secondAttribute="top" id="PiA-Sq-ViQ"/>
-                                            <constraint firstItem="sQB-yE-QvK" firstAttribute="top" secondItem="Mrj-8J-Rby" secondAttribute="top" id="UUQ-Ia-Vx8"/>
-                                            <constraint firstItem="L79-Bx-7kO" firstAttribute="top" secondItem="Mrj-8J-Rby" secondAttribute="top" id="eyx-ZK-7D9"/>
-                                            <constraint firstItem="0uj-ry-VDN" firstAttribute="top" secondItem="Mrj-8J-Rby" secondAttribute="top" id="oMH-tx-rsl"/>
-                                            <constraint firstItem="pEV-xZ-yuy" firstAttribute="top" secondItem="Mrj-8J-Rby" secondAttribute="top" id="ozY-u8-tqj"/>
+                                            <constraint firstItem="buH-dg-IoR" firstAttribute="height" secondItem="DwR-rf-qjF" secondAttribute="height" id="0Xa-si-K4Q"/>
+                                            <constraint firstItem="OQh-IE-AZq" firstAttribute="width" secondItem="DwR-rf-qjF" secondAttribute="width" id="3ii-1I-x2i"/>
+                                            <constraint firstItem="x80-O2-wa3" firstAttribute="width" secondItem="DwR-rf-qjF" secondAttribute="width" id="4QL-fO-O7Q"/>
+                                            <constraint firstItem="m3j-1d-b7C" firstAttribute="width" secondItem="DwR-rf-qjF" secondAttribute="width" id="8ii-PZ-qQ4"/>
+                                            <constraint firstItem="45j-Gn-EEn" firstAttribute="height" secondItem="DwR-rf-qjF" secondAttribute="height" id="9qv-SG-gnK"/>
+                                            <constraint firstItem="x80-O2-wa3" firstAttribute="height" secondItem="DwR-rf-qjF" secondAttribute="height" id="Dbl-I1-dKi"/>
+                                            <constraint firstItem="DwR-rf-qjF" firstAttribute="top" secondItem="6kI-U2-NdI" secondAttribute="top" id="F4y-hV-Dzi"/>
+                                            <constraint firstItem="1ks-Em-TET" firstAttribute="width" secondItem="DwR-rf-qjF" secondAttribute="width" id="HNe-Ft-ZWP"/>
+                                            <constraint firstItem="OQh-IE-AZq" firstAttribute="top" secondItem="6kI-U2-NdI" secondAttribute="top" id="HvI-RJ-scU"/>
+                                            <constraint firstItem="TVH-sr-ht2" firstAttribute="height" secondItem="DwR-rf-qjF" secondAttribute="height" id="Sw1-Jm-aSR"/>
+                                            <constraint firstItem="45j-Gn-EEn" firstAttribute="top" secondItem="6kI-U2-NdI" secondAttribute="top" id="U0v-2W-WWj"/>
+                                            <constraint firstItem="TVH-sr-ht2" firstAttribute="top" secondItem="6kI-U2-NdI" secondAttribute="top" id="VsR-F7-iww"/>
+                                            <constraint firstItem="2U7-qX-fAb" firstAttribute="top" secondItem="6kI-U2-NdI" secondAttribute="top" id="Yml-VT-rIX"/>
+                                            <constraint firstItem="x80-O2-wa3" firstAttribute="top" secondItem="6kI-U2-NdI" secondAttribute="top" id="ZSq-Z1-KzN"/>
+                                            <constraint firstItem="6ra-ad-DLE" firstAttribute="height" secondItem="DwR-rf-qjF" secondAttribute="height" id="ZnV-dv-K5F"/>
+                                            <constraint firstItem="buH-dg-IoR" firstAttribute="top" secondItem="6kI-U2-NdI" secondAttribute="top" id="asl-3K-nI4"/>
+                                            <constraint firstItem="DwR-rf-qjF" firstAttribute="leading" secondItem="6kI-U2-NdI" secondAttribute="leading" id="bON-wU-uRr"/>
+                                            <constraint firstItem="2U7-qX-fAb" firstAttribute="height" secondItem="DwR-rf-qjF" secondAttribute="height" id="bRx-NY-Yrb"/>
+                                            <constraint firstItem="OQh-IE-AZq" firstAttribute="height" secondItem="DwR-rf-qjF" secondAttribute="height" id="dcA-WY-U5Y"/>
+                                            <constraint firstItem="m3j-1d-b7C" firstAttribute="top" secondItem="6kI-U2-NdI" secondAttribute="top" id="eLv-ZW-6T2"/>
+                                            <constraint firstItem="1ks-Em-TET" firstAttribute="height" secondItem="DwR-rf-qjF" secondAttribute="height" id="iNB-vR-fJ8"/>
+                                            <constraint firstItem="6ra-ad-DLE" firstAttribute="top" secondItem="6kI-U2-NdI" secondAttribute="top" id="j0c-Yc-4NT"/>
+                                            <constraint firstItem="2U7-qX-fAb" firstAttribute="width" secondItem="DwR-rf-qjF" secondAttribute="width" id="o3z-LS-rr6"/>
+                                            <constraint firstItem="buH-dg-IoR" firstAttribute="width" secondItem="DwR-rf-qjF" secondAttribute="width" id="sNK-x4-eNg"/>
+                                            <constraint firstItem="TVH-sr-ht2" firstAttribute="width" secondItem="DwR-rf-qjF" secondAttribute="width" id="syR-lR-4ih"/>
+                                            <constraint firstItem="1ks-Em-TET" firstAttribute="top" secondItem="6kI-U2-NdI" secondAttribute="top" id="uB8-bI-xEN"/>
+                                            <constraint firstItem="m3j-1d-b7C" firstAttribute="height" secondItem="DwR-rf-qjF" secondAttribute="height" id="xj1-Hb-X7X"/>
+                                            <constraint firstItem="6ra-ad-DLE" firstAttribute="width" secondItem="DwR-rf-qjF" secondAttribute="width" id="zvA-4b-pWm"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="HNe-Ft-ZWP"/>
+                                                <exclude reference="zvA-4b-pWm"/>
+                                                <exclude reference="o3z-LS-rr6"/>
+                                                <exclude reference="syR-lR-4ih"/>
+                                                <exclude reference="4QL-fO-O7Q"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="HNe-Ft-ZWP"/>
+                                                <exclude reference="zvA-4b-pWm"/>
+                                                <exclude reference="3ii-1I-x2i"/>
+                                                <exclude reference="o3z-LS-rr6"/>
+                                                <exclude reference="sNK-x4-eNg"/>
+                                                <exclude reference="4QL-fO-O7Q"/>
+                                            </mask>
+                                        </variation>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="YVm-GQ-Jg8" firstAttribute="top" secondItem="JMA-up-RNZ" secondAttribute="top" id="S0Y-vv-Xzg"/>
-                                    <constraint firstAttribute="height" constant="54" id="Wj1-bF-7kb"/>
+                                    <constraint firstAttribute="height" constant="103" id="248-U7-Zjo"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="translatesAutoresizingMaskIntoConstraints" value="NO"/>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="248-U7-Zjo"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="248-U7-Zjo"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Yzm-KS-bQ1">
+                                <rect key="frame" x="384" y="447" width="0.0" height="104"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" distribution="fillEqually" alignment="center" spacing="5" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FUO-n7-9UW">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="50"/>
+                                        <subviews>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CnA-Wf-U8c" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="Ptb-Pq-m2b"/>
+                                                    <constraint firstAttribute="width" secondItem="CnA-Wf-U8c" secondAttribute="height" multiplier="1:1" id="ugU-NU-daB"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="Ptb-Pq-m2b"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="Ptb-Pq-m2b"/>
+                                                        <exclude reference="ugU-NU-daB"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
+                                            <view hidden="YES" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="700-Xo-oB9" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="-384" y="0.0" width="0.0" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view hidden="YES" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1kW-qT-oHo" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="-384" y="0.0" width="0.0" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view hidden="YES" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbU-I3-VIW" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="-384" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view hidden="YES" tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4BA-Ih-ce4" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="-384" y="0.0" width="0.0" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view hidden="YES" tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejh-Wv-4vU" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="-384" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view hidden="YES" tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fki-hX-m9s" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="-384" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view hidden="YES" tag="7" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUw-ob-3dm" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="-384" y="0.0" width="0.0" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view hidden="YES" tag="8" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cml-vM-60y" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="-384" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view hidden="YES" tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lzq-8o-RFb" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="-384" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="CUw-ob-3dm" firstAttribute="height" secondItem="CnA-Wf-U8c" secondAttribute="height" id="24L-Cz-PTb"/>
+                                            <constraint firstItem="CnA-Wf-U8c" firstAttribute="leading" secondItem="FUO-n7-9UW" secondAttribute="leading" id="2Bf-kh-0d0"/>
+                                            <constraint firstItem="4BA-Ih-ce4" firstAttribute="width" secondItem="CnA-Wf-U8c" secondAttribute="width" id="2mO-Av-eNi"/>
+                                            <constraint firstItem="Lzq-8o-RFb" firstAttribute="top" secondItem="FUO-n7-9UW" secondAttribute="top" id="6F9-Wx-jLf"/>
+                                            <constraint firstItem="Cml-vM-60y" firstAttribute="top" secondItem="FUO-n7-9UW" secondAttribute="top" id="7SR-XW-P0b"/>
+                                            <constraint firstItem="tbU-I3-VIW" firstAttribute="top" secondItem="FUO-n7-9UW" secondAttribute="top" id="9Hu-h8-Tfg"/>
+                                            <constraint firstItem="ejh-Wv-4vU" firstAttribute="height" secondItem="CnA-Wf-U8c" secondAttribute="height" id="9Xe-yH-uH4"/>
+                                            <constraint firstItem="fki-hX-m9s" firstAttribute="top" secondItem="FUO-n7-9UW" secondAttribute="top" id="Dbr-Pc-dIt"/>
+                                            <constraint firstItem="tbU-I3-VIW" firstAttribute="width" secondItem="CnA-Wf-U8c" secondAttribute="width" id="HLW-ga-5Ef"/>
+                                            <constraint firstItem="700-Xo-oB9" firstAttribute="height" secondItem="CnA-Wf-U8c" secondAttribute="height" id="HmW-wj-XRN"/>
+                                            <constraint firstItem="ejh-Wv-4vU" firstAttribute="top" secondItem="FUO-n7-9UW" secondAttribute="top" id="Oby-xy-aaq"/>
+                                            <constraint firstItem="Lzq-8o-RFb" firstAttribute="width" secondItem="CnA-Wf-U8c" secondAttribute="width" id="QOh-hI-JIj"/>
+                                            <constraint firstItem="CnA-Wf-U8c" firstAttribute="top" secondItem="FUO-n7-9UW" secondAttribute="top" id="RNX-KE-9SA"/>
+                                            <constraint firstItem="tbU-I3-VIW" firstAttribute="height" secondItem="CnA-Wf-U8c" secondAttribute="height" id="Tck-O1-eUQ"/>
+                                            <constraint firstItem="700-Xo-oB9" firstAttribute="width" secondItem="CnA-Wf-U8c" secondAttribute="width" id="U4M-je-r1g"/>
+                                            <constraint firstItem="700-Xo-oB9" firstAttribute="top" secondItem="FUO-n7-9UW" secondAttribute="top" id="YkK-kl-5wF"/>
+                                            <constraint firstItem="Cml-vM-60y" firstAttribute="height" secondItem="CnA-Wf-U8c" secondAttribute="height" id="Z1U-1e-Bi9"/>
+                                            <constraint firstItem="1kW-qT-oHo" firstAttribute="top" secondItem="FUO-n7-9UW" secondAttribute="top" id="ZKi-Re-nvY"/>
+                                            <constraint firstItem="Lzq-8o-RFb" firstAttribute="height" secondItem="CnA-Wf-U8c" secondAttribute="height" id="awe-eA-Epb"/>
+                                            <constraint firstItem="ejh-Wv-4vU" firstAttribute="width" secondItem="CnA-Wf-U8c" secondAttribute="width" id="bKO-cL-Ia2"/>
+                                            <constraint firstItem="4BA-Ih-ce4" firstAttribute="top" secondItem="FUO-n7-9UW" secondAttribute="top" id="c4u-tB-wI5"/>
+                                            <constraint firstItem="1kW-qT-oHo" firstAttribute="width" secondItem="CnA-Wf-U8c" secondAttribute="width" id="cL7-ZH-UWE"/>
+                                            <constraint firstAttribute="height" constant="50" id="fNg-Vq-tG6"/>
+                                            <constraint firstItem="CUw-ob-3dm" firstAttribute="top" secondItem="FUO-n7-9UW" secondAttribute="top" id="fcX-20-t99"/>
+                                            <constraint firstItem="fki-hX-m9s" firstAttribute="height" secondItem="CnA-Wf-U8c" secondAttribute="height" id="hGU-fN-stZ"/>
+                                            <constraint firstItem="Cml-vM-60y" firstAttribute="width" secondItem="CnA-Wf-U8c" secondAttribute="width" id="hTM-65-cvZ"/>
+                                            <constraint firstItem="4BA-Ih-ce4" firstAttribute="height" secondItem="CnA-Wf-U8c" secondAttribute="height" id="kdJ-3F-DQ0"/>
+                                            <constraint firstItem="1kW-qT-oHo" firstAttribute="height" secondItem="CnA-Wf-U8c" secondAttribute="height" id="pVQ-Uy-P9S"/>
+                                            <constraint firstItem="CUw-ob-3dm" firstAttribute="width" secondItem="CnA-Wf-U8c" secondAttribute="width" id="ptD-r6-OqF"/>
+                                            <constraint firstItem="fki-hX-m9s" firstAttribute="width" secondItem="CnA-Wf-U8c" secondAttribute="width" id="rcG-hJ-ao6"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="fNg-Vq-tG6"/>
+                                                <exclude reference="cL7-ZH-UWE"/>
+                                                <exclude reference="2mO-Av-eNi"/>
+                                                <exclude reference="ptD-r6-OqF"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <exclude reference="rcG-hJ-ao6"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="fNg-Vq-tG6"/>
+                                                <exclude reference="cL7-ZH-UWE"/>
+                                                <exclude reference="2mO-Av-eNi"/>
+                                                <exclude reference="U4M-je-r1g"/>
+                                                <exclude reference="ptD-r6-OqF"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" distribution="fillEqually" alignment="center" spacing="5" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kdb-Gh-xFK">
+                                        <rect key="frame" x="0.0" y="54" width="0.0" height="50"/>
+                                        <subviews>
+                                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9um-2k-pOp" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="9um-2k-pOp" secondAttribute="height" multiplier="1:1" id="ARC-fO-WUn"/>
+                                                    <constraint firstAttribute="width" constant="50" id="Ann-ya-MN1"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="Ann-ya-MN1"/>
+                                                    </mask>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <mask key="constraints">
+                                                        <include reference="Ann-ya-MN1"/>
+                                                    </mask>
+                                                </variation>
+                                            </view>
+                                            <view hidden="YES" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5QP-UN-gA0" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="-384" y="0.0" width="0.0" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view hidden="YES" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ub2-zO-P92" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="-384" y="0.0" width="0.0" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view hidden="YES" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBd-fY-Ty5" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="-384" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view hidden="YES" tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hD-s2-U52" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="-384" y="0.0" width="0.0" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view hidden="YES" tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvf-Wf-Wsw" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="-384" y="0.0" width="0.0" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view hidden="YES" tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kct-te-jpk" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="-384" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view hidden="YES" tag="7" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pxe-MA-fYo" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="-384" y="0.0" width="0.0" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view hidden="YES" tag="8" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEX-hb-Vdr" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="-384" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view hidden="YES" tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhi-i3-UbC" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="-384" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="kct-te-jpk" firstAttribute="width" secondItem="9um-2k-pOp" secondAttribute="width" id="3Kt-vG-iWP"/>
+                                            <constraint firstItem="ub2-zO-P92" firstAttribute="width" secondItem="9um-2k-pOp" secondAttribute="width" id="3WJ-i8-rr8"/>
+                                            <constraint firstItem="eBd-fY-Ty5" firstAttribute="width" secondItem="9um-2k-pOp" secondAttribute="width" id="3YE-S3-ezt"/>
+                                            <constraint firstItem="pxe-MA-fYo" firstAttribute="top" secondItem="Kdb-Gh-xFK" secondAttribute="top" id="4CC-y5-b3h"/>
+                                            <constraint firstItem="3hD-s2-U52" firstAttribute="height" secondItem="9um-2k-pOp" secondAttribute="height" id="5Qc-Wd-YRn"/>
+                                            <constraint firstItem="5QP-UN-gA0" firstAttribute="width" secondItem="9um-2k-pOp" secondAttribute="width" id="7d3-yG-ZwK"/>
+                                            <constraint firstItem="zvf-Wf-Wsw" firstAttribute="width" secondItem="9um-2k-pOp" secondAttribute="width" id="BcU-B1-5Hh"/>
+                                            <constraint firstItem="5QP-UN-gA0" firstAttribute="top" secondItem="Kdb-Gh-xFK" secondAttribute="top" id="DY3-15-UuY"/>
+                                            <constraint firstItem="pxe-MA-fYo" firstAttribute="width" secondItem="9um-2k-pOp" secondAttribute="width" id="Dqz-0C-qvp"/>
+                                            <constraint firstItem="jhi-i3-UbC" firstAttribute="height" secondItem="9um-2k-pOp" secondAttribute="height" id="EMH-KD-0Xo"/>
+                                            <constraint firstItem="jhi-i3-UbC" firstAttribute="top" secondItem="Kdb-Gh-xFK" secondAttribute="top" id="HDl-vm-TeW"/>
+                                            <constraint firstItem="kct-te-jpk" firstAttribute="top" secondItem="Kdb-Gh-xFK" secondAttribute="top" id="KIN-BU-oOM"/>
+                                            <constraint firstItem="zvf-Wf-Wsw" firstAttribute="height" secondItem="9um-2k-pOp" secondAttribute="height" id="Myi-qS-GqC"/>
+                                            <constraint firstItem="5QP-UN-gA0" firstAttribute="height" secondItem="9um-2k-pOp" secondAttribute="height" id="NfQ-d8-pFg"/>
+                                            <constraint firstItem="9um-2k-pOp" firstAttribute="top" secondItem="Kdb-Gh-xFK" secondAttribute="top" id="Pqq-uS-I5c"/>
+                                            <constraint firstItem="9um-2k-pOp" firstAttribute="leading" secondItem="Kdb-Gh-xFK" secondAttribute="leading" id="R9V-LY-QcN"/>
+                                            <constraint firstItem="ub2-zO-P92" firstAttribute="top" secondItem="Kdb-Gh-xFK" secondAttribute="top" id="W5T-Nu-A0p"/>
+                                            <constraint firstItem="kct-te-jpk" firstAttribute="height" secondItem="9um-2k-pOp" secondAttribute="height" id="e96-aR-BVy"/>
+                                            <constraint firstItem="ub2-zO-P92" firstAttribute="height" secondItem="9um-2k-pOp" secondAttribute="height" id="eay-U9-e8T"/>
+                                            <constraint firstItem="aEX-hb-Vdr" firstAttribute="width" secondItem="9um-2k-pOp" secondAttribute="width" id="gpA-gt-fpM"/>
+                                            <constraint firstItem="eBd-fY-Ty5" firstAttribute="top" secondItem="Kdb-Gh-xFK" secondAttribute="top" id="hrG-Xd-Ypo"/>
+                                            <constraint firstItem="3hD-s2-U52" firstAttribute="width" secondItem="9um-2k-pOp" secondAttribute="width" id="lXA-mW-PYR"/>
+                                            <constraint firstItem="aEX-hb-Vdr" firstAttribute="top" secondItem="Kdb-Gh-xFK" secondAttribute="top" id="lZV-hA-lpo"/>
+                                            <constraint firstItem="pxe-MA-fYo" firstAttribute="height" secondItem="9um-2k-pOp" secondAttribute="height" id="mEk-9I-G3W"/>
+                                            <constraint firstItem="eBd-fY-Ty5" firstAttribute="height" secondItem="9um-2k-pOp" secondAttribute="height" id="s66-TR-EMz"/>
+                                            <constraint firstItem="zvf-Wf-Wsw" firstAttribute="top" secondItem="Kdb-Gh-xFK" secondAttribute="top" id="t1c-c7-Lrk"/>
+                                            <constraint firstItem="jhi-i3-UbC" firstAttribute="width" secondItem="9um-2k-pOp" secondAttribute="width" id="t70-lj-X4c"/>
+                                            <constraint firstItem="3hD-s2-U52" firstAttribute="top" secondItem="Kdb-Gh-xFK" secondAttribute="top" id="v38-KR-cT0"/>
+                                            <constraint firstItem="aEX-hb-Vdr" firstAttribute="height" secondItem="9um-2k-pOp" secondAttribute="height" id="vno-hS-OPK"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="3WJ-i8-rr8"/>
+                                                <exclude reference="lXA-mW-PYR"/>
+                                                <exclude reference="BcU-B1-5Hh"/>
+                                                <exclude reference="Dqz-0C-qvp"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <exclude reference="gpA-gt-fpM"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="7d3-yG-ZwK"/>
+                                                <exclude reference="3WJ-i8-rr8"/>
+                                                <exclude reference="lXA-mW-PYR"/>
+                                                <exclude reference="Dqz-0C-qvp"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.33371838927268982" green="0.51054686307907104" blue="0.68785446882247925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -358,26 +528,42 @@
                             <constraint firstItem="Sdf-YC-23U" firstAttribute="top" secondItem="lAm-8R-gor" secondAttribute="top" id="2Y8-Pn-6pL"/>
                             <constraint firstAttribute="trailing" secondItem="DwW-rB-f6J" secondAttribute="trailing" id="3S0-zb-vUX"/>
                             <constraint firstItem="rHt-ON-cre" firstAttribute="height" secondItem="lAm-8R-gor" secondAttribute="height" multiplier="0.3" id="4hy-QX-JiN"/>
+                            <constraint firstItem="JMA-up-RNZ" firstAttribute="top" secondItem="Yzm-KS-bQ1" secondAttribute="bottom" constant="100" id="Dpz-uJ-veK"/>
                             <constraint firstAttribute="trailing" secondItem="Sdf-YC-23U" secondAttribute="trailing" id="FOw-nr-7Mj"/>
                             <constraint firstItem="rHt-ON-cre" firstAttribute="centerX" secondItem="lAm-8R-gor" secondAttribute="centerX" id="JWT-tZ-rhF"/>
-                            <constraint firstItem="JMA-up-RNZ" firstAttribute="top" secondItem="FUO-n7-9UW" secondAttribute="bottom" constant="30" id="KIs-ua-gqR"/>
-                            <constraint firstItem="FUO-n7-9UW" firstAttribute="centerX" secondItem="lAm-8R-gor" secondAttribute="centerX" id="KzK-8y-uYj"/>
-                            <constraint firstItem="FUO-n7-9UW" firstAttribute="top" secondItem="rHt-ON-cre" secondAttribute="bottom" constant="16" id="Mnz-9H-e26"/>
+                            <constraint firstItem="CnA-Wf-U8c" firstAttribute="width" secondItem="lAm-8R-gor" secondAttribute="width" multiplier="0.08" id="OmB-gm-czr"/>
+                            <constraint firstItem="Yzm-KS-bQ1" firstAttribute="centerX" secondItem="lAm-8R-gor" secondAttribute="centerX" id="QRu-hv-Ko8"/>
                             <constraint firstItem="rHt-ON-cre" firstAttribute="top" secondItem="36e-ae-RRF" secondAttribute="bottom" constant="8" id="TCm-UM-dQI"/>
                             <constraint firstItem="S8M-ob-yZ3" firstAttribute="centerX" secondItem="36e-ae-RRF" secondAttribute="centerX" id="UFe-g1-lDn"/>
                             <constraint firstItem="36e-ae-RRF" firstAttribute="baseline" secondItem="S8M-ob-yZ3" secondAttribute="firstBaseline" constant="22" id="Wqf-Ax-1uX"/>
                             <constraint firstItem="36e-ae-RRF" firstAttribute="centerX" secondItem="lAm-8R-gor" secondAttribute="centerX" id="YSK-b8-clg"/>
                             <constraint firstItem="aIM-b5-pNf" firstAttribute="top" secondItem="DwW-rB-f6J" secondAttribute="bottom" id="bAR-N8-d4w"/>
+                            <constraint firstItem="Yzm-KS-bQ1" firstAttribute="top" secondItem="rHt-ON-cre" secondAttribute="bottom" constant="32" id="c2d-lW-JQn"/>
+                            <constraint firstItem="OMN-NT-MX0" firstAttribute="width" secondItem="lAm-8R-gor" secondAttribute="width" multiplier="0.08" id="ehw-o4-oEK"/>
+                            <constraint firstItem="JMA-up-RNZ" firstAttribute="top" secondItem="Yzm-KS-bQ1" secondAttribute="bottom" constant="40" id="gHd-ZW-bRO"/>
                             <constraint firstItem="DwW-rB-f6J" firstAttribute="leading" secondItem="lAm-8R-gor" secondAttribute="leading" id="ha0-gW-Sbb"/>
                             <constraint firstItem="Sdf-YC-23U" firstAttribute="leading" secondItem="lAm-8R-gor" secondAttribute="leading" id="jLa-uL-Jpr"/>
                             <constraint firstItem="36e-ae-RRF" firstAttribute="top" secondItem="6Fm-Mu-sB3" secondAttribute="bottom" id="lEj-ue-qHX"/>
                             <constraint firstItem="JMA-up-RNZ" firstAttribute="centerX" secondItem="lAm-8R-gor" secondAttribute="centerX" id="loP-ys-yis"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Dpz-uJ-veK"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="Dpz-uJ-veK"/>
+                                <exclude reference="gHd-ZW-bRO"/>
+                                <exclude reference="ehw-o4-oEK"/>
+                                <exclude reference="OmB-gm-czr"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
-                        <outlet property="answerStackView" destination="FUO-n7-9UW" id="8Jv-G9-oMk"/>
                         <outlet property="bottomVerticalStackView" destination="JMA-up-RNZ" id="jA7-45-Hhp"/>
                         <outlet property="logoImageView" destination="rHt-ON-cre" id="aKN-rO-alS"/>
+                        <outlet property="middleVerticalStackView" destination="Yzm-KS-bQ1" id="XQq-9g-Pym"/>
                         <outlet property="navCircleView" destination="36e-ae-RRF" id="U0T-Cm-xNq"/>
                     </connections>
                 </viewController>

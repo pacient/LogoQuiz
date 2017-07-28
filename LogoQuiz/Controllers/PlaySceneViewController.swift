@@ -11,36 +11,44 @@ import UIKit
 class PlaySceneViewController: UIViewController {
     @IBOutlet weak var navCircleView: UIView!
     @IBOutlet weak var logoImageView: UIImageView!
-    @IBOutlet weak var answerStackView: UIStackView!
     
+    @IBOutlet weak var middleVerticalStackView: UIStackView!
     @IBOutlet weak var bottomVerticalStackView: UIStackView!
-    var word = "BMW"
+    var brand = "BMW"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureStackView()
-        configureImageView()
+        configureMiddleStackView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        configureImageView()
         configureNavCircleView()
         configureBottomVerticalStackView()
     }
     
-    fileprivate func configureStackView() {
-        let letters = word.count
-        for i in letters...answerStackView.arrangedSubviews.count - 1 {
-            answerStackView.arrangedSubviews[i].isHidden = true
+    //This methods shows the correct number of squares under the logo depending on the brand name
+    fileprivate func configureMiddleStackView() {
+        let wordsInBrand = brand.split(separator: " ")
+        guard wordsInBrand.count > 0 else { return }
+        for i in 0...wordsInBrand.count - 1 {
+            if let stackView = middleVerticalStackView.arrangedSubviews[i] as? UIStackView {
+                for index in 0...wordsInBrand[i].count - 1 {
+                    stackView.arrangedSubviews[index].isHidden = false
+                }
+            }
         }
     }
     
     fileprivate func configureImageView() {
-        logoImageView.layer.cornerRadius = 10
         logoImageView.layer.shadowColor = UIColor.black.cgColor
-        logoImageView.layer.shadowOpacity = 0.7
+        logoImageView.layer.shadowOpacity = 0.5
         logoImageView.layer.shadowOffset = CGSize(width: -4, height: 7)
-        logoImageView.layer.shadowRadius = 7
+        logoImageView.layer.shadowRadius = 3
         logoImageView.layer.shadowPath = UIBezierPath(rect: logoImageView.bounds).cgPath
     }
     
@@ -56,7 +64,9 @@ class PlaySceneViewController: UIViewController {
         var allLetters = getAllLettersToShow()
         bottomVerticalStackView.arrangedSubviews.forEach { (arrangedView) in
             if let stack = arrangedView as? UIStackView {
-               _ = stack.arrangedSubviews.map { ($0 as! SquareView).label.text = "\(allLetters.removeFirst())"
+                _ = stack.arrangedSubviews.map {
+                    guard let square = $0 as? SquareView else { return }
+                    square.label?.text = "\(allLetters.removeFirst())"
                 }
             }
         }
@@ -64,8 +74,10 @@ class PlaySceneViewController: UIViewController {
     
     fileprivate func getAllLettersToShow() -> [Character]{
         var charArray = [Character]()
-        for char in word { // Get first the letters that are in the actual word
-            charArray.append(char)
+        for char in brand { // Get first the letters that are in the actual word
+            if char != " " {
+                charArray.append(char)
+            }
         }
         for _ in charArray.count..<20 { //Now add random letters to it
             charArray.append(randomLetter())
