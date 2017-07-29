@@ -10,24 +10,29 @@ import UIKit
 
 class PlaySceneViewController: MasterViewController {
     @IBOutlet weak var logoImageView: UIImageView!
-    
+    @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var middleVerticalStackView: UIStackView!
     @IBOutlet weak var bottomVerticalStackView: UIStackView!
-    var brand = "SEVEN ELEVEN"
+    
+    var brandViewModel: BrandViewModel!
     
     //MARK: View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard UserManager.brandToFind != nil else {
+            self.navigationController?.popViewController(animated: false)
+            return
+        }
+        
+        brandViewModel = BrandViewModel(brand: UserManager.brandToFind!)
+        levelLabel.text = "\(brandViewModel.brandLevel)"
         addTapGestureToSquares()
         configureMiddleStackView()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        guard UserManager.brandToFind != nil else {return}
         configureImageView()
         configureBottomVerticalStackView()
     }
@@ -35,7 +40,7 @@ class PlaySceneViewController: MasterViewController {
     //MARK: Configure Views
     //This methods shows the correct number of squares under the logo depending on the brand name
     fileprivate func configureMiddleStackView() {
-        let wordsInBrand = brand.split(separator: " ")
+        let wordsInBrand = brandViewModel.brandName.split(separator: " ")
         guard wordsInBrand.count > 0 else { return }
         for i in 0...wordsInBrand.count - 1 {
             if let stackView = middleVerticalStackView.arrangedSubviews[i] as? UIStackView {
@@ -52,6 +57,7 @@ class PlaySceneViewController: MasterViewController {
         logoImageView.layer.shadowOffset = CGSize(width: -4, height: 7)
         logoImageView.layer.shadowRadius = 3
         logoImageView.layer.shadowPath = UIBezierPath(rect: logoImageView.bounds).cgPath
+        logoImageView.image = UIImage(named: brandViewModel.imageName)
     }
     
     fileprivate func configureBottomVerticalStackView() {
@@ -103,7 +109,7 @@ class PlaySceneViewController: MasterViewController {
     
     
     @IBAction func backPressed(_ sender: Any) {
-        //go back to main menu
+        navigationController?.popViewController(animated: true)
     }
     
     //MARK: Helper Functions
@@ -122,7 +128,7 @@ class PlaySceneViewController: MasterViewController {
     }
     
     fileprivate func checkIfWinner() {
-        let wordsNumber = brand.split(separator: " ").count
+        let wordsNumber = brandViewModel.brandName.split(separator: " ").count
         var typedWord = ""
         let firstStack = middleVerticalStackView.arrangedSubviews[0] as! UIStackView
         let visibleSquares = firstStack.arrangedSubviews.filter{ $0.isHidden == false} as! [SquareView]
@@ -140,18 +146,31 @@ class PlaySceneViewController: MasterViewController {
             }
         }
         
-        if typedWord == brand {
+        if typedWord == brandViewModel.brandName {
             //Proceed to next level
             print("WE HAVE A WINNER!!!!")
+            nextLevel()
         }else {
             //Shake the stack view because WE GOT INCORRECT ANSWER!
             print("WE HAVE A LOSER!!!!")
         }
     }
     
+    fileprivate func nextLevel() {
+        UserDefaults.standard.set(UserManager.levelsCompleted+1, forKey: Constants.levelsCompleted)
+        UserDefaults.standard.set(UserManager.cash+5, forKey: Constants.cash)
+        //here we are reseting the view controller so all the views go back to their initial state, you don't want to animate it to look more realistic.
+        let storyboard = UIStoryboard(name: "PlayScene", bundle: nil)
+        let vc = storyboard.instantiateInitialViewController()!
+        guard var viewcontrollers = self.navigationController?.viewControllers else {return}
+        viewcontrollers.removeLast()
+        viewcontrollers.append(vc)
+        navigationController?.setViewControllers(viewcontrollers, animated: false)
+    }
+    
     fileprivate func getAllLettersToShow() -> [Character]{
         var charArray = [Character]()
-        for char in brand { // Get first the letters that are in the actual word
+        for char in brandViewModel.brandName { // Get first the letters that are in the actual word
             if char != " " {
                 charArray.append(char)
             }
@@ -168,5 +187,4 @@ class PlaySceneViewController: MasterViewController {
         let r = Int(arc4random_uniform(UInt32(a.characters.count)))
         return String(a[a.index(a.startIndex, offsetBy: r)]).characters.first!
     }
-    
 }

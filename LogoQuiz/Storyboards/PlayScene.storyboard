@@ -570,15 +570,16 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="constraints">
-                                <exclude reference="OmB-gm-czr"/>
                                 <include reference="Dpz-uJ-veK"/>
                                 <exclude reference="gHd-ZW-bRO"/>
                                 <exclude reference="ehw-o4-oEK"/>
+                                <exclude reference="OmB-gm-czr"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="bottomVerticalStackView" destination="JMA-up-RNZ" id="jA7-45-Hhp"/>
+                        <outlet property="levelLabel" destination="S8M-ob-yZ3" id="eoM-vb-mbP"/>
                         <outlet property="logoImageView" destination="rHt-ON-cre" id="aKN-rO-alS"/>
                         <outlet property="middleVerticalStackView" destination="Yzm-KS-bQ1" id="XQq-9g-Pym"/>
                     </connections>

@@ -11,6 +11,8 @@ import UIKit
 class MainViewController: MasterViewController {
     
     @IBAction func playPressed(_ sender: Any) {
+        let playVC = UIStoryboard(name: "PlayScene", bundle: nil).instantiateInitialViewController()!
+        navigationController?.pushViewController(playVC, animated: true)
     }
     
     @IBAction func resetProgressPressed(_ sender: Any) {
