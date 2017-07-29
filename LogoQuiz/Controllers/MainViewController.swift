@@ -9,6 +9,11 @@
 import UIKit
 
 class MainViewController: MasterViewController {
+    @IBOutlet weak var cashLabel: UILabel!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        cashLabel.text = "💵\(UserManager.cash)"
+    }
     
     @IBAction func playPressed(_ sender: Any) {
         let playVC = UIStoryboard(name: "PlayScene", bundle: nil).instantiateInitialViewController()!

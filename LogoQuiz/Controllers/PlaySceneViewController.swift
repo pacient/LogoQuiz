@@ -13,6 +13,7 @@ class PlaySceneViewController: MasterViewController {
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var middleVerticalStackView: UIStackView!
     @IBOutlet weak var bottomVerticalStackView: UIStackView!
+    @IBOutlet weak var cashLabel: UILabel!
     
     var brandViewModel: BrandViewModel!
     
@@ -35,6 +36,11 @@ class PlaySceneViewController: MasterViewController {
         guard UserManager.brandToFind != nil else {return}
         configureImageView()
         configureBottomVerticalStackView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        cashLabel.text = "💵\(UserManager.cash)"
     }
     
     //MARK: Configure Views

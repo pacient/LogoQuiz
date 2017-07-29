@@ -10,6 +10,7 @@ import UIKit
 
 class SettingsViewController: MasterViewController {
     @IBOutlet weak var stackview: UIStackView!
+    @IBOutlet weak var cashLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +18,7 @@ class SettingsViewController: MasterViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        cashLabel.text = "💵\(UserManager.cash)"
         stackview.bounds.origin.x -= self.view.bounds.width
     }
     
