@@ -31,9 +31,28 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sdf-YC-23U">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAT-B5-PBR" customClass="YellowButton" customModule="LogoQuiz" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="26" width="55" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="F3Y-ol-uxK"/>
+                                            <constraint firstAttribute="height" constant="30" id="iTI-7X-3tO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="17"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Back">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backPressed:" destination="Yuj-gz-2bH" eventType="touchUpInside" id="Srv-7r-qOP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.077577359974384294" green="0.23701548303167019" blue="0.35893875360488892" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="hAT-B5-PBR" firstAttribute="leading" secondItem="Sdf-YC-23U" secondAttribute="leading" constant="8" id="BFy-FM-OFK"/>
                                     <constraint firstAttribute="height" constant="64" id="cvm-e5-VUW"/>
+                                    <constraint firstAttribute="bottom" secondItem="hAT-B5-PBR" secondAttribute="bottom" constant="8" id="x3N-Ct-nMj"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DwW-rB-f6J">

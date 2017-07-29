@@ -111,6 +111,11 @@ class PlaySceneViewController: MasterViewController {
         bottomSquare.alpha = 1
     }
     
+    
+    @IBAction func backPressed(_ sender: Any) {
+        //go back to main menu
+    }
+    
     //MARK: Helper Functions
     fileprivate func insertToSquare(letter: String, tag: Int, completion: @escaping () -> Void) {
         loop: for stackview in middleVerticalStackView.arrangedSubviews as! [UIStackView] {
