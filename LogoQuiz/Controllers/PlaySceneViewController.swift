@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PlaySceneViewController: UIViewController {
+class PlaySceneViewController: MasterViewController {
     @IBOutlet weak var navCircleView: UIView!
     @IBOutlet weak var logoImageView: UIImageView!
     
