@@ -14,16 +14,19 @@ class PlaySceneViewController: UIViewController {
     
     @IBOutlet weak var middleVerticalStackView: UIStackView!
     @IBOutlet weak var bottomVerticalStackView: UIStackView!
-    var brand = "BMW"
+    var brand = "SEVEN ELEVEN"
     
+    //MARK: View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        addTapGestureToSquares()
         configureMiddleStackView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         configureImageView()
@@ -31,6 +34,7 @@ class PlaySceneViewController: UIViewController {
         configureBottomVerticalStackView()
     }
     
+    //MARK: Configure Views
     //This methods shows the correct number of squares under the logo depending on the brand name
     fileprivate func configureMiddleStackView() {
         let wordsInBrand = brand.split(separator: " ")
@@ -72,6 +76,84 @@ class PlaySceneViewController: UIViewController {
         }
     }
     
+    fileprivate func addTapGestureToSquares() {
+        _ = middleVerticalStackView.arrangedSubviews.map { ($0 as? UIStackView)?.arrangedSubviews.map{
+                let tap = UITapGestureRecognizer(target: self, action: #selector(self.removeLetterFromSquare(_:)))
+                $0.addGestureRecognizer(tap)
+            }
+        }
+        _ = bottomVerticalStackView.arrangedSubviews.map { ($0 as? UIStackView)?.arrangedSubviews.map{
+                let tap = UITapGestureRecognizer(target: self, action: #selector(self.bottomSquareTapped(_:)))
+                $0.addGestureRecognizer(tap)
+            }
+        }
+    }
+    
+    //MARK: Actions
+    @objc func bottomSquareTapped(_ sender: UITapGestureRecognizer) {
+        guard let squareView = sender.view as? SquareView else { return }
+        guard let letter = squareView.label.text, squareView.isUserInteractionEnabled else { return }
+        //add the letter to the next available square in the middle stack
+        insertToSquare(letter: letter, tag: squareView.tag) {
+            //disable the pressed view
+            squareView.isUserInteractionEnabled = false
+            squareView.alpha = 0.5
+        }
+    }
+    
+    @objc func removeLetterFromSquare(_ sender: UITapGestureRecognizer) {
+        guard let squareView = sender.view as? SquareView else { return }
+        guard squareView.label.text != nil else { return }
+        squareView.label.text = nil
+        let stackIndex = squareView.tag >= 10 ? 1 : 0
+        let bottomSquare = (bottomVerticalStackView.arrangedSubviews[stackIndex] as? UIStackView)?.arrangedSubviews.filter{$0.tag == squareView.tag}.first as! SquareView
+        bottomSquare.isUserInteractionEnabled = true
+        bottomSquare.alpha = 1
+    }
+    
+    //MARK: Helper Functions
+    fileprivate func insertToSquare(letter: String, tag: Int, completion: @escaping () -> Void) {
+        loop: for stackview in middleVerticalStackView.arrangedSubviews as! [UIStackView] {
+            for square in stackview.arrangedSubviews as! [SquareView] {
+                if square.isHidden == false, square.label.text == nil {
+                    square.label.text = letter
+                    square.tag = tag
+                    completion()
+                    checkIfWinner()
+                    break loop
+                }
+            }
+        }
+    }
+    
+    fileprivate func checkIfWinner() {
+        let wordsNumber = brand.split(separator: " ").count
+        var typedWord = ""
+        let firstStack = middleVerticalStackView.arrangedSubviews[0] as! UIStackView
+        let visibleSquares = firstStack.arrangedSubviews.filter{ $0.isHidden == false} as! [SquareView]
+        for square in visibleSquares {
+            guard let letter = square.label.text else { return }
+            typedWord += letter
+        }
+        if wordsNumber > 1 {
+            typedWord += " "
+            let secondStack = middleVerticalStackView.arrangedSubviews[1] as! UIStackView
+            let visibleSecondSquares = secondStack.arrangedSubviews.filter{ $0.isHidden == false} as! [SquareView]
+            for square in visibleSecondSquares {
+                guard let letter = square.label.text else { return }
+                typedWord += letter
+            }
+        }
+        
+        if typedWord == brand {
+            //Proceed to next level
+            print("WE HAVE A WINNER!!!!")
+        }else {
+            //Shake the stack view because WE GOT INCORRECT ANSWER!
+            print("WE HAVE A LOSER!!!!")
+        }
+    }
+    
     fileprivate func getAllLettersToShow() -> [Character]{
         var charArray = [Character]()
         for char in brand { // Get first the letters that are in the actual word
@@ -86,7 +168,7 @@ class PlaySceneViewController: UIViewController {
         return charArray
     }
     
-    public func randomLetter() -> Character {
+    fileprivate func randomLetter() -> Character {
         let a = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         let r = Int(arc4random_uniform(UInt32(a.characters.count)))
         return String(a[a.index(a.startIndex, offsetBy: r)]).characters.first!
