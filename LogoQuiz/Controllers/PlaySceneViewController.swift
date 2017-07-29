@@ -9,7 +9,6 @@
 import UIKit
 
 class PlaySceneViewController: MasterViewController {
-    @IBOutlet weak var navCircleView: UIView!
     @IBOutlet weak var logoImageView: UIImageView!
     
     @IBOutlet weak var middleVerticalStackView: UIStackView!
@@ -30,7 +29,6 @@ class PlaySceneViewController: MasterViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         configureImageView()
-        configureNavCircleView()
         configureBottomVerticalStackView()
     }
     
@@ -54,14 +52,6 @@ class PlaySceneViewController: MasterViewController {
         logoImageView.layer.shadowOffset = CGSize(width: -4, height: 7)
         logoImageView.layer.shadowRadius = 3
         logoImageView.layer.shadowPath = UIBezierPath(rect: logoImageView.bounds).cgPath
-    }
-    
-    fileprivate func configureNavCircleView() {
-        let frame = navCircleView.frame
-        navCircleView.frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.width, height: frame.width)
-        navCircleView.layer.cornerRadius = navCircleView.bounds.size.width/2
-        navCircleView.layer.borderWidth = 2
-        navCircleView.layer.borderColor = UIColor.white.cgColor
     }
     
     fileprivate func configureBottomVerticalStackView() {

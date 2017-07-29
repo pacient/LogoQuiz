@@ -62,7 +62,7 @@
                                     <constraint firstAttribute="height" constant="50" id="PMZ-GX-c4h"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36e-ae-RRF">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36e-ae-RRF" customClass="CircleNavView" customModule="LogoQuiz" customModuleProvider="target">
                                 <rect key="frame" x="147.5" y="20" width="80" height="80.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agb-s3-v7b">
@@ -581,7 +581,6 @@
                         <outlet property="bottomVerticalStackView" destination="JMA-up-RNZ" id="jA7-45-Hhp"/>
                         <outlet property="logoImageView" destination="rHt-ON-cre" id="aKN-rO-alS"/>
                         <outlet property="middleVerticalStackView" destination="Yzm-KS-bQ1" id="XQq-9g-Pym"/>
-                        <outlet property="navCircleView" destination="36e-ae-RRF" id="U0T-Cm-xNq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFi-Eq-2uA" userLabel="First Responder" sceneMemberID="firstResponder"/>

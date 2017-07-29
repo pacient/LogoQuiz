@@ -11,9 +11,11 @@
 		388F42831F2CAEB700509033 /* RadialGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F42821F2CAEB700509033 /* RadialGradientLayer.swift */; };
 		388F42871F2CAFD000509033 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F42861F2CAFD000509033 /* MasterViewController.swift */; };
 		388F42891F2CB2C400509033 /* YellowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F42881F2CB2C400509033 /* YellowButton.swift */; };
+		388F428B1F2CBB5B00509033 /* CircleNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F428A1F2CBB5B00509033 /* CircleNavView.swift */; };
+		388F428D1F2CBD4600509033 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F428C1F2CBD4600509033 /* MainViewController.swift */; };
+		388F428F1F2CC37700509033 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F428E1F2CC37600509033 /* SettingsViewController.swift */; };
 		38920D3D1F2A8E2B00824E5F /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38920D3C1F2A8E2B00824E5F /* Array.swift */; };
 		38921F7A1F2A17D6003A8F3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38921F791F2A17D6003A8F3A /* AppDelegate.swift */; };
-		38921F7C1F2A17D6003A8F3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38921F7B1F2A17D6003A8F3A /* ViewController.swift */; };
 		38921F7F1F2A17D6003A8F3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38921F7D1F2A17D6003A8F3A /* Main.storyboard */; };
 		38921F811F2A17D6003A8F3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38921F801F2A17D6003A8F3A /* Assets.xcassets */; };
 		38921F841F2A17D6003A8F3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38921F821F2A17D6003A8F3A /* LaunchScreen.storyboard */; };
@@ -46,10 +48,12 @@
 		388F42821F2CAEB700509033 /* RadialGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadialGradientLayer.swift; path = ../../../../Desktop/HolidayTime/HolidayTime/RadialGradientLayer.swift; sourceTree = "<group>"; };
 		388F42861F2CAFD000509033 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		388F42881F2CB2C400509033 /* YellowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowButton.swift; sourceTree = "<group>"; };
+		388F428A1F2CBB5B00509033 /* CircleNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleNavView.swift; sourceTree = "<group>"; };
+		388F428C1F2CBD4600509033 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		388F428E1F2CC37600509033 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		38920D3C1F2A8E2B00824E5F /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		38921F761F2A17D6003A8F3A /* LogoQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogoQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38921F791F2A17D6003A8F3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		38921F7B1F2A17D6003A8F3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		38921F7E1F2A17D6003A8F3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38921F801F2A17D6003A8F3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38921F831F2A17D6003A8F3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 			children = (
 				38281D021F2A74B8009E41D7 /* SquareView.swift */,
 				388F42881F2CB2C400509033 /* YellowButton.swift */,
+				388F428A1F2CBB5B00509033 /* CircleNavView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -147,7 +152,6 @@
 				38921FAB1F2A1B72003A8F3A /* Resources */,
 				38921FA71F2A17E4003A8F3A /* Storyboards */,
 				38921F791F2A17D6003A8F3A /* AppDelegate.swift */,
-				38921F7B1F2A17D6003A8F3A /* ViewController.swift */,
 				38921F801F2A17D6003A8F3A /* Assets.xcassets */,
 				38921F821F2A17D6003A8F3A /* LaunchScreen.storyboard */,
 				38921F851F2A17D6003A8F3A /* Info.plist */,
@@ -195,6 +199,8 @@
 			children = (
 				38921FAF1F2A2F52003A8F3A /* PlaySceneViewController.swift */,
 				388F42861F2CAFD000509033 /* MasterViewController.swift */,
+				388F428C1F2CBD4600509033 /* MainViewController.swift */,
+				388F428E1F2CC37600509033 /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -334,10 +340,12 @@
 			files = (
 				38921FB01F2A2F52003A8F3A /* PlaySceneViewController.swift in Sources */,
 				38920D3D1F2A8E2B00824E5F /* Array.swift in Sources */,
-				38921F7C1F2A17D6003A8F3A /* ViewController.swift in Sources */,
 				38921F7A1F2A17D6003A8F3A /* AppDelegate.swift in Sources */,
+				388F428F1F2CC37700509033 /* SettingsViewController.swift in Sources */,
+				388F428B1F2CBB5B00509033 /* CircleNavView.swift in Sources */,
 				388F42831F2CAEB700509033 /* RadialGradientLayer.swift in Sources */,
 				388F42891F2CB2C400509033 /* YellowButton.swift in Sources */,
+				388F428D1F2CBD4600509033 /* MainViewController.swift in Sources */,
 				388F42871F2CAFD000509033 /* MasterViewController.swift in Sources */,
 				38281D031F2A74B8009E41D7 /* SquareView.swift in Sources */,
 			);
