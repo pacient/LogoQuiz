@@ -11,16 +11,39 @@ import UIKit
 class MainViewController: MasterViewController {
     @IBOutlet weak var cashLabel: UILabel!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateCashText), name: Notifications.updateCash, object: nil)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
+        updateCashText()
+    }
+    
+    @objc func updateCashText() {
         cashLabel.text = "💵\(UserManager.cash)"
     }
     
+    fileprivate func presentCongratsAlert() {
+        let alert = UIAlertController(title: "Congratulations", message: "You've completed all levels. Please keep the app updated for more levels.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "YAY!", style: .default, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func playPressed(_ sender: Any) {
-        let playVC = UIStoryboard(name: "PlayScene", bundle: nil).instantiateInitialViewController()!
+        guard let brand = UserManager.brandToFind else {
+            presentCongratsAlert()
+            return
+        }
+        let playVC = UIStoryboard(name: "PlayScene", bundle: nil).instantiateInitialViewController() as! PlaySceneViewController
+        playVC.brandViewModel = BrandViewModel(brand: brand)
         navigationController?.pushViewController(playVC, animated: true)
     }
     
     @IBAction func resetProgressPressed(_ sender: Any) {
+        self.present(UserManager.resetProgressAlert(), animated: true, completion: nil)
     }
     
     @IBAction func settingsPressed(_ sender: Any) {

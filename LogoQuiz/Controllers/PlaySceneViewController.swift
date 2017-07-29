@@ -24,7 +24,6 @@ class PlaySceneViewController: MasterViewController {
             self.navigationController?.popViewController(animated: false)
             return
         }
-        
         brandViewModel = BrandViewModel(brand: UserManager.brandToFind!)
         levelLabel.text = "\(brandViewModel.brandLevel)"
         addTapGestureToSquares()

@@ -237,7 +237,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="playPressed:" destination="RAQ-G3-LSN" eventType="touchUpInside" id="aHX-V4-4ch"/>
+                                            <action selector="resetGamePressed:" destination="RAQ-G3-LSN" eventType="touchUpInside" id="WZH-Q5-9F1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBK-mx-yf7" customClass="YellowButton" customModule="LogoQuiz" customModuleProvider="target">
@@ -247,9 +247,6 @@
                                         <state key="normal" title="Contact Us">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <action selector="resetProgressPressed:" destination="RAQ-G3-LSN" eventType="touchUpInside" id="R9l-Z0-jkG"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFE-5p-R0p" customClass="YellowButton" customModule="LogoQuiz" customModuleProvider="target">
                                         <rect key="frame" x="61.666666666666686" y="135.99999999999997" width="146" height="40"/>
@@ -258,9 +255,6 @@
                                         <state key="normal" title="Remove Ads">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <action selector="settingsPressed:" destination="RAQ-G3-LSN" eventType="touchUpInside" id="8At-2e-v7N"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYb-r8-CGP" customClass="YellowButton" customModule="LogoQuiz" customModuleProvider="target">
                                         <rect key="frame" x="44.666666666666686" y="203.99999999999997" width="180" height="36"/>
@@ -269,9 +263,6 @@
                                         <state key="normal" title="Buy In-Game Cash">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <action selector="settingsPressed:" destination="RAQ-G3-LSN" eventType="touchUpInside" id="M6O-UM-TbE"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <variation key="heightClass=regular-widthClass=regular" spacing="50"/>

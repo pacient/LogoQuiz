@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.statusBarStyle = .lightContent
         BrandManager.decodeJSON { (stored) in
             if stored {
-                print(BrandManager.brands)
+                //dissmiss splash screen here
             }
         }
         

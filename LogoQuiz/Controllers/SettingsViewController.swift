@@ -14,12 +14,17 @@ class SettingsViewController: MasterViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(updateCashText), name: Notifications.updateCash, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        cashLabel.text = "💵\(UserManager.cash)"
+        updateCashText()
         stackview.bounds.origin.x -= self.view.bounds.width
+    }
+    
+    @objc func updateCashText() {
+        cashLabel.text = "💵\(UserManager.cash)"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -28,6 +33,9 @@ class SettingsViewController: MasterViewController {
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: {
             self.stackview.bounds.origin.x += self.view.bounds.width
         }, completion: nil)
+    }
+    @IBAction func resetGamePressed(_ sender: Any) {
+        self.present(UserManager.resetProgressAlert(), animated: true, completion: nil)
     }
     
     @IBAction func backPressed(_ sender: Any) {
