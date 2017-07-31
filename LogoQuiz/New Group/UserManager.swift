@@ -36,4 +36,13 @@ class UserManager {
         alert.addAction(cancelAction)
         return alert
     }
+    
+    class func congratulationsAlert(completion: (()->Void)? = nil) -> UIAlertController {
+        let alert = UIAlertController(title: "Congratulations 🎉", message: "You've completed all levels. Please keep the app updated for more levels.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "YAY!", style: .default) { (action) in
+            completion?()
+        }
+        alert.addAction(action)
+        return alert
+    }
 }

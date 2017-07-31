@@ -20,11 +20,11 @@ class PlaySceneViewController: MasterViewController {
     //MARK: View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard UserManager.brandToFind != nil else {
+        guard let brand = UserManager.brandToFind else {
             self.navigationController?.popViewController(animated: false)
             return
         }
-        brandViewModel = BrandViewModel(brand: UserManager.brandToFind!)
+        brandViewModel = BrandViewModel(brand: brand)
         levelLabel.text = "\(brandViewModel.brandLevel)"
         addTapGestureToSquares()
         configureMiddleStackView()
@@ -165,6 +165,14 @@ class PlaySceneViewController: MasterViewController {
     fileprivate func nextLevel() {
         UserDefaults.standard.set(UserManager.levelsCompleted+1, forKey: Constants.levelsCompleted)
         UserDefaults.standard.set(UserManager.cash+5, forKey: Constants.cash)
+        guard BrandManager.brands.count > UserManager.levelsCompleted else {
+            //Present a screen congratulating the user that they wont the game 🎉
+            let alert = UserManager.congratulationsAlert(completion: {
+                self.navigationController?.popViewController(animated: true)
+            })
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
         //here we are reseting the view controller so all the views go back to their initial state, you don't want to animate it to look more realistic.
         let storyboard = UIStoryboard(name: "PlayScene", bundle: nil)
         let vc = storyboard.instantiateInitialViewController()!

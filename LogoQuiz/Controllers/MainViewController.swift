@@ -26,9 +26,7 @@ class MainViewController: MasterViewController {
     }
     
     fileprivate func presentCongratsAlert() {
-        let alert = UIAlertController(title: "Congratulations", message: "You've completed all levels. Please keep the app updated for more levels.", preferredStyle: .alert)
-        let action = UIAlertAction(title: "YAY!", style: .default, handler: nil)
-        alert.addAction(action)
+        let alert = UserManager.congratulationsAlert()
         self.present(alert, animated: true, completion: nil)
     }
     
