@@ -39,7 +39,7 @@ class PlaySceneViewController: MasterViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        cashLabel.text = "💵\(UserManager.cash)"
+        cashLabel.text = UserManager.cashString
     }
     
     //MARK: Configure Views
@@ -158,6 +158,7 @@ class PlaySceneViewController: MasterViewController {
         }else {
             //Shake the stack view because WE GOT INCORRECT ANSWER!
             print("WE HAVE A LOSER!!!!")
+            middleVerticalStackView.shake()
         }
     }
     

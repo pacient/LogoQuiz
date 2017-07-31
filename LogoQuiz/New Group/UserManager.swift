@@ -20,6 +20,9 @@ class UserManager {
     static var brandToFind: Brand? {
         return BrandManager.brands.filter({$0.level == UserManager.levelsCompleted+1}).first
     }
+    static var cashString: String {
+        return "💵\(cash)"
+    }
     
     class func resetProgressAlert() -> UIAlertController {
         let alert = UIAlertController(title: "Warning!", message: "If you reset the progress your cash will be set to 💵1500 and you will be set back to level 1. Do you want to continue?", preferredStyle: .alert)

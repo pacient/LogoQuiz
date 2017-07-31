@@ -22,7 +22,7 @@ class MainViewController: MasterViewController {
     }
     
     @objc func updateCashText() {
-        cashLabel.text = "💵\(UserManager.cash)"
+        cashLabel.text = UserManager.cashString
     }
     
     fileprivate func presentCongratsAlert() {
