@@ -14,6 +14,8 @@ class PlaySceneViewController: MasterViewController {
     @IBOutlet weak var middleVerticalStackView: MiddleStackView!
     @IBOutlet weak var bottomVerticalStackView: BottomStackView!
     @IBOutlet weak var cashLabel: UILabel!
+    @IBOutlet weak var findButton: UIButton!
+    @IBOutlet weak var findButtonIpad: UIButton!
     
     var brandViewModel: BrandViewModel!
     
@@ -24,6 +26,9 @@ class PlaySceneViewController: MasterViewController {
             self.navigationController?.popViewController(animated: false)
             return
         }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(hideFindButton), name: Notifications.hideFindButton, object: nil)
+        
         brandViewModel = BrandViewModel(brand: brand)
         addTapGestureToSquares()
         middleVerticalStackView.configure(with: brandViewModel.brandName)
@@ -72,6 +77,20 @@ class PlaySceneViewController: MasterViewController {
     
     @IBAction func findLettersPressed(_ sender: UIButton) {
         print("find correct letter")
+        var letterToShow = brandViewModel.getCorrectLetter()
+        guard let key = letterToShow.first?.key else {return}
+        let inWordKey = key.first
+        let inSubviewKey = key.dropFirst()
+        let char = letterToShow.values.first!
+        guard let inWord = Int(String(inWordKey!)) else {return}
+        guard let inSubview = Int(String(inSubviewKey)) else {return}
+        let stackView = middleVerticalStackView.arrangedSubviews[inWord] as! UIStackView
+        let square = stackView.arrangedSubviews[inSubview] as! SquareView
+        if square.isUserInteractionEnabled {
+            square.label.text = "\(char)"
+            square.isUserInteractionEnabled = false
+            square.alpha = 0.5
+        }
     }
     
     @IBAction func removeLettersPressed(_ sender: UIButton) {
@@ -95,6 +114,11 @@ class PlaySceneViewController: MasterViewController {
                 }
             }
         }
+    }
+    
+    @objc fileprivate func hideFindButton() {
+        self.findButton.isHidden = true
+        self.findButtonIpad.isHidden = true
     }
     
     fileprivate func checkIfWinner() {
