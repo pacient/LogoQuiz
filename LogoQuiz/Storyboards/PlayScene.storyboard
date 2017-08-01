@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Yuj-gz-2bH">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -26,11 +27,11 @@
                         <viewControllerLayoutGuide type="bottom" id="aIM-b5-pNf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lAm-8R-gor">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sdf-YC-23U">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAT-B5-PBR" customClass="YellowButton" customModule="LogoQuiz" customModuleProvider="target">
                                         <rect key="frame" x="8" y="26" width="55" height="30"/>
@@ -48,7 +49,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGl-WT-fx8">
-                                        <rect key="frame" x="323" y="36" width="44" height="20"/>
+                                        <rect key="frame" x="716" y="36" width="44" height="20"/>
                                         <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -64,14 +65,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DwW-rB-f6J">
-                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="974" width="768" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="PMZ-GX-c4h"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36e-ae-RRF" customClass="CircleNavView" customModule="LogoQuiz" customModuleProvider="target">
-                                <rect key="frame" x="147.5" y="20" width="80" height="80.5"/>
+                                <rect key="frame" x="344" y="20" width="80" height="80.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agb-s3-v7b">
                                         <rect key="frame" x="24" y="8" width="31.5" height="15"/>
@@ -92,64 +93,64 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8M-ob-yZ3">
-                                <rect key="frame" x="188" y="50.5" width="0.0" height="0.0"/>
+                                <rect key="frame" x="384.5" y="50.5" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rHt-ON-cre" customClass="LogoImageView" customModule="LogoQuiz" customModuleProvider="target">
-                                <rect key="frame" x="54" y="108" width="267" height="200"/>
+                                <rect key="frame" x="179" y="108" width="410" height="307"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rHt-ON-cre" secondAttribute="height" multiplier="4:3" id="2wv-cc-bWE"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="JMA-up-RNZ" customClass="BottomStackView" customModule="LogoQuiz" customModuleProvider="target">
-                                <rect key="frame" x="15" y="384" width="345" height="64"/>
+                                <rect key="frame" x="114" y="651" width="540" height="103"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" distribution="fillEqually" alignment="center" spacing="5" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zpu-ON-tm4">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="540" height="49.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMN-NT-MX0" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="49.5" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="OMN-NT-MX0" secondAttribute="height" multiplier="1:1" id="pZc-bZ-gHv"/>
                                                 </constraints>
                                             </view>
                                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GH4-Ds-Tx3" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="35" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="54.5" y="0.0" width="49.5" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MMm-ik-xf1" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="70" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="109" y="0.0" width="49.5" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fQG-WS-nul" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="105" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="163.5" y="0.0" width="49.5" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Oo-8D-Kfm" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="140" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="218" y="0.0" width="49.5" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ES-9K-2KQ" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="175" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="272.5" y="0.0" width="49.5" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SK6-AL-K29" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="210" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="327" y="0.0" width="49.5" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view tag="7" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2pO-gg-trJ" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="245" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="381.5" y="0.0" width="49.5" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view tag="8" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fwc-oP-28t" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="280" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="436" y="0.0" width="49.5" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ld6-76-l9Q" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="315" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="490.5" y="0.0" width="49.5" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>
@@ -205,49 +206,49 @@
                                         </variation>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" distribution="fillEqually" alignment="center" spacing="5" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6kI-U2-NdI">
-                                        <rect key="frame" x="2.5" y="34" width="340" height="30"/>
+                                        <rect key="frame" x="0.0" y="53.5" width="540" height="49.5"/>
                                         <subviews>
                                             <view tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DwR-rf-qjF" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="29.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="49.5" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="DwR-rf-qjF" secondAttribute="height" multiplier="1:1" id="ZIg-qb-oBN"/>
                                                 </constraints>
                                             </view>
                                             <view tag="11" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ks-Em-TET" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="34.5" y="0.0" width="29.5" height="30"/>
+                                                <rect key="frame" x="54.5" y="0.0" width="49.5" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view tag="12" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ra-ad-DLE" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="69" y="0.0" width="29.5" height="30"/>
+                                                <rect key="frame" x="109" y="0.0" width="49.5" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view tag="13" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQh-IE-AZq" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="103.5" y="0.0" width="29.5" height="30"/>
+                                                <rect key="frame" x="163.5" y="0.0" width="49.5" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view tag="14" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2U7-qX-fAb" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="138" y="0.0" width="29.5" height="30"/>
+                                                <rect key="frame" x="218" y="0.0" width="49.5" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view tag="15" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVH-sr-ht2" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="172.5" y="0.0" width="29.5" height="30"/>
+                                                <rect key="frame" x="272.5" y="0.0" width="49.5" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view tag="16" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="buH-dg-IoR" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="207" y="0.0" width="29.5" height="30"/>
+                                                <rect key="frame" x="327" y="0.0" width="49.5" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view tag="17" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x80-O2-wa3" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="241.5" y="0.0" width="29.5" height="30"/>
+                                                <rect key="frame" x="381.5" y="0.0" width="49.5" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view tag="18" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45j-Gn-EEn" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="276" y="0.0" width="29.5" height="30"/>
+                                                <rect key="frame" x="436" y="0.0" width="49.5" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view tag="19" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m3j-1d-b7C" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="310.5" y="0.0" width="29.5" height="30"/>
+                                                <rect key="frame" x="490.5" y="0.0" width="49.5" height="49.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>
@@ -320,12 +321,13 @@
                                 </variation>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Yzm-KS-bQ1" customClass="MiddleStackView" customModule="LogoQuiz" customModuleProvider="target">
-                                <rect key="frame" x="188" y="340" width="0.0" height="4"/>
+                                <rect key="frame" x="384" y="447" width="0.0" height="104"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" distribution="fillEqually" alignment="center" spacing="5" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FUO-n7-9UW">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="50"/>
                                         <subviews>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CnA-Wf-U8c" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="Ptb-Pq-m2b"/>
@@ -344,39 +346,39 @@
                                                 </variation>
                                             </view>
                                             <view hidden="YES" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="700-Xo-oB9" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="-188" y="0.0" width="30" height="30.5"/>
+                                                <rect key="frame" x="-384" y="0.0" width="0.0" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view hidden="YES" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1kW-qT-oHo" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="-188" y="0.0" width="0.0" height="30.5"/>
+                                                <rect key="frame" x="-384" y="0.0" width="0.0" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view hidden="YES" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbU-I3-VIW" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="-188" y="0.0" width="30" height="30.5"/>
+                                                <rect key="frame" x="-384" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view hidden="YES" tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4BA-Ih-ce4" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="-188" y="0.0" width="0.0" height="30.5"/>
+                                                <rect key="frame" x="-384" y="0.0" width="0.0" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view hidden="YES" tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ejh-Wv-4vU" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="-188" y="0.0" width="30" height="30.5"/>
+                                                <rect key="frame" x="-384" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view hidden="YES" tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fki-hX-m9s" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="-188" y="0.0" width="0.0" height="30.5"/>
+                                                <rect key="frame" x="-384" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view hidden="YES" tag="7" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUw-ob-3dm" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="-188" y="0.0" width="0.0" height="30.5"/>
+                                                <rect key="frame" x="-384" y="0.0" width="0.0" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view hidden="YES" tag="8" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cml-vM-60y" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="-188" y="0.0" width="30" height="30.5"/>
+                                                <rect key="frame" x="-384" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view hidden="YES" tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lzq-8o-RFb" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="-188" y="0.0" width="30" height="30.5"/>
+                                                <rect key="frame" x="-384" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>
@@ -436,10 +438,10 @@
                                         </variation>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" distribution="fillEqually" alignment="center" spacing="5" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kdb-Gh-xFK">
-                                        <rect key="frame" x="0.0" y="4" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="54" width="0.0" height="50"/>
                                         <subviews>
                                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9um-2k-pOp" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="9um-2k-pOp" secondAttribute="height" multiplier="1:1" id="ARC-fO-WUn"/>
@@ -457,39 +459,39 @@
                                                 </variation>
                                             </view>
                                             <view hidden="YES" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5QP-UN-gA0" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="-188" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="-384" y="0.0" width="0.0" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view hidden="YES" tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ub2-zO-P92" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="-188" y="0.0" width="0.0" height="30"/>
+                                                <rect key="frame" x="-384" y="0.0" width="0.0" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view hidden="YES" tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBd-fY-Ty5" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="-188" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="-384" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view hidden="YES" tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hD-s2-U52" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="-188" y="0.0" width="0.0" height="30"/>
+                                                <rect key="frame" x="-384" y="0.0" width="0.0" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view hidden="YES" tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvf-Wf-Wsw" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="-188" y="0.0" width="0.0" height="30"/>
+                                                <rect key="frame" x="-384" y="0.0" width="0.0" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view hidden="YES" tag="6" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kct-te-jpk" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="-188" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="-384" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view hidden="YES" tag="7" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pxe-MA-fYo" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="-188" y="0.0" width="0.0" height="30"/>
+                                                <rect key="frame" x="-384" y="0.0" width="0.0" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view hidden="YES" tag="8" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEX-hb-Vdr" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="-188" y="0.0" width="0.0" height="30"/>
+                                                <rect key="frame" x="-384" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <view hidden="YES" tag="9" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhi-i3-UbC" customClass="SquareView" customModule="LogoQuiz" customModuleProvider="target">
-                                                <rect key="frame" x="-188" y="0.0" width="30" height="30"/>
+                                                <rect key="frame" x="-384" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>
@@ -551,29 +553,86 @@
                                     <constraint firstItem="9um-2k-pOp" firstAttribute="width" secondItem="CnA-Wf-U8c" secondAttribute="width" id="wPH-dp-ILN"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b38-Ij-kLL">
+                                <rect key="frame" x="20" y="931" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="7mz-5f-YQf"/>
+                                    <constraint firstAttribute="width" constant="35" id="fkA-iI-mtK"/>
+                                </constraints>
+                                <state key="normal" image="find"/>
+                                <variation key="heightClass=regular-widthClass=regular" hidden="YES"/>
+                                <connections>
+                                    <action selector="findLettersPressed:" destination="Yuj-gz-2bH" eventType="touchUpInside" id="S34-8R-LK3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Df4-ub-jlq">
+                                <rect key="frame" x="63" y="931" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="096-9G-OQ2"/>
+                                    <constraint firstAttribute="width" constant="35" id="VRX-m4-OQq"/>
+                                </constraints>
+                                <state key="normal" image="remove"/>
+                                <variation key="heightClass=regular-widthClass=regular" hidden="YES"/>
+                                <connections>
+                                    <action selector="removeLettersPressed:" destination="Yuj-gz-2bH" eventType="touchUpInside" id="yKt-q4-L7p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAR-M6-rDh">
+                                <rect key="frame" x="28" y="916" width="55" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0hA-8J-LrY"/>
+                                    <constraint firstAttribute="width" constant="55" id="KxU-aD-gQg"/>
+                                </constraints>
+                                <state key="normal" image="find-iPad"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="findLettersPressed:" destination="Yuj-gz-2bH" eventType="touchUpInside" id="jyA-0e-DUL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4D4-eh-al0">
+                                <rect key="frame" x="91" y="916" width="55" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="FSF-hc-YOv"/>
+                                    <constraint firstAttribute="height" constant="50" id="TNl-KB-pfN"/>
+                                </constraints>
+                                <state key="normal" image="remove-iPad"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="removeLettersPressed:" destination="Yuj-gz-2bH" eventType="touchUpInside" id="GIm-ub-RCv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.33371838927268982" green="0.51054686307907104" blue="0.68785446882247925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Sdf-YC-23U" firstAttribute="top" secondItem="lAm-8R-gor" secondAttribute="top" id="2Y8-Pn-6pL"/>
+                            <constraint firstItem="DwW-rB-f6J" firstAttribute="top" secondItem="Df4-ub-jlq" secondAttribute="bottom" constant="8" id="2dh-7t-ZCz"/>
                             <constraint firstAttribute="trailing" secondItem="DwW-rB-f6J" secondAttribute="trailing" id="3S0-zb-vUX"/>
                             <constraint firstItem="rHt-ON-cre" firstAttribute="height" secondItem="lAm-8R-gor" secondAttribute="height" multiplier="0.3" id="4hy-QX-JiN"/>
+                            <constraint firstItem="Df4-ub-jlq" firstAttribute="leading" secondItem="b38-Ij-kLL" secondAttribute="trailing" constant="8" id="5Cw-ZT-FwI"/>
                             <constraint firstItem="JMA-up-RNZ" firstAttribute="top" secondItem="Yzm-KS-bQ1" secondAttribute="bottom" constant="100" id="Dpz-uJ-veK"/>
                             <constraint firstAttribute="trailing" secondItem="Sdf-YC-23U" secondAttribute="trailing" id="FOw-nr-7Mj"/>
                             <constraint firstItem="rHt-ON-cre" firstAttribute="centerX" secondItem="lAm-8R-gor" secondAttribute="centerX" id="JWT-tZ-rhF"/>
+                            <constraint firstItem="DwW-rB-f6J" firstAttribute="top" secondItem="XAR-M6-rDh" secondAttribute="bottom" constant="8" id="MYI-uj-tIY"/>
                             <constraint firstItem="CnA-Wf-U8c" firstAttribute="width" secondItem="lAm-8R-gor" secondAttribute="width" multiplier="0.08" id="OmB-gm-czr"/>
                             <constraint firstItem="Yzm-KS-bQ1" firstAttribute="centerX" secondItem="lAm-8R-gor" secondAttribute="centerX" id="QRu-hv-Ko8"/>
+                            <constraint firstItem="DwW-rB-f6J" firstAttribute="top" secondItem="b38-Ij-kLL" secondAttribute="bottom" constant="8" id="RNa-DJ-S0Z"/>
                             <constraint firstItem="rHt-ON-cre" firstAttribute="top" secondItem="36e-ae-RRF" secondAttribute="bottom" constant="8" id="TCm-UM-dQI"/>
                             <constraint firstItem="S8M-ob-yZ3" firstAttribute="centerX" secondItem="36e-ae-RRF" secondAttribute="centerX" id="UFe-g1-lDn"/>
+                            <constraint firstItem="XAR-M6-rDh" firstAttribute="leading" secondItem="lAm-8R-gor" secondAttribute="leadingMargin" constant="8" id="VcR-zb-gut"/>
                             <constraint firstItem="36e-ae-RRF" firstAttribute="baseline" secondItem="S8M-ob-yZ3" secondAttribute="firstBaseline" constant="22" id="Wqf-Ax-1uX"/>
                             <constraint firstItem="36e-ae-RRF" firstAttribute="centerX" secondItem="lAm-8R-gor" secondAttribute="centerX" id="YSK-b8-clg"/>
                             <constraint firstItem="aIM-b5-pNf" firstAttribute="top" secondItem="DwW-rB-f6J" secondAttribute="bottom" id="bAR-N8-d4w"/>
                             <constraint firstItem="Yzm-KS-bQ1" firstAttribute="top" secondItem="rHt-ON-cre" secondAttribute="bottom" constant="32" id="c2d-lW-JQn"/>
+                            <constraint firstItem="b38-Ij-kLL" firstAttribute="leading" secondItem="lAm-8R-gor" secondAttribute="leadingMargin" id="d5Q-ai-9AB"/>
                             <constraint firstItem="OMN-NT-MX0" firstAttribute="width" secondItem="lAm-8R-gor" secondAttribute="width" multiplier="0.08" id="ehw-o4-oEK"/>
                             <constraint firstItem="JMA-up-RNZ" firstAttribute="top" secondItem="Yzm-KS-bQ1" secondAttribute="bottom" constant="40" id="gHd-ZW-bRO"/>
                             <constraint firstItem="DwW-rB-f6J" firstAttribute="leading" secondItem="lAm-8R-gor" secondAttribute="leading" id="ha0-gW-Sbb"/>
                             <constraint firstItem="Sdf-YC-23U" firstAttribute="leading" secondItem="lAm-8R-gor" secondAttribute="leading" id="jLa-uL-Jpr"/>
+                            <constraint firstItem="4D4-eh-al0" firstAttribute="leading" secondItem="XAR-M6-rDh" secondAttribute="trailing" constant="8" id="jX9-PG-Onm"/>
+                            <constraint firstItem="Df4-ub-jlq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JMA-up-RNZ" secondAttribute="bottom" constant="8" id="k0m-m9-q3o"/>
                             <constraint firstItem="36e-ae-RRF" firstAttribute="top" secondItem="6Fm-Mu-sB3" secondAttribute="bottom" id="lEj-ue-qHX"/>
                             <constraint firstItem="JMA-up-RNZ" firstAttribute="centerX" secondItem="lAm-8R-gor" secondAttribute="centerX" id="loP-ys-yis"/>
+                            <constraint firstItem="DwW-rB-f6J" firstAttribute="top" secondItem="4D4-eh-al0" secondAttribute="bottom" constant="8" id="n0R-L3-XGL"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -602,4 +661,10 @@
             <point key="canvasLocation" x="381.60000000000002" y="79.610194902548727"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="find" width="35" height="30"/>
+        <image name="find-iPad" width="55" height="48"/>
+        <image name="remove" width="35" height="30"/>
+        <image name="remove-iPad" width="55" height="48"/>
+    </resources>
 </document>

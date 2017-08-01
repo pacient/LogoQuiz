@@ -70,6 +70,13 @@ class PlaySceneViewController: MasterViewController {
         bottomSquare.alpha = 1
     }
     
+    @IBAction func findLettersPressed(_ sender: UIButton) {
+        print("find correct letter")
+    }
+    
+    @IBAction func removeLettersPressed(_ sender: UIButton) {
+        print("remove random letters")
+    }
     
     @IBAction func backPressed(_ sender: Any) {
         navigationController?.popViewController(animated: true)
