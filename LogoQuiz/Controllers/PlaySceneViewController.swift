@@ -12,7 +12,7 @@ class PlaySceneViewController: MasterViewController {
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var middleVerticalStackView: MiddleStackView!
-    @IBOutlet weak var bottomVerticalStackView: UIStackView!
+    @IBOutlet weak var bottomVerticalStackView: BottomStackView!
     @IBOutlet weak var cashLabel: UILabel!
     
     var brandViewModel: BrandViewModel!
@@ -26,14 +26,14 @@ class PlaySceneViewController: MasterViewController {
         }
         brandViewModel = BrandViewModel(brand: brand)
         addTapGestureToSquares()
-        middleVerticalStackView.configureWith(brandName: brandViewModel.brandName)
+        middleVerticalStackView.configure(with: brandViewModel.brandName)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         guard UserManager.brandToFind != nil else {return}
+        bottomVerticalStackView.configure(with: brandViewModel.lettersToShow)
         logoImageView.image = UIImage(named: brandViewModel.imageName)
-        configureBottomVerticalStackView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,31 +43,6 @@ class PlaySceneViewController: MasterViewController {
     }
     
     //MARK: Configure Views
-    //This methods shows the correct number of squares under the logo depending on the brand name
-    fileprivate func configureMiddleStackView() {
-        let wordsInBrand = brandViewModel.brandName.split(separator: " ")
-        guard wordsInBrand.count > 0 else { return }
-        for i in 0...wordsInBrand.count - 1 {
-            if let stackView = middleVerticalStackView.arrangedSubviews[i] as? UIStackView {
-                for index in 0...wordsInBrand[i].count - 1 {
-                    stackView.arrangedSubviews[index].isHidden = false
-                }
-            }
-        }
-    }
-    
-    fileprivate func configureBottomVerticalStackView() {
-        var allLetters = brandViewModel.lettersToShow
-        bottomVerticalStackView.arrangedSubviews.forEach { (arrangedView) in
-            if let stack = arrangedView as? UIStackView {
-                _ = stack.arrangedSubviews.map {
-                    guard let square = $0 as? SquareView else { return }
-                    square.label?.text = "\(allLetters.removeFirst())"
-                }
-            }
-        }
-    }
-    
     fileprivate func addTapGestureToSquares() {
         middleVerticalStackView.addGestureRecognizerToSubviews(with: #selector(self.removeLetterFromSquare(_:)), target: self)
         bottomVerticalStackView.addGestureRecognizerToSubviews(with: #selector(self.bottomSquareTapped(_:)), target: self)

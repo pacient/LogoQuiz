@@ -9,9 +9,9 @@
 import UIKit
 
 class MiddleStackView: UIStackView {
-
-    func configureWith(brandName name: String) {
-        let wordsInBrand = name.split(separator: " ")
+    
+    func configure(with brandName: String) {
+        let wordsInBrand = brandName.split(separator: " ")
         guard wordsInBrand.count > 0 else { return }
         for i in 0...wordsInBrand.count - 1 {
             if let stackView = self.arrangedSubviews[i] as? UIStackView {
@@ -21,5 +21,4 @@ class MiddleStackView: UIStackView {
             }
         }
     }
-
 }

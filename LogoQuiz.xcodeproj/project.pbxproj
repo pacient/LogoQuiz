@@ -35,6 +35,7 @@
 		38921FAD1F2A1B84003A8F3A /* Eurostile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38921FAC1F2A1B83003A8F3A /* Eurostile.ttf */; };
 		38921FB01F2A2F52003A8F3A /* PlaySceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38921FAF1F2A2F52003A8F3A /* PlaySceneViewController.swift */; };
 		38B212951F2F735F001F3C10 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B212941F2F735F001F3C10 /* UIView.swift */; };
+		38E1CD261F3099CC00950F9B /* BottomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E1CD251F3099CC00950F9B /* BottomStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		38921FAC1F2A1B83003A8F3A /* Eurostile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Eurostile.ttf; path = ../../../../Downloads/eurostile/Eurostile.ttf; sourceTree = "<group>"; };
 		38921FAF1F2A2F52003A8F3A /* PlaySceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySceneViewController.swift; sourceTree = "<group>"; };
 		38B212941F2F735F001F3C10 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		38E1CD251F3099CC00950F9B /* BottomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				388F428A1F2CBB5B00509033 /* CircleNavView.swift */,
 				381647BA1F3079820038926E /* LogoImageView.swift */,
 				381647BE1F30836F0038926E /* MiddleStackView.swift */,
+				38E1CD251F3099CC00950F9B /* BottomStackView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				3873EB1C1F2CDD2900AAC196 /* BrandManager.swift in Sources */,
 				3873EB221F2CE41100AAC196 /* BrandViewModel.swift in Sources */,
 				381647BD1F307C7F0038926E /* UIStackView.swift in Sources */,
+				38E1CD261F3099CC00950F9B /* BottomStackView.swift in Sources */,
 				38921F7A1F2A17D6003A8F3A /* AppDelegate.swift in Sources */,
 				381647BF1F30836F0038926E /* MiddleStackView.swift in Sources */,
 				388F428F1F2CC37700509033 /* SettingsViewController.swift in Sources */,
