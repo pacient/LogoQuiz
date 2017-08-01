@@ -11,7 +11,7 @@ import UIKit
 class PlaySceneViewController: MasterViewController {
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var levelLabel: UILabel!
-    @IBOutlet weak var middleVerticalStackView: UIStackView!
+    @IBOutlet weak var middleVerticalStackView: MiddleStackView!
     @IBOutlet weak var bottomVerticalStackView: UIStackView!
     @IBOutlet weak var cashLabel: UILabel!
     
@@ -25,21 +25,21 @@ class PlaySceneViewController: MasterViewController {
             return
         }
         brandViewModel = BrandViewModel(brand: brand)
-        levelLabel.text = "\(brandViewModel.brandLevel)"
         addTapGestureToSquares()
-        configureMiddleStackView()
+        middleVerticalStackView.configureWith(brandName: brandViewModel.brandName)
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         guard UserManager.brandToFind != nil else {return}
-        configureImageView()
+        logoImageView.image = UIImage(named: brandViewModel.imageName)
         configureBottomVerticalStackView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         cashLabel.text = UserManager.cashString
+        levelLabel.text = "\(brandViewModel.brandLevel)"
     }
     
     //MARK: Configure Views
@@ -56,17 +56,8 @@ class PlaySceneViewController: MasterViewController {
         }
     }
     
-    fileprivate func configureImageView() {
-        logoImageView.layer.shadowColor = UIColor.black.cgColor
-        logoImageView.layer.shadowOpacity = 0.5
-        logoImageView.layer.shadowOffset = CGSize(width: -4, height: 7)
-        logoImageView.layer.shadowRadius = 3
-        logoImageView.layer.shadowPath = UIBezierPath(rect: logoImageView.bounds).cgPath
-        logoImageView.image = UIImage(named: brandViewModel.imageName)
-    }
-    
     fileprivate func configureBottomVerticalStackView() {
-        var allLetters = getAllLettersToShow()
+        var allLetters = brandViewModel.lettersToShow
         bottomVerticalStackView.arrangedSubviews.forEach { (arrangedView) in
             if let stack = arrangedView as? UIStackView {
                 _ = stack.arrangedSubviews.map {
@@ -78,16 +69,8 @@ class PlaySceneViewController: MasterViewController {
     }
     
     fileprivate func addTapGestureToSquares() {
-        _ = middleVerticalStackView.arrangedSubviews.map { ($0 as? UIStackView)?.arrangedSubviews.map{
-                let tap = UITapGestureRecognizer(target: self, action: #selector(self.removeLetterFromSquare(_:)))
-                $0.addGestureRecognizer(tap)
-            }
-        }
-        _ = bottomVerticalStackView.arrangedSubviews.map { ($0 as? UIStackView)?.arrangedSubviews.map{
-                let tap = UITapGestureRecognizer(target: self, action: #selector(self.bottomSquareTapped(_:)))
-                $0.addGestureRecognizer(tap)
-            }
-        }
+        middleVerticalStackView.addGestureRecognizerToSubviews(with: #selector(self.removeLetterFromSquare(_:)), target: self)
+        bottomVerticalStackView.addGestureRecognizerToSubviews(with: #selector(self.bottomSquareTapped(_:)), target: self)
     }
     
     //MARK: Actions
@@ -119,14 +102,14 @@ class PlaySceneViewController: MasterViewController {
     
     //MARK: Helper Functions
     fileprivate func insertToSquare(letter: String, tag: Int, completion: @escaping () -> Void) {
-        loop: for stackview in middleVerticalStackView.arrangedSubviews as! [UIStackView] {
+        for stackview in middleVerticalStackView.arrangedSubviews as! [UIStackView] {
             for square in stackview.arrangedSubviews as! [SquareView] {
                 if square.isHidden == false, square.label.text == nil {
                     square.label.text = letter
                     square.tag = tag
                     completion()
                     checkIfWinner()
-                    break loop
+                    return
                 }
             }
         }
@@ -153,11 +136,9 @@ class PlaySceneViewController: MasterViewController {
         
         if typedWord == brandViewModel.brandName {
             //Proceed to next level
-            print("WE HAVE A WINNER!!!!")
             nextLevel()
         }else {
             //Shake the stack view because WE GOT INCORRECT ANSWER!
-            print("WE HAVE A LOSER!!!!")
             middleVerticalStackView.shake()
         }
     }
@@ -180,25 +161,5 @@ class PlaySceneViewController: MasterViewController {
         viewcontrollers.removeLast()
         viewcontrollers.append(vc)
         navigationController?.setViewControllers(viewcontrollers, animated: false)
-    }
-    
-    fileprivate func getAllLettersToShow() -> [Character]{
-        var charArray = [Character]()
-        for char in brandViewModel.brandName { // Get first the letters that are in the actual word
-            if char != " " {
-                charArray.append(char)
-            }
-        }
-        for _ in charArray.count..<20 { //Now add random letters to it
-            charArray.append(randomLetter())
-        }
-        charArray.shuffle()
-        return charArray
-    }
-    
-    fileprivate func randomLetter() -> Character {
-        let a = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        let r = Int(arc4random_uniform(UInt32(a.characters.count)))
-        return String(a[a.index(a.startIndex, offsetBy: r)]).characters.first!
     }
 }

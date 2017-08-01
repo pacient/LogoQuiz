@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		381647BB1F3079820038926E /* LogoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381647BA1F3079820038926E /* LogoImageView.swift */; };
+		381647BD1F307C7F0038926E /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381647BC1F307C7F0038926E /* UIStackView.swift */; };
+		381647BF1F30836F0038926E /* MiddleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381647BE1F30836F0038926E /* MiddleStackView.swift */; };
 		38265B1C1F2D2A6F009020FC /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38265B1B1F2D2A6F009020FC /* Notifications.swift */; };
 		38281D031F2A74B8009E41D7 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38281D021F2A74B8009E41D7 /* SquareView.swift */; };
 		3873EB1C1F2CDD2900AAC196 /* BrandManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873EB1B1F2CDD2900AAC196 /* BrandManager.swift */; };
@@ -52,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		381647BA1F3079820038926E /* LogoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImageView.swift; sourceTree = "<group>"; };
+		381647BC1F307C7F0038926E /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		381647BE1F30836F0038926E /* MiddleStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleStackView.swift; sourceTree = "<group>"; };
 		38265B1B1F2D2A6F009020FC /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		38281D021F2A74B8009E41D7 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
 		3873EB1B1F2CDD2900AAC196 /* BrandManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandManager.swift; sourceTree = "<group>"; };
@@ -116,6 +122,8 @@
 				38281D021F2A74B8009E41D7 /* SquareView.swift */,
 				388F42881F2CB2C400509033 /* YellowButton.swift */,
 				388F428A1F2CBB5B00509033 /* CircleNavView.swift */,
+				381647BA1F3079820038926E /* LogoImageView.swift */,
+				381647BE1F30836F0038926E /* MiddleStackView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -147,6 +155,7 @@
 			children = (
 				38920D3C1F2A8E2B00824E5F /* Array.swift */,
 				38B212941F2F735F001F3C10 /* UIView.swift */,
+				381647BC1F307C7F0038926E /* UIStackView.swift */,
 			);
 			name = Extensions;
 			path = Extension;
@@ -377,7 +386,9 @@
 				3873EB241F2CE86100AAC196 /* UserManager.swift in Sources */,
 				3873EB1C1F2CDD2900AAC196 /* BrandManager.swift in Sources */,
 				3873EB221F2CE41100AAC196 /* BrandViewModel.swift in Sources */,
+				381647BD1F307C7F0038926E /* UIStackView.swift in Sources */,
 				38921F7A1F2A17D6003A8F3A /* AppDelegate.swift in Sources */,
+				381647BF1F30836F0038926E /* MiddleStackView.swift in Sources */,
 				388F428F1F2CC37700509033 /* SettingsViewController.swift in Sources */,
 				38265B1C1F2D2A6F009020FC /* Notifications.swift in Sources */,
 				388F428B1F2CBB5B00509033 /* CircleNavView.swift in Sources */,
@@ -386,6 +397,7 @@
 				388F42891F2CB2C400509033 /* YellowButton.swift in Sources */,
 				38B212951F2F735F001F3C10 /* UIView.swift in Sources */,
 				388F428D1F2CBD4600509033 /* MainViewController.swift in Sources */,
+				381647BB1F3079820038926E /* LogoImageView.swift in Sources */,
 				388F42871F2CAFD000509033 /* MasterViewController.swift in Sources */,
 				38281D031F2A74B8009E41D7 /* SquareView.swift in Sources */,
 			);

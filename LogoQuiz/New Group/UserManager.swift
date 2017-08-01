@@ -18,7 +18,7 @@ class UserManager {
         return ud.integer(forKey: Constants.cash)
     }
     static var brandToFind: Brand? {
-        return BrandManager.brands.filter({$0.level == UserManager.levelsCompleted+1}).first
+        return BrandManager.brands.first(where: {$0.level == levelsCompleted+1})
     }
     static var cashString: String {
         return "💵\(cash)"
