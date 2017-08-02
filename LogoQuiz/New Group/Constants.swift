@@ -12,4 +12,5 @@ struct Constants {
     static let firstLaunch = "firstLaunch"
     static let levelsCompleted = "levelsCompleted"
     static let cash = "cash"
+    static let foundLetters = "foundLetters"
 }

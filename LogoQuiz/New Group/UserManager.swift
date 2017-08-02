@@ -24,11 +24,30 @@ class UserManager {
         return "💵\(cash)"
     }
     
+    class func setValuesForNextLevel() {
+        bumpCash()
+        increaseLevel()
+        resetFoundLettersForLevel()
+    }
+    
+    fileprivate class func bumpCash() {
+        ud.set(cash+5, forKey: Constants.cash)
+    }
+    
+    fileprivate class func increaseLevel() {
+        ud.set(levelsCompleted+1, forKey: Constants.levelsCompleted)
+    }
+    
+    fileprivate class func resetFoundLettersForLevel() {
+        ud.removeObject(forKey: Constants.foundLetters)
+    }
+    
     class func resetProgressAlert() -> UIAlertController {
         let alert = UIAlertController(title: "Warning!", message: "If you reset the progress your cash will be set to 💵1500 and you will be set back to level 1. Do you want to continue?", preferredStyle: .alert)
         let continueAction = UIAlertAction(title: "Continue", style: .default) { (action) in
             ud.set(1500, forKey: Constants.cash)
             ud.set(0, forKey: Constants.levelsCompleted)
+            resetFoundLettersForLevel()
             NotificationCenter.default.post(name: Notifications.updateCash, object: nil)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)

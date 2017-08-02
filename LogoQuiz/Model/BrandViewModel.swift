@@ -37,36 +37,40 @@ struct BrandViewModel {
         return charArray
     }
     
+    var foundLetters: [[String]]
+    var shouldHideFindButton: Bool {
+        return foundLetters.joined().filter({$0 == " "}).count <= 1
+    }
     private var helperChars: [String]
     
     //TODO: Refactor me!!!!!!
-    mutating func getCorrectLetter() -> [String : Character] {
+    mutating func getCorrectLetter() -> [IndexPath : Character] {
         let randomChar = randomLetter(from: helperChars.filter({$0 != "|"}).joined())
         guard randomChar != " " else { return getCorrectLetter() }
-        var words = helperChars.split(separator: " ")
-        var i = 0
-        var index: Int
+        var words = helperChars.split(separator: " ").map({Array($0)})
+        let index: IndexPath
         if let indx = words[0].index(of: String(randomChar)){
-            i = 0
-            index = indx
+            index = IndexPath(row: 0, section: indx)
         }else if let indx = words[1].index(of: String(randomChar)) {
-            i = 1
-            index = indx
+            index = IndexPath(row: 1, section: indx)
         }else {
             return getCorrectLetter()
         }
-        words[i].remove(at: index)
-        words[i].insert("|", at: index)
+        
+        words[index.row].remove(at: index.section)
+        words[index.row].insert("|", at: index.section)
+        foundLetters[index.row].remove(at: index.section)
+        foundLetters[index.row].insert(String(randomChar), at: index.section)
+        UserDefaults.standard.set(foundLetters, forKey: Constants.foundLetters)
         if words.count > 1 {
             self.helperChars = Array(words[0] + [" "] + words[1]).map({String($0)})
         }else {
             self.helperChars = Array(words[0]).map({String($0)})
         }
-        if helperChars.filter({$0 != "|" && $0 != " "}).joined().count == 1 {
+        if shouldHideFindButton {
             NotificationCenter.default.post(name: Notifications.hideFindButton, object: nil)
         }
-        let keyToReturn = i == 1 ? "\(i)\(index - words[0].count - 1)" : "\(i)\(index)"
-        return[keyToReturn: randomChar]
+        return[index: randomChar]
     }
     
     fileprivate func randomLetter(from: String? = nil) -> Character {
@@ -78,5 +82,10 @@ struct BrandViewModel {
     init(brand: Brand) {
         self.brand = brand
         self.helperChars = Array(brand.name.characters).map{String($0)}
+        if let letters = UserDefaults.standard.array(forKey: Constants.foundLetters) as? [[String]] {
+            foundLetters = letters
+        }else {
+            foundLetters = brand.name.components(separatedBy: " ").map({$0.characters.map({ _ in " "})})
+        }
     }
 }

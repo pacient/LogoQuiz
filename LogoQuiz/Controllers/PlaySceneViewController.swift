@@ -31,7 +31,7 @@ class PlaySceneViewController: MasterViewController {
         
         brandViewModel = BrandViewModel(brand: brand)
         addTapGestureToSquares()
-        middleVerticalStackView.configure(with: brandViewModel.brandName)
+        middleVerticalStackView.configure(with: brandViewModel.brandName, foundLetter: brandViewModel.foundLetters)
     }
     
     override func viewDidLayoutSubviews() {
@@ -39,6 +39,9 @@ class PlaySceneViewController: MasterViewController {
         guard UserManager.brandToFind != nil else {return}
         bottomVerticalStackView.configure(with: brandViewModel.lettersToShow)
         logoImageView.image = UIImage(named: brandViewModel.imageName)
+        if brandViewModel.shouldHideFindButton {
+            hideFindButton()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,12 +81,10 @@ class PlaySceneViewController: MasterViewController {
     @IBAction func findLettersPressed(_ sender: UIButton) {
         print("find correct letter")
         var letterToShow = brandViewModel.getCorrectLetter()
-        guard let key = letterToShow.first?.key else {return}
-        let inWordKey = key.first
-        let inSubviewKey = key.dropFirst()
+        guard let key = letterToShow.keys.first else {return}
+        let inWord = key.row
+        let inSubview = key.section
         let char = letterToShow.values.first!
-        guard let inWord = Int(String(inWordKey!)) else {return}
-        guard let inSubview = Int(String(inSubviewKey)) else {return}
         let stackView = middleVerticalStackView.arrangedSubviews[inWord] as! UIStackView
         let square = stackView.arrangedSubviews[inSubview] as! SquareView
         if square.isUserInteractionEnabled {
@@ -150,8 +151,7 @@ class PlaySceneViewController: MasterViewController {
     }
     
     fileprivate func nextLevel() {
-        UserDefaults.standard.set(UserManager.levelsCompleted+1, forKey: Constants.levelsCompleted)
-        UserDefaults.standard.set(UserManager.cash+5, forKey: Constants.cash)
+        UserManager.setValuesForNextLevel()
         guard BrandManager.brands.count > UserManager.levelsCompleted else {
             //Present a screen congratulating the user that they wont the game 🎉
             let alert = UserManager.congratulationsAlert(completion: {
