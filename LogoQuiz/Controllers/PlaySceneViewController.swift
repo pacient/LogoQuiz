@@ -15,7 +15,7 @@ class PlaySceneViewController: MasterViewController {
     @IBOutlet weak var bottomVerticalStackView: BottomStackView!
     @IBOutlet weak var cashLabel: UILabel!
     @IBOutlet weak var findButton: UIButton!
-    @IBOutlet weak var findButtonIpad: UIButton!
+    @IBOutlet weak var removeLettersButton: UIButton!
     
     var brandViewModel: BrandViewModel!
     
@@ -41,6 +41,13 @@ class PlaySceneViewController: MasterViewController {
         logoImageView.image = UIImage(named: brandViewModel.imageName)
         if brandViewModel.shouldHideFindButton {
             hideFindButton()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if UserManager.hasRemovedLettersForLevel {
+            removeLettersPressed(removeLettersButton)
         }
     }
     
@@ -92,10 +99,23 @@ class PlaySceneViewController: MasterViewController {
             square.isUserInteractionEnabled = false
             square.alpha = 0.5
         }
+        checkIfWinner()
     }
     
     @IBAction func removeLettersPressed(_ sender: UIButton) {
-        print("remove random letters")
+        bottomVerticalStackView.arrangedSubviews.flatMap({($0 as? UIStackView)?.arrangedSubviews ?? [$0]}).flatMap({$0 as? SquareView}).forEach { (square) in
+            if let char = square.label.text?.characters.first!, !brandViewModel.brandName.contains(char) {
+                square.alpha = 0
+                square.isUserInteractionEnabled = false
+            }
+        }
+        middleVerticalStackView.arrangedSubviews.flatMap({($0 as? UIStackView)?.arrangedSubviews ?? [$0]}).flatMap({$0 as? SquareView}).forEach { (square) in
+            if let char = square.label.text?.characters.first, !brandViewModel.brandName.contains(char) {
+                square.label.text = nil
+            }
+        }
+        UserManager.removedLetters()
+        sender.isHidden = true
     }
     
     @IBAction func backPressed(_ sender: Any) {
@@ -119,7 +139,6 @@ class PlaySceneViewController: MasterViewController {
     
     @objc fileprivate func hideFindButton() {
         self.findButton.isHidden = true
-        self.findButtonIpad.isHidden = true
     }
     
     fileprivate func checkIfWinner() {
