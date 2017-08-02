@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         let ud = UserDefaults.standard
-        ud.set(0, forKey: Constants.levelsCompleted)
+//        ud.set(0, forKey: Constants.levelsCompleted)
 
         if ud.object(forKey: Constants.firstLaunch) == nil {
             ud.set(0, forKey: Constants.levelsCompleted)
