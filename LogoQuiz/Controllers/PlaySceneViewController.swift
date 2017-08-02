@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PlaySceneViewController: MasterViewController {
+class PlaySceneViewController: MasterViewController, GameHintDelegate {
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var middleVerticalStackView: MiddleStackView!
@@ -18,7 +18,7 @@ class PlaySceneViewController: MasterViewController {
     @IBOutlet weak var removeLettersButton: UIButton!
     
     var brandViewModel: BrandViewModel!
-    
+    var lettersToShow: [Character]!
     //MARK: View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +26,11 @@ class PlaySceneViewController: MasterViewController {
             self.navigationController?.popViewController(animated: false)
             return
         }
-        
         NotificationCenter.default.addObserver(self, selector: #selector(hideFindButton), name: Notifications.hideFindButton, object: nil)
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateCash), name: Notifications.updateCash, object: nil)
+        UserManager.delegate = self
         brandViewModel = BrandViewModel(brand: brand)
+        lettersToShow = brandViewModel.lettersToShow
         addTapGestureToSquares()
         middleVerticalStackView.configure(with: brandViewModel.brandName, foundLetter: brandViewModel.foundLetters)
     }
@@ -37,7 +38,7 @@ class PlaySceneViewController: MasterViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         guard UserManager.brandToFind != nil else {return}
-        bottomVerticalStackView.configure(with: brandViewModel.lettersToShow)
+        bottomVerticalStackView.configure(with: lettersToShow)
         logoImageView.image = UIImage(named: brandViewModel.imageName)
         if brandViewModel.shouldHideFindButton {
             hideFindButton()
@@ -47,13 +48,17 @@ class PlaySceneViewController: MasterViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if UserManager.hasRemovedLettersForLevel {
-            removeLettersPressed(removeLettersButton)
+            removeLetters()
         }
+    }
+    
+    @objc fileprivate func updateCash() {
+        return cashLabel.text = UserManager.cashString
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        cashLabel.text = UserManager.cashString
+        updateCash()
         levelLabel.text = "\(brandViewModel.brandLevel)"
     }
     
@@ -86,36 +91,13 @@ class PlaySceneViewController: MasterViewController {
     }
     
     @IBAction func findLettersPressed(_ sender: UIButton) {
-        print("find correct letter")
-        var letterToShow = brandViewModel.getCorrectLetter()
-        guard let key = letterToShow.keys.first else {return}
-        let inWord = key.row
-        let inSubview = key.section
-        let char = letterToShow.values.first!
-        let stackView = middleVerticalStackView.arrangedSubviews[inWord] as! UIStackView
-        let square = stackView.arrangedSubviews[inSubview] as! SquareView
-        if square.isUserInteractionEnabled {
-            square.label.text = "\(char)"
-            square.isUserInteractionEnabled = false
-            square.alpha = 0.5
-        }
-        checkIfWinner()
+        let alert = UserManager.giveLetterHintAlert()
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func removeLettersPressed(_ sender: UIButton) {
-        bottomVerticalStackView.arrangedSubviews.flatMap({($0 as? UIStackView)?.arrangedSubviews ?? [$0]}).flatMap({$0 as? SquareView}).forEach { (square) in
-            if let char = square.label.text?.characters.first!, !brandViewModel.brandName.contains(char) {
-                square.alpha = 0
-                square.isUserInteractionEnabled = false
-            }
-        }
-        middleVerticalStackView.arrangedSubviews.flatMap({($0 as? UIStackView)?.arrangedSubviews ?? [$0]}).flatMap({$0 as? SquareView}).forEach { (square) in
-            if let char = square.label.text?.characters.first, !brandViewModel.brandName.contains(char) {
-                square.label.text = nil
-            }
-        }
-        UserManager.removedLetters()
-        sender.isHidden = true
+        let alert = UserManager.removeLettersHintAlert()
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func backPressed(_ sender: Any) {
@@ -186,5 +168,42 @@ class PlaySceneViewController: MasterViewController {
         viewcontrollers.removeLast()
         viewcontrollers.append(vc)
         navigationController?.setViewControllers(viewcontrollers, animated: false)
+    }
+    
+    //MARK: Delegates
+    func removeLetters() {
+        DispatchQueue.main.async {
+            self.bottomVerticalStackView.arrangedSubviews.flatMap({($0 as? UIStackView)?.arrangedSubviews ?? [$0]}).flatMap({$0 as? SquareView}).forEach { (square) in
+                if let char = square.label.text?.characters.first!, !self.brandViewModel.brandName.contains(char) {
+                    square.alpha = 0
+                    square.isUserInteractionEnabled = false
+                }
+            }
+            self.middleVerticalStackView.arrangedSubviews.flatMap({($0 as? UIStackView)?.arrangedSubviews ?? [$0]}).flatMap({$0 as? SquareView}).forEach { (square) in
+                if let char = square.label.text?.characters.first, !self.brandViewModel.brandName.contains(char) {
+                    square.label.text = nil
+                }
+            }
+            UserManager.removedLetters()
+            self.removeLettersButton.isHidden = true
+        }
+    }
+    
+    func giveCorrectLetter() {
+        DispatchQueue.main.async {
+            var letterToShow = self.brandViewModel.getCorrectLetter()
+            guard let key = letterToShow.keys.first else {return}
+            let inWord = key.row
+            let inSubview = key.section
+            let char = letterToShow.values.first!
+            let stackView = self.middleVerticalStackView.arrangedSubviews[inWord] as! UIStackView
+            let square = stackView.arrangedSubviews[inSubview] as! SquareView
+            if square.isUserInteractionEnabled {
+                square.label.text = "\(char)"
+                square.isUserInteractionEnabled = false
+                square.alpha = 0.5
+            }
+            self.checkIfWinner()
+        }
     }
 }

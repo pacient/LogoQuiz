@@ -11,6 +11,8 @@ import UIKit
 class UserManager {
     private static let instance = UserManager()
     private static let ud = UserDefaults.standard
+    static var delegate: GameHintDelegate?
+    //MARK: Variables
     static var levelsCompleted: Int {
         return ud.integer(forKey: Constants.levelsCompleted)
     }
@@ -27,17 +29,17 @@ class UserManager {
     static var hasRemovedLettersForLevel: Bool {
         return ud.bool(forKey: Constants.hasRemovedLetters)
     }
-    class func removedLetters() {
-        ud.set(true, forKey: Constants.hasRemovedLetters)
-    }
-    class func setValuesForNextLevel() {
-        bumpCash()
-        increaseLevel()
-        resetHintsForLevel()
-    }
     
+    //MARK: Functions
     fileprivate class func bumpCash() {
         ud.set(cash+5, forKey: Constants.cash)
+    }
+    
+    fileprivate class func decreaseCash(with amount:Int) -> Bool {
+        guard cash - amount >= 0 else {return false}
+        ud.set(cash-amount, forKey: Constants.cash)
+        NotificationCenter.default.post(name: Notifications.updateCash, object: nil)
+        return true
     }
     
     fileprivate class func increaseLevel() {
@@ -47,6 +49,13 @@ class UserManager {
     fileprivate class func resetHintsForLevel() {
         ud.removeObject(forKey: Constants.foundLetters)
         ud.removeObject(forKey: Constants.hasRemovedLetters)
+    }
+    
+    fileprivate class func noCashAlert() -> UIAlertController {
+        let alert = UIAlertController(title: "Ooops!", message: "You don't have enough 💵. Solve levels to get more 💵 or go to the menu to purchase more.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(action)
+        return alert
     }
     
     class func resetProgressAlert() -> UIAlertController {
@@ -71,4 +80,47 @@ class UserManager {
         alert.addAction(action)
         return alert
     }
+    
+    class func removedLetters() {
+        ud.set(true, forKey: Constants.hasRemovedLetters)
+    }
+    class func setValuesForNextLevel() {
+        bumpCash()
+        increaseLevel()
+        resetHintsForLevel()
+    }
+    
+    class func giveLetterHintAlert() -> UIAlertController {
+        let alert = UIAlertController(title: "Letter Hint", message: "Show correct letter for 💵60?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
+            let purchased = self.decreaseCash(with: 60)
+            if purchased {
+                self.delegate?.giveCorrectLetter()
+            }else {
+                UIApplication.shared.keyWindow?.rootViewController?.present(noCashAlert(), animated: true, completion: nil)
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        return alert
+    }
+    
+    class func removeLettersHintAlert() -> UIAlertController {
+        let alert = UIAlertController(title: "Remove Letters Hint", message: "Remove letters that are not part of the solution for 💵80?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
+            let purchased = self.decreaseCash(with: 80)
+            if purchased {
+                self.delegate?.removeLetters()
+            }else {
+                UIApplication.shared.keyWindow?.rootViewController?.present(noCashAlert(), animated: true, completion: nil)
+            }
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        return alert
+    }
+    
+    
 }
