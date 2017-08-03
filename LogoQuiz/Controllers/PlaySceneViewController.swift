@@ -49,6 +49,12 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
         if UserManager.hasRemovedLettersForLevel {
             removeLetters()
         }
+        
+        UIView.animate(withDuration: 0.3) {
+            self.bottomVerticalStackView.alpha = 1
+            self.middleVerticalStackView.alpha = 1
+            self.logoImageView.alpha = 1
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -60,6 +66,15 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
     fileprivate func addTapGestureToSquares() {
         middleVerticalStackView.addGestureRecognizerToSubviews(with: #selector(self.removeLetterFromSquare(_:)), target: self)
         bottomVerticalStackView.addGestureRecognizerToSubviews(with: #selector(self.bottomSquareTapped(_:)), target: self)
+    }
+    
+    fileprivate func addCelebrationView(completion: @escaping ()->Void) {
+        let celebrationView = CelebrationView(frame: view.bounds)
+        view.addSubview(celebrationView)
+        celebrationView.startConfetti()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0) {
+            completion()
+        }
     }
     
     //MARK: Actions
@@ -138,7 +153,10 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
         
         if typedWord == brandViewModel.brandName {
             //Proceed to next level
-            nextLevel()
+            UserManager.setValuesForNextLevel()
+            addCelebrationView {
+                self.nextLevel()
+            }
         }else {
             //Shake the stack view because WE GOT INCORRECT ANSWER!
             middleVerticalStackView.shake()
@@ -146,7 +164,6 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
     }
     
     fileprivate func nextLevel() {
-        UserManager.setValuesForNextLevel()
         guard BrandManager.brands.count > UserManager.levelsCompleted else {
             //Present a screen congratulating the user that they wont the game 🎉
             let alert = UserManager.congratulationsAlert(completion: {

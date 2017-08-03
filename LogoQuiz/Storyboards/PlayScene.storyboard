@@ -90,13 +90,13 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rHt-ON-cre" customClass="LogoImageView" customModule="LogoQuiz" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rHt-ON-cre" customClass="LogoImageView" customModule="LogoQuiz" customModuleProvider="target">
                                 <rect key="frame" x="60" y="108" width="294" height="220.66666666666669"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rHt-ON-cre" secondAttribute="height" multiplier="4:3" id="2wv-cc-bWE"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="JMA-up-RNZ" customClass="BottomStackView" customModule="LogoQuiz" customModuleProvider="target">
+                            <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="JMA-up-RNZ" customClass="BottomStackView" customModule="LogoQuiz" customModuleProvider="target">
                                 <rect key="frame" x="18" y="404.66666666666669" width="378.33333333333331" height="70.666666666666629"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" distribution="fillEqually" alignment="center" spacing="5" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zpu-ON-tm4">
@@ -312,7 +312,7 @@
                                     </mask>
                                 </variation>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Yzm-KS-bQ1" customClass="MiddleStackView" customModule="LogoQuiz" customModuleProvider="target">
+                            <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Yzm-KS-bQ1" customClass="MiddleStackView" customModule="LogoQuiz" customModuleProvider="target">
                                 <rect key="frame" x="207" y="360.66666666666669" width="0.0" height="4"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" distribution="fillEqually" alignment="center" spacing="5" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FUO-n7-9UW">
