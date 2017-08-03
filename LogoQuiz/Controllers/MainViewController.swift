@@ -9,7 +9,7 @@
 import UIKit
 
 class MainViewController: MasterViewController {
-    @IBOutlet weak var cashLabel: UILabel!
+    @IBOutlet weak var blueBar: BlueNavBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,12 +17,16 @@ class MainViewController: MasterViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(updateCashText), name: Notifications.updateCash, object: nil)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         updateCashText()
     }
     
     @objc func updateCashText() {
-        cashLabel.text = UserManager.cashString
+        blueBar.cashLabel?.text = UserManager.cashString
     }
     
     fileprivate func presentCongratsAlert() {

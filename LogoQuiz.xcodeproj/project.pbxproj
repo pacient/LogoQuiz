@@ -12,6 +12,9 @@
 		381647BF1F30836F0038926E /* MiddleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381647BE1F30836F0038926E /* MiddleStackView.swift */; };
 		38265B1C1F2D2A6F009020FC /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38265B1B1F2D2A6F009020FC /* Notifications.swift */; };
 		38281D031F2A74B8009E41D7 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38281D021F2A74B8009E41D7 /* SquareView.swift */; };
+		383307F31F33353E00EEFAC5 /* BlueNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383307F21F33353E00EEFAC5 /* BlueNavBar.swift */; };
+		383307F51F3336BA00EEFAC5 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383307F41F3336BA00EEFAC5 /* UIFont.swift */; };
+		38548FCF1F332B310048DC5F /* CashLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38548FCE1F332B310048DC5F /* CashLabel.swift */; };
 		3873EB1C1F2CDD2900AAC196 /* BrandManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873EB1B1F2CDD2900AAC196 /* BrandManager.swift */; };
 		3873EB1E1F2CDE7000AAC196 /* app.json in Resources */ = {isa = PBXBuildFile; fileRef = 3873EB1D1F2CDE7000AAC196 /* app.json */; };
 		3873EB201F2CE20200AAC196 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873EB1F1F2CE20200AAC196 /* Constants.swift */; };
@@ -63,6 +66,9 @@
 		381647BE1F30836F0038926E /* MiddleStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleStackView.swift; sourceTree = "<group>"; };
 		38265B1B1F2D2A6F009020FC /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		38281D021F2A74B8009E41D7 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
+		383307F21F33353E00EEFAC5 /* BlueNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueNavBar.swift; sourceTree = "<group>"; };
+		383307F41F3336BA00EEFAC5 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		38548FCE1F332B310048DC5F /* CashLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashLabel.swift; sourceTree = "<group>"; };
 		3873EB1B1F2CDD2900AAC196 /* BrandManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandManager.swift; sourceTree = "<group>"; };
 		3873EB1D1F2CDE7000AAC196 /* app.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = app.json; path = ../../../../Desktop/app.json; sourceTree = "<group>"; };
 		3873EB1F1F2CE20200AAC196 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -131,6 +137,8 @@
 				381647BA1F3079820038926E /* LogoImageView.swift */,
 				381647BE1F30836F0038926E /* MiddleStackView.swift */,
 				38E1CD251F3099CC00950F9B /* BottomStackView.swift */,
+				38548FCE1F332B310048DC5F /* CashLabel.swift */,
+				383307F21F33353E00EEFAC5 /* BlueNavBar.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -164,6 +172,7 @@
 				38920D3C1F2A8E2B00824E5F /* Array.swift */,
 				38B212941F2F735F001F3C10 /* UIView.swift */,
 				381647BC1F307C7F0038926E /* UIStackView.swift */,
+				383307F41F3336BA00EEFAC5 /* UIFont.swift */,
 			);
 			name = Extensions;
 			path = Extension;
@@ -393,7 +402,9 @@
 				38921FB01F2A2F52003A8F3A /* PlaySceneViewController.swift in Sources */,
 				38920D3D1F2A8E2B00824E5F /* Array.swift in Sources */,
 				388F42921F2CD45400509033 /* Brand.swift in Sources */,
+				38548FCF1F332B310048DC5F /* CashLabel.swift in Sources */,
 				387917D21F32046D003FD82E /* GameHintDelegate.swift in Sources */,
+				383307F31F33353E00EEFAC5 /* BlueNavBar.swift in Sources */,
 				3873EB241F2CE86100AAC196 /* UserManager.swift in Sources */,
 				3873EB1C1F2CDD2900AAC196 /* BrandManager.swift in Sources */,
 				3873EB221F2CE41100AAC196 /* BrandViewModel.swift in Sources */,
@@ -406,6 +417,7 @@
 				388F428B1F2CBB5B00509033 /* CircleNavView.swift in Sources */,
 				3873EB201F2CE20200AAC196 /* Constants.swift in Sources */,
 				388F42831F2CAEB700509033 /* RadialGradientLayer.swift in Sources */,
+				383307F51F3336BA00EEFAC5 /* UIFont.swift in Sources */,
 				388F42891F2CB2C400509033 /* YellowButton.swift in Sources */,
 				38B212951F2F735F001F3C10 /* UIView.swift in Sources */,
 				388F428D1F2CBD4600509033 /* MainViewController.swift in Sources */,

@@ -13,9 +13,9 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var middleVerticalStackView: MiddleStackView!
     @IBOutlet weak var bottomVerticalStackView: BottomStackView!
-    @IBOutlet weak var cashLabel: UILabel!
     @IBOutlet weak var findButton: UIButton!
     @IBOutlet weak var removeLettersButton: UIButton!
+    @IBOutlet weak var blueBar: BlueNavBar!
     
     var brandViewModel: BrandViewModel!
     var lettersToShow: [Character]!
@@ -53,7 +53,7 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
     }
     
     @objc fileprivate func updateCash() {
-        return cashLabel.text = UserManager.cashString
+        blueBar.cashLabel?.text = UserManager.cashString
     }
     
     override func viewWillAppear(_ animated: Bool) {

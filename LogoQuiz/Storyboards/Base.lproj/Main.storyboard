@@ -28,20 +28,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ptw-34-NVY">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ptw-34-NVY" customClass="BlueNavBar" customModule="LogoQuiz" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuT-Kz-1Sf">
-                                        <rect key="frame" x="362" y="36" width="44" height="20"/>
-                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" red="0.077577359969999996" green="0.237015483" blue="0.35893875359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="AuT-Kz-1Sf" secondAttribute="trailing" constant="8" id="Uly-AD-wO8"/>
-                                    <constraint firstAttribute="bottom" secondItem="AuT-Kz-1Sf" secondAttribute="bottom" constant="8" id="dnv-fE-XRd"/>
                                     <constraint firstAttribute="height" constant="64" id="hXU-o4-kaJ"/>
                                 </constraints>
                             </view>
@@ -132,7 +122,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vUY-Wo-iob"/>
                     <connections>
-                        <outlet property="cashLabel" destination="AuT-Kz-1Sf" id="enA-bt-sFh"/>
+                        <outlet property="blueBar" destination="ptw-34-NVY" id="8wf-CF-6MI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -169,7 +159,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atB-Li-LFN">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atB-Li-LFN" customClass="BlueNavBar" customModule="LogoQuiz" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zc-VG-VpO" customClass="YellowButton" customModule="LogoQuiz" customModuleProvider="target">
@@ -186,19 +176,11 @@
                                             <action selector="backPressed:" destination="RAQ-G3-LSN" eventType="touchUpInside" id="ngi-qO-x9t"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Of4-5G-zLK">
-                                        <rect key="frame" x="362" y="36" width="44" height="20"/>
-                                        <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.077577359969999996" green="0.237015483" blue="0.35893875359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Of4-5G-zLK" secondAttribute="bottom" constant="8" id="GTj-nz-g7t"/>
                                     <constraint firstItem="9zc-VG-VpO" firstAttribute="leading" secondItem="atB-Li-LFN" secondAttribute="leading" constant="8" id="O1u-e1-7RZ"/>
                                     <constraint firstAttribute="height" constant="64" id="mge-cs-hMt"/>
-                                    <constraint firstAttribute="trailing" secondItem="Of4-5G-zLK" secondAttribute="trailing" constant="8" id="uX6-Bf-qWX"/>
                                     <constraint firstAttribute="bottom" secondItem="9zc-VG-VpO" secondAttribute="bottom" constant="8" id="xic-tC-NHM"/>
                                 </constraints>
                             </view>
@@ -295,7 +277,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ccg-gz-CaH"/>
                     <connections>
-                        <outlet property="cashLabel" destination="Of4-5G-zLK" id="FLQ-F3-mbt"/>
+                        <outlet property="blueBar" destination="atB-Li-LFN" id="1Gt-8L-qEs"/>
                         <outlet property="stackview" destination="WbQ-HX-bs5" id="RpJ-eD-43M"/>
                     </connections>
                 </viewController>

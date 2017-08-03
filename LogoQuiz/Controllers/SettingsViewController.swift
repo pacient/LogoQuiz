@@ -10,7 +10,7 @@ import UIKit
 
 class SettingsViewController: MasterViewController {
     @IBOutlet weak var stackview: UIStackView!
-    @IBOutlet weak var cashLabel: UILabel!
+    @IBOutlet weak var blueBar: BlueNavBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class SettingsViewController: MasterViewController {
     }
     
     @objc func updateCashText() {
-        cashLabel.text = UserManager.cashString
+        blueBar.cashLabel?.text = UserManager.cashString
     }
     
     override func viewDidAppear(_ animated: Bool) {
