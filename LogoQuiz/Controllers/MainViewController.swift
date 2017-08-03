@@ -11,24 +11,6 @@ import UIKit
 class MainViewController: MasterViewController {
     @IBOutlet weak var blueBar: BlueNavBar!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(updateCashText), name: Notifications.updateCash, object: nil)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        updateCashText()
-    }
-    
-    @objc func updateCashText() {
-        blueBar.cashLabel?.text = UserManager.cashString
-    }
-    
     fileprivate func presentCongratsAlert() {
         let alert = UserManager.congratulationsAlert()
         self.present(alert, animated: true, completion: nil)

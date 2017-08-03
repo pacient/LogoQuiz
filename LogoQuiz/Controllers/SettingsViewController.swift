@@ -12,19 +12,9 @@ class SettingsViewController: MasterViewController {
     @IBOutlet weak var stackview: UIStackView!
     @IBOutlet weak var blueBar: BlueNavBar!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(updateCashText), name: Notifications.updateCash, object: nil)
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        updateCashText()
         stackview.bounds.origin.x -= self.view.bounds.width
-    }
-    
-    @objc func updateCashText() {
-        blueBar.cashLabel?.text = UserManager.cashString
     }
     
     override func viewDidAppear(_ animated: Bool) {

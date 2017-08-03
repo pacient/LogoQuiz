@@ -27,7 +27,6 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
             return
         }
         NotificationCenter.default.addObserver(self, selector: #selector(hideFindButton), name: Notifications.hideFindButton, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(updateCash), name: Notifications.updateCash, object: nil)
         UserManager.delegate = self
         brandViewModel = BrandViewModel(brand: brand)
         lettersToShow = brandViewModel.lettersToShow
@@ -51,14 +50,9 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
             removeLetters()
         }
     }
-    
-    @objc fileprivate func updateCash() {
-        blueBar.cashLabel?.text = UserManager.cashString
-    }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        updateCash()
         levelLabel.text = "\(brandViewModel.brandLevel)"
     }
     

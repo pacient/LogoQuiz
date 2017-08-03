@@ -27,7 +27,6 @@ class BlueNavBar: UIView {
     func configure() {
         if cashLabel == nil {
             cashLabel = CashLabel()
-            cashLabel.text = UserManager.cashString
             cashLabel.translatesAutoresizingMaskIntoConstraints = false
             cashLabel.font = UIFont.eurostile(with: 20)
             cashLabel.textColor = .white

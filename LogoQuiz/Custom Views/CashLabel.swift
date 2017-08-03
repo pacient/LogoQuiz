@@ -9,6 +9,30 @@
 import UIKit
 
 class CashLabel: UILabel {
+    
+    private var token: NSKeyValueObservation!
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setTextValue(value: CashManager.instance.cash)
+        token = CashManager.instance.observe(\.cash) { [weak self] (manager, _) in
+            DispatchQueue.main.async {
+                if let oldValue = manager.oldCash {
+                    self?.count(from: oldValue, to: manager.cash)
+                }else {
+                    self?.setTextValue(value: manager.cash)
+                }
+            }
+        }
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    deinit {
+        token = nil
+    }
+    
     var animationDuration = 30.0
     
     fileprivate var startingValue = 0
@@ -19,6 +43,7 @@ class CashLabel: UILabel {
     fileprivate var timer: Timer?
     fileprivate var rate: Float = 0.0
     fileprivate var lastUpdate: TimeInterval = 0
+    
     
     fileprivate var currentValue: Int {
         if progress >= totalTime { return destinationValue }
@@ -36,7 +61,6 @@ class CashLabel: UILabel {
         totalTime = animationDuration
         lastUpdate = Date.timeIntervalSinceReferenceDate
         rate = 3.0
-        
         
         addTimer()
         if from >= to {

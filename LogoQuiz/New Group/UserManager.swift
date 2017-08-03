@@ -16,32 +16,16 @@ class UserManager {
     static var levelsCompleted: Int {
         return ud.integer(forKey: Constants.levelsCompleted)
     }
-    static var cash: Int {
-        return ud.integer(forKey: Constants.cash)
-    }
+    
     static var brandToFind: Brand? {
         return BrandManager.brands.first(where: {$0.level == levelsCompleted+1})
     }
-    static var cashString: String {
-        return "💵\(cash)"
-    }
-    
+
     static var hasRemovedLettersForLevel: Bool {
         return ud.bool(forKey: Constants.hasRemovedLetters)
     }
     
     //MARK: Functions
-    fileprivate class func bumpCash() {
-        ud.set(cash+5, forKey: Constants.cash)
-    }
-    
-    fileprivate class func decreaseCash(with amount:Int) -> Bool {
-        guard cash - amount >= 0 else {return false}
-        ud.set(cash-amount, forKey: Constants.cash)
-        NotificationCenter.default.post(name: Notifications.updateCash, object: nil)
-        return true
-    }
-    
     fileprivate class func increaseLevel() {
         ud.set(levelsCompleted+1, forKey: Constants.levelsCompleted)
     }
@@ -61,10 +45,9 @@ class UserManager {
     class func resetProgressAlert() -> UIAlertController {
         let alert = UIAlertController(title: "Warning!", message: "If you reset the progress your cash will be set to 💵1500 and you will be set back to level 1. Do you want to continue?", preferredStyle: .alert)
         let continueAction = UIAlertAction(title: "Continue", style: .default) { (action) in
-            ud.set(1500, forKey: Constants.cash)
+            CashManager.resetCash()
             ud.set(0, forKey: Constants.levelsCompleted)
             resetHintsForLevel()
-            NotificationCenter.default.post(name: Notifications.updateCash, object: nil)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(continueAction)
@@ -85,7 +68,7 @@ class UserManager {
         ud.set(true, forKey: Constants.hasRemovedLetters)
     }
     class func setValuesForNextLevel() {
-        bumpCash()
+        CashManager.bumpCash()
         increaseLevel()
         resetHintsForLevel()
     }
@@ -93,7 +76,7 @@ class UserManager {
     class func giveLetterHintAlert() -> UIAlertController {
         let alert = UIAlertController(title: "Letter Hint", message: "Show correct letter for 💵60?", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
-            let purchased = self.decreaseCash(with: 60)
+            let purchased = CashManager.decreaseCash(for: .correctLetter)
             if purchased {
                 self.delegate?.giveCorrectLetter()
             }else {
@@ -109,7 +92,7 @@ class UserManager {
     class func removeLettersHintAlert() -> UIAlertController {
         let alert = UIAlertController(title: "Remove Letters Hint", message: "Remove letters that are not part of the solution for 💵80?", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
-            let purchased = self.decreaseCash(with: 80)
+            let purchased = CashManager.decreaseCash(for: .removeLetter)
             if purchased {
                 self.delegate?.removeLetters()
             }else {

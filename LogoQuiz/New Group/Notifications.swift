@@ -9,6 +9,5 @@
 import Foundation
 
 struct Notifications {
-    static let updateCash = Notification.Name(rawValue: "updateCash")
     static let hideFindButton = Notification.Name("hideFindButton")
 }

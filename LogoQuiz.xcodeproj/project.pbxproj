@@ -14,6 +14,7 @@
 		38281D031F2A74B8009E41D7 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38281D021F2A74B8009E41D7 /* SquareView.swift */; };
 		383307F31F33353E00EEFAC5 /* BlueNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383307F21F33353E00EEFAC5 /* BlueNavBar.swift */; };
 		383307F51F3336BA00EEFAC5 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383307F41F3336BA00EEFAC5 /* UIFont.swift */; };
+		383307F71F33523700EEFAC5 /* CashManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383307F61F33523700EEFAC5 /* CashManager.swift */; };
 		38548FCF1F332B310048DC5F /* CashLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38548FCE1F332B310048DC5F /* CashLabel.swift */; };
 		3873EB1C1F2CDD2900AAC196 /* BrandManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873EB1B1F2CDD2900AAC196 /* BrandManager.swift */; };
 		3873EB1E1F2CDE7000AAC196 /* app.json in Resources */ = {isa = PBXBuildFile; fileRef = 3873EB1D1F2CDE7000AAC196 /* app.json */; };
@@ -68,6 +69,7 @@
 		38281D021F2A74B8009E41D7 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
 		383307F21F33353E00EEFAC5 /* BlueNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueNavBar.swift; sourceTree = "<group>"; };
 		383307F41F3336BA00EEFAC5 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		383307F61F33523700EEFAC5 /* CashManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashManager.swift; sourceTree = "<group>"; };
 		38548FCE1F332B310048DC5F /* CashLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashLabel.swift; sourceTree = "<group>"; };
 		3873EB1B1F2CDD2900AAC196 /* BrandManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandManager.swift; sourceTree = "<group>"; };
 		3873EB1D1F2CDE7000AAC196 /* app.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = app.json; path = ../../../../Desktop/app.json; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				3873EB231F2CE86100AAC196 /* UserManager.swift */,
 				38265B1B1F2D2A6F009020FC /* Notifications.swift */,
 				387917D11F32046D003FD82E /* GameHintDelegate.swift */,
+				383307F61F33523700EEFAC5 /* CashManager.swift */,
 			);
 			name = Helpers;
 			path = "New Group";
@@ -417,6 +420,7 @@
 				388F428B1F2CBB5B00509033 /* CircleNavView.swift in Sources */,
 				3873EB201F2CE20200AAC196 /* Constants.swift in Sources */,
 				388F42831F2CAEB700509033 /* RadialGradientLayer.swift in Sources */,
+				383307F71F33523700EEFAC5 /* CashManager.swift in Sources */,
 				383307F51F3336BA00EEFAC5 /* UIFont.swift in Sources */,
 				388F42891F2CB2C400509033 /* YellowButton.swift in Sources */,
 				38B212951F2F735F001F3C10 /* UIView.swift in Sources */,
