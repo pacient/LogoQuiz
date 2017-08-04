@@ -42,7 +42,7 @@ public class CelebrationView: UIView {
                   UIColor(red:0.30, green:0.76, blue:0.85, alpha:1.0),
                   UIColor(red:0.58, green:0.39, blue:0.55, alpha:1.0)]
         intensity = 0.5
-        type = .star
+        type = .diamond
         active = false
     }
     
@@ -90,7 +90,7 @@ public class CelebrationView: UIView {
     
     func confetti(with color: UIColor) -> CAEmitterCell {
         let confetti = CAEmitterCell()
-        confetti.birthRate = 6.0 * intensity
+        confetti.birthRate = 8.0 * intensity
         confetti.lifetime = 14.0 * intensity
         confetti.lifetimeRange = 0
         confetti.color = color.cgColor
