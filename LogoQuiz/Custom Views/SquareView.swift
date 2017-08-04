@@ -26,7 +26,7 @@ class SquareView: UIView {
         super.layoutSubviews()
         label.frame = bounds
         let fontSize = (bounds.width/2) + 5
-        label.font = UIFont(name: "Eurostile", size: fontSize)
+        label.font = UIFont.eurostile(with: fontSize)
         configure()
     }
     
