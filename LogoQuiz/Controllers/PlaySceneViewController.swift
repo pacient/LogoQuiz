@@ -80,13 +80,19 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
     //MARK: Actions
     @objc func bottomSquareTapped(_ sender: UITapGestureRecognizer) {
         guard let squareView = sender.view as? SquareView else { return }
-        guard let letter = squareView.label.text, squareView.isUserInteractionEnabled else { return }
-        //add the letter to the next available square in the middle stack
-        insertToSquare(letter: letter, tag: squareView.tag) {
-            //disable the pressed view
-            squareView.isUserInteractionEnabled = false
-            squareView.alpha = 0.5
+        guard let letter = squareView.label.text else { return }
+        
+        if squareView.alpha == 1  {
+            //add the letter to the next available square in the middle stack
+            insertToSquare(letter: letter, tag: squareView.tag) {
+                //disable the pressed view
+                squareView.alpha = 0.5
+            }
+        }else {
+            //remove the letter from the middle view
+            removeFromSquare(with: squareView.tag)
         }
+        
     }
     
     @objc func removeLetterFromSquare(_ sender: UITapGestureRecognizer) {
@@ -95,7 +101,6 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
         squareView.label.text = nil
         let stackIndex = squareView.tag >= 10 ? 1 : 0
         let bottomSquare = (bottomVerticalStackView.arrangedSubviews[stackIndex] as? UIStackView)?.arrangedSubviews.filter{$0.tag == squareView.tag}.first as! SquareView
-        bottomSquare.isUserInteractionEnabled = true
         bottomSquare.alpha = 1
     }
     
@@ -126,6 +131,16 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
                 }
             }
         }
+    }
+    
+    fileprivate func removeFromSquare(with tag: Int) {
+        let square = (middleVerticalStackView.arrangedSubviews[0] as? UIStackView)?.arrangedSubviews.first(where: {$0.tag == tag}) as? SquareView ??
+        /*else check in the second stackView*/(middleVerticalStackView.arrangedSubviews[1] as? UIStackView)?.arrangedSubviews.first(where: {$0.tag == tag}) as? SquareView
+        guard square != nil else {return}
+        square?.label.text = nil
+        let stackIndex = square!.tag >= 10 ? 1 : 0
+        let bottomSquare = (bottomVerticalStackView.arrangedSubviews[stackIndex] as? UIStackView)?.arrangedSubviews.filter{$0.tag == square?.tag}.first as! SquareView
+        bottomSquare.alpha = 1
     }
     
     @objc fileprivate func hideFindButton() {
