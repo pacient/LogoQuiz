@@ -13,10 +13,12 @@ class BlueNavBar: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        configure()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        configure()
     }
     
     override func layoutSubviews() {
@@ -37,5 +39,6 @@ class BlueNavBar: UIView {
             
             addConstraints([trailing,bottom])
         }
+        backgroundColor = .darkBlue
     }
 }

@@ -15,6 +15,7 @@
 		383307F31F33353E00EEFAC5 /* BlueNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383307F21F33353E00EEFAC5 /* BlueNavBar.swift */; };
 		383307F51F3336BA00EEFAC5 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383307F41F3336BA00EEFAC5 /* UIFont.swift */; };
 		383307F71F33523700EEFAC5 /* CashManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383307F61F33523700EEFAC5 /* CashManager.swift */; };
+		3847A6281F3473EE002962E2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3847A6271F3473EE002962E2 /* UIColor.swift */; };
 		38548FCF1F332B310048DC5F /* CashLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38548FCE1F332B310048DC5F /* CashLabel.swift */; };
 		3873EB1C1F2CDD2900AAC196 /* BrandManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873EB1B1F2CDD2900AAC196 /* BrandManager.swift */; };
 		3873EB1E1F2CDE7000AAC196 /* app.json in Resources */ = {isa = PBXBuildFile; fileRef = 3873EB1D1F2CDE7000AAC196 /* app.json */; };
@@ -72,6 +73,7 @@
 		383307F21F33353E00EEFAC5 /* BlueNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueNavBar.swift; sourceTree = "<group>"; };
 		383307F41F3336BA00EEFAC5 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		383307F61F33523700EEFAC5 /* CashManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashManager.swift; sourceTree = "<group>"; };
+		3847A6271F3473EE002962E2 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		38548FCE1F332B310048DC5F /* CashLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashLabel.swift; sourceTree = "<group>"; };
 		3873EB1B1F2CDD2900AAC196 /* BrandManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandManager.swift; sourceTree = "<group>"; };
 		3873EB1D1F2CDE7000AAC196 /* app.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = app.json; path = ../../../../Desktop/app.json; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				38B212941F2F735F001F3C10 /* UIView.swift */,
 				381647BC1F307C7F0038926E /* UIStackView.swift */,
 				383307F41F3336BA00EEFAC5 /* UIFont.swift */,
+				3847A6271F3473EE002962E2 /* UIColor.swift */,
 			);
 			name = Extensions;
 			path = Extension;
@@ -410,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38921FB01F2A2F52003A8F3A /* PlaySceneViewController.swift in Sources */,
+				3847A6281F3473EE002962E2 /* UIColor.swift in Sources */,
 				38920D3D1F2A8E2B00824E5F /* Array.swift in Sources */,
 				388F42921F2CD45400509033 /* Brand.swift in Sources */,
 				38548FCF1F332B310048DC5F /* CashLabel.swift in Sources */,

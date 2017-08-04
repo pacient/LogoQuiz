@@ -19,5 +19,6 @@ class CircleNavView: UIView {
         self.layer.cornerRadius = self.bounds.size.width/2
         self.layer.borderWidth = 2
         self.layer.borderColor = UIColor.white.cgColor
+        backgroundColor = .darkBlue
     }
 }
