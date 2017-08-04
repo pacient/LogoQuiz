@@ -45,6 +45,7 @@
 		38921FB01F2A2F52003A8F3A /* PlaySceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38921FAF1F2A2F52003A8F3A /* PlaySceneViewController.swift */; };
 		38B212951F2F735F001F3C10 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B212941F2F735F001F3C10 /* UIView.swift */; };
 		38E1CD261F3099CC00950F9B /* BottomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E1CD251F3099CC00950F9B /* BottomStackView.swift */; };
+		8F2B40FB94D083593B54452A /* Pods_LogoQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7098A565D7083051DD5D91 /* Pods_LogoQuiz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,11 @@
 		38921FAF1F2A2F52003A8F3A /* PlaySceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySceneViewController.swift; sourceTree = "<group>"; };
 		38B212941F2F735F001F3C10 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		38E1CD251F3099CC00950F9B /* BottomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomStackView.swift; sourceTree = "<group>"; };
+		7B7098A565D7083051DD5D91 /* Pods_LogoQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogoQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		890C53136AF8D27EB1D0C58E /* Pods_LogoQuizTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogoQuizTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0E5253817C1B5DCB3750CB6 /* Pods_LogoQuizUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogoQuizUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF662306E16D1EA6D06F5AAB /* Pods-LogoQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogoQuiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LogoQuiz/Pods-LogoQuiz.debug.xcconfig"; sourceTree = "<group>"; };
+		CCFAFE20D2BD3CE6EE5D0A08 /* Pods-LogoQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogoQuiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-LogoQuiz/Pods-LogoQuiz.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F2B40FB94D083593B54452A /* Pods_LogoQuiz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +203,8 @@
 				38921F8D1F2A17D6003A8F3A /* LogoQuizTests */,
 				38921F981F2A17D6003A8F3A /* LogoQuizUITests */,
 				38921F771F2A17D6003A8F3A /* Products */,
+				97595D28801B53CD0671653E /* Pods */,
+				85AFF869020DE6BBFD066C02 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -276,6 +285,25 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		85AFF869020DE6BBFD066C02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B7098A565D7083051DD5D91 /* Pods_LogoQuiz.framework */,
+				890C53136AF8D27EB1D0C58E /* Pods_LogoQuizTests.framework */,
+				A0E5253817C1B5DCB3750CB6 /* Pods_LogoQuizUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97595D28801B53CD0671653E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BF662306E16D1EA6D06F5AAB /* Pods-LogoQuiz.debug.xcconfig */,
+				CCFAFE20D2BD3CE6EE5D0A08 /* Pods-LogoQuiz.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -283,9 +311,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38921F9E1F2A17D6003A8F3A /* Build configuration list for PBXNativeTarget "LogoQuiz" */;
 			buildPhases = (
+				1D8BE20BF1F9E289CB15A0F3 /* [CP] Check Pods Manifest.lock */,
 				38921F721F2A17D6003A8F3A /* Sources */,
 				38921F731F2A17D6003A8F3A /* Frameworks */,
 				38921F741F2A17D6003A8F3A /* Resources */,
+				DA363A186F88C71C1047E3F1 /* [CP] Embed Pods Frameworks */,
+				33F8F29DB618C88487153694 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -344,6 +375,7 @@
 				TargetAttributes = {
 					38921F751F2A17D6003A8F3A = {
 						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Manual;
 					};
 					38921F891F2A17D6003A8F3A = {
 						CreatedOnToolsVersion = 9.0;
@@ -406,6 +438,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D8BE20BF1F9E289CB15A0F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		33F8F29DB618C88487153694 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LogoQuiz/Pods-LogoQuiz-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA363A186F88C71C1047E3F1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LogoQuiz/Pods-LogoQuiz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		38921F721F2A17D6003A8F3A /* Sources */ = {
@@ -599,14 +679,19 @@
 		};
 		38921F9F1F2A17D6003A8F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF662306E16D1EA6D06F5AAB /* Pods-LogoQuiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = TPWG8G6ELX;
 				INFOPLIST_FILE = LogoQuiz/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nunev.LogoQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f6fc4675-fad6-4c23-8a47-69f4eb400ed0";
+				PROVISIONING_PROFILE_SPECIFIER = "com.nunev.LogoQuiz AppStore";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -614,14 +699,19 @@
 		};
 		38921FA01F2A17D6003A8F3A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCFAFE20D2BD3CE6EE5D0A08 /* Pods-LogoQuiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = TPWG8G6ELX;
 				INFOPLIST_FILE = LogoQuiz/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nunev.LogoQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f6fc4675-fad6-4c23-8a47-69f4eb400ed0";
+				PROVISIONING_PROFILE_SPECIFIER = "com.nunev.LogoQuiz AppStore";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -632,6 +722,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = TPWG8G6ELX;
 				INFOPLIST_FILE = LogoQuizTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nunev.LogoQuizTests;
@@ -647,6 +738,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = TPWG8G6ELX;
 				INFOPLIST_FILE = LogoQuizTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nunev.LogoQuizTests;
@@ -661,6 +753,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = TPWG8G6ELX;
 				INFOPLIST_FILE = LogoQuizUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nunev.LogoQuizUITests;
@@ -675,6 +768,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = TPWG8G6ELX;
 				INFOPLIST_FILE = LogoQuizUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nunev.LogoQuizUITests;

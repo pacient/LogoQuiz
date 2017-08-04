@@ -1,13 +1,12 @@
 # More documentation about how to customize your build
 # can be found here:
 # https://docs.fastlane.tools
-fastlane_version "1.109.0"
+fastlane_version "2.50.1"
 
 # This value helps us track success metrics for Fastfiles
 # we automatically generate. Feel free to remove this line
 # once you get things running smoothly!
 generated_fastfile_id "c201478b-2800-4947-b482-018022487339"
-
 default_platform :ios
 
 # Fastfile actions accept additional configuration, but
@@ -17,7 +16,7 @@ lane :beta do
   # build your iOS app
   gym(
     scheme: "LogoQuiz",
-    #export_method: "app-store"
+    export_method: "app-store"
   )
 
   # upload to Testflight
