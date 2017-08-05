@@ -13,6 +13,9 @@ class CashLabel: UILabel {
     private var token: NSKeyValueObservation!
     override init(frame: CGRect) {
         super.init(frame: frame)
+        isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(cashLabelTapped))
+        addGestureRecognizer(tap)
         setTextValue(value: CashManager.instance.cash)
         token = CashManager.instance.observe(\.cash) { [weak self] (manager, _) in
             DispatchQueue.main.async {
@@ -31,6 +34,11 @@ class CashLabel: UILabel {
     
     deinit {
         token = nil
+    }
+    
+    //TODO: Implement me
+    @objc func cashLabelTapped() {
+        //here we are going to present a small alert like view with all our in-app purchases
     }
     
     var animationDuration = 30.0
