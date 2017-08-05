@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0D3A8596EB92F6B1564F78 /* Pods_LogoQuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890C53136AF8D27EB1D0C58E /* Pods_LogoQuizTests.framework */; };
 		381647BB1F3079820038926E /* LogoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381647BA1F3079820038926E /* LogoImageView.swift */; };
 		381647BD1F307C7F0038926E /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381647BC1F307C7F0038926E /* UIStackView.swift */; };
 		381647BF1F30836F0038926E /* MiddleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381647BE1F30836F0038926E /* MiddleStackView.swift */; };
@@ -15,6 +16,9 @@
 		383307F31F33353E00EEFAC5 /* BlueNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383307F21F33353E00EEFAC5 /* BlueNavBar.swift */; };
 		383307F51F3336BA00EEFAC5 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383307F41F3336BA00EEFAC5 /* UIFont.swift */; };
 		383307F71F33523700EEFAC5 /* CashManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383307F61F33523700EEFAC5 /* CashManager.swift */; };
+		383BB95D1F351628005F919E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383BB95C1F351628005F919E /* StoreKit.framework */; };
+		383BB95F1F3516C1005F919E /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BB95E1F3516C1005F919E /* IAPHelper.swift */; };
+		383BB9611F351707005F919E /* CashProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BB9601F351707005F919E /* CashProducts.swift */; };
 		3847A6281F3473EE002962E2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3847A6271F3473EE002962E2 /* UIColor.swift */; };
 		38548FCF1F332B310048DC5F /* CashLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38548FCE1F332B310048DC5F /* CashLabel.swift */; };
 		3873EB1C1F2CDD2900AAC196 /* BrandManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873EB1B1F2CDD2900AAC196 /* BrandManager.swift */; };
@@ -45,6 +49,7 @@
 		38921FB01F2A2F52003A8F3A /* PlaySceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38921FAF1F2A2F52003A8F3A /* PlaySceneViewController.swift */; };
 		38B212951F2F735F001F3C10 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B212941F2F735F001F3C10 /* UIView.swift */; };
 		38E1CD261F3099CC00950F9B /* BottomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E1CD251F3099CC00950F9B /* BottomStackView.swift */; };
+		5E3480304804A33145FC942A /* Pods_LogoQuizUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E5253817C1B5DCB3750CB6 /* Pods_LogoQuizUITests.framework */; };
 		8F2B40FB94D083593B54452A /* Pods_LogoQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7098A565D7083051DD5D91 /* Pods_LogoQuiz.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +71,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BAD9D58E87DE919F5C64DC2 /* Pods-LogoQuizTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogoQuizTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LogoQuizTests/Pods-LogoQuizTests.debug.xcconfig"; sourceTree = "<group>"; };
+		320065C6D98917D2FD006956 /* Pods-LogoQuizUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogoQuizUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LogoQuizUITests/Pods-LogoQuizUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		381647BA1F3079820038926E /* LogoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImageView.swift; sourceTree = "<group>"; };
 		381647BC1F307C7F0038926E /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		381647BE1F30836F0038926E /* MiddleStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleStackView.swift; sourceTree = "<group>"; };
@@ -74,6 +81,9 @@
 		383307F21F33353E00EEFAC5 /* BlueNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueNavBar.swift; sourceTree = "<group>"; };
 		383307F41F3336BA00EEFAC5 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		383307F61F33523700EEFAC5 /* CashManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashManager.swift; sourceTree = "<group>"; };
+		383BB95C1F351628005F919E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		383BB95E1F3516C1005F919E /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		383BB9601F351707005F919E /* CashProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashProducts.swift; sourceTree = "<group>"; };
 		3847A6271F3473EE002962E2 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		38548FCE1F332B310048DC5F /* CashLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashLabel.swift; sourceTree = "<group>"; };
 		3873EB1B1F2CDD2900AAC196 /* BrandManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandManager.swift; sourceTree = "<group>"; };
@@ -115,6 +125,8 @@
 		A0E5253817C1B5DCB3750CB6 /* Pods_LogoQuizUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogoQuizUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF662306E16D1EA6D06F5AAB /* Pods-LogoQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogoQuiz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LogoQuiz/Pods-LogoQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 		CCFAFE20D2BD3CE6EE5D0A08 /* Pods-LogoQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogoQuiz.release.xcconfig"; path = "Pods/Target Support Files/Pods-LogoQuiz/Pods-LogoQuiz.release.xcconfig"; sourceTree = "<group>"; };
+		F67BBFA3B120A4C950698D7C /* Pods-LogoQuizUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogoQuizUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LogoQuizUITests/Pods-LogoQuizUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FE5E6670CD7A513B5C3AEDC1 /* Pods-LogoQuizTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogoQuizTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LogoQuizTests/Pods-LogoQuizTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F2B40FB94D083593B54452A /* Pods_LogoQuiz.framework in Frameworks */,
+				383BB95D1F351628005F919E /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E0D3A8596EB92F6B1564F78 /* Pods_LogoQuizTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E3480304804A33145FC942A /* Pods_LogoQuizUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +184,7 @@
 				38265B1B1F2D2A6F009020FC /* Notifications.swift */,
 				387917D11F32046D003FD82E /* GameHintDelegate.swift */,
 				383307F61F33523700EEFAC5 /* CashManager.swift */,
+				383BB95E1F3516C1005F919E /* IAPHelper.swift */,
 			);
 			name = Helpers;
 			path = "New Group";
@@ -179,6 +195,7 @@
 			children = (
 				388F42911F2CD45400509033 /* Brand.swift */,
 				3873EB211F2CE41100AAC196 /* BrandViewModel.swift */,
+				383BB9601F351707005F919E /* CashProducts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -288,6 +305,7 @@
 		85AFF869020DE6BBFD066C02 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				383BB95C1F351628005F919E /* StoreKit.framework */,
 				7B7098A565D7083051DD5D91 /* Pods_LogoQuiz.framework */,
 				890C53136AF8D27EB1D0C58E /* Pods_LogoQuizTests.framework */,
 				A0E5253817C1B5DCB3750CB6 /* Pods_LogoQuizUITests.framework */,
@@ -300,6 +318,10 @@
 			children = (
 				BF662306E16D1EA6D06F5AAB /* Pods-LogoQuiz.debug.xcconfig */,
 				CCFAFE20D2BD3CE6EE5D0A08 /* Pods-LogoQuiz.release.xcconfig */,
+				1BAD9D58E87DE919F5C64DC2 /* Pods-LogoQuizTests.debug.xcconfig */,
+				FE5E6670CD7A513B5C3AEDC1 /* Pods-LogoQuizTests.release.xcconfig */,
+				320065C6D98917D2FD006956 /* Pods-LogoQuizUITests.debug.xcconfig */,
+				F67BBFA3B120A4C950698D7C /* Pods-LogoQuizUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -331,9 +353,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38921FA11F2A17D6003A8F3A /* Build configuration list for PBXNativeTarget "LogoQuizTests" */;
 			buildPhases = (
+				B36C24E6A5E9BDABAC9706D9 /* [CP] Check Pods Manifest.lock */,
 				38921F861F2A17D6003A8F3A /* Sources */,
 				38921F871F2A17D6003A8F3A /* Frameworks */,
 				38921F881F2A17D6003A8F3A /* Resources */,
+				7D2539AC218FDA9EB4CBB565 /* [CP] Embed Pods Frameworks */,
+				369F4364C3D48E9C3BE5456E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -349,9 +374,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38921FA41F2A17D6003A8F3A /* Build configuration list for PBXNativeTarget "LogoQuizUITests" */;
 			buildPhases = (
+				8274FDCFB83521712A6766F3 /* [CP] Check Pods Manifest.lock */,
 				38921F911F2A17D6003A8F3A /* Sources */,
 				38921F921F2A17D6003A8F3A /* Frameworks */,
 				38921F931F2A17D6003A8F3A /* Resources */,
+				50342A2D0478FBDC7B91B9A8 /* [CP] Embed Pods Frameworks */,
+				E4D60EBB234235C6466AF05E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -376,6 +404,11 @@
 					38921F751F2A17D6003A8F3A = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					38921F891F2A17D6003A8F3A = {
 						CreatedOnToolsVersion = 9.0;
@@ -470,6 +503,81 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LogoQuiz/Pods-LogoQuiz-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		369F4364C3D48E9C3BE5456E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LogoQuizTests/Pods-LogoQuizTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50342A2D0478FBDC7B91B9A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LogoQuizUITests/Pods-LogoQuizUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D2539AC218FDA9EB4CBB565 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LogoQuizTests/Pods-LogoQuizTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8274FDCFB83521712A6766F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B36C24E6A5E9BDABAC9706D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		DA363A186F88C71C1047E3F1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -483,6 +591,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LogoQuiz/Pods-LogoQuiz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4D60EBB234235C6466AF05E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LogoQuizUITests/Pods-LogoQuizUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -515,10 +638,12 @@
 				383307F71F33523700EEFAC5 /* CashManager.swift in Sources */,
 				383307F51F3336BA00EEFAC5 /* UIFont.swift in Sources */,
 				388F42891F2CB2C400509033 /* YellowButton.swift in Sources */,
+				383BB95F1F3516C1005F919E /* IAPHelper.swift in Sources */,
 				38B212951F2F735F001F3C10 /* UIView.swift in Sources */,
 				388F428D1F2CBD4600509033 /* MainViewController.swift in Sources */,
 				381647BB1F3079820038926E /* LogoImageView.swift in Sources */,
 				388F42871F2CAFD000509033 /* MasterViewController.swift in Sources */,
+				383BB9611F351707005F919E /* CashProducts.swift in Sources */,
 				38281D031F2A74B8009E41D7 /* SquareView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -719,6 +844,7 @@
 		};
 		38921FA21F2A17D6003A8F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BAD9D58E87DE919F5C64DC2 /* Pods-LogoQuizTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -735,6 +861,7 @@
 		};
 		38921FA31F2A17D6003A8F3A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE5E6670CD7A513B5C3AEDC1 /* Pods-LogoQuizTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -751,6 +878,7 @@
 		};
 		38921FA51F2A17D6003A8F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 320065C6D98917D2FD006956 /* Pods-LogoQuizUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = TPWG8G6ELX;
@@ -766,6 +894,7 @@
 		};
 		38921FA61F2A17D6003A8F3A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F67BBFA3B120A4C950698D7C /* Pods-LogoQuizUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = TPWG8G6ELX;

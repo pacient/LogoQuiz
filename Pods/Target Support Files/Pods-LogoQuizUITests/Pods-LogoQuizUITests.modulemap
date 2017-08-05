@@ -1,0 +1,6 @@
+framework module Pods_LogoQuizUITests {
+  umbrella header "Pods-LogoQuizUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
