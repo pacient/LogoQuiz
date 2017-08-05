@@ -19,6 +19,7 @@
 		383BB95D1F351628005F919E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383BB95C1F351628005F919E /* StoreKit.framework */; };
 		383BB95F1F3516C1005F919E /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BB95E1F3516C1005F919E /* IAPHelper.swift */; };
 		383BB9611F351707005F919E /* CashProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BB9601F351707005F919E /* CashProducts.swift */; };
+		38478EE51F364A4600EB306E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38478EE41F364A4600EB306E /* GoogleService-Info.plist */; };
 		3847A6281F3473EE002962E2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3847A6271F3473EE002962E2 /* UIColor.swift */; };
 		38548FCF1F332B310048DC5F /* CashLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38548FCE1F332B310048DC5F /* CashLabel.swift */; };
 		3873EB1C1F2CDD2900AAC196 /* BrandManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873EB1B1F2CDD2900AAC196 /* BrandManager.swift */; };
@@ -88,6 +89,7 @@
 		383BB95C1F351628005F919E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		383BB95E1F3516C1005F919E /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		383BB9601F351707005F919E /* CashProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashProducts.swift; sourceTree = "<group>"; };
+		38478EE41F364A4600EB306E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3847A6271F3473EE002962E2 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		38548FCE1F332B310048DC5F /* CashLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashLabel.swift; sourceTree = "<group>"; };
 		3873EB1B1F2CDD2900AAC196 /* BrandManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandManager.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				38921F791F2A17D6003A8F3A /* AppDelegate.swift */,
 				38921F801F2A17D6003A8F3A /* Assets.xcassets */,
 				38921F821F2A17D6003A8F3A /* LaunchScreen.storyboard */,
+				38478EE41F364A4600EB306E /* GoogleService-Info.plist */,
 				38921F851F2A17D6003A8F3A /* Info.plist */,
 			);
 			path = LogoQuiz;
@@ -465,6 +468,7 @@
 				38921F7F1F2A17D6003A8F3A /* Main.storyboard in Resources */,
 				38921FAA1F2A1801003A8F3A /* PlayScene.storyboard in Resources */,
 				387917D41F322006003FD82E /* Logos.xcassets in Resources */,
+				38478EE51F364A4600EB306E /* GoogleService-Info.plist in Resources */,
 				3873EB1E1F2CDE7000AAC196 /* app.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

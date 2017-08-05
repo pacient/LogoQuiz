@@ -6,6 +6,8 @@ target 'LogoQuiz' do
   use_frameworks!
 
   # Pods for LogoQuiz
+  pod 'Firebase/Core'
+  pod 'Firebase/AdMob'
 
   target 'LogoQuizTests' do
     inherit! :search_paths
