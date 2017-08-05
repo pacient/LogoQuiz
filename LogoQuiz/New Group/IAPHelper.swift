@@ -16,6 +16,7 @@ open class IAPHelper : NSObject  {
     fileprivate var purchasedProductIdentifiers = Set<ProductIdentifier>()
     fileprivate var productsRequest: SKProductsRequest?
     fileprivate var productsRequestCompletionHandler: ProductsRequestCompletionHandler?
+    public private(set) var allProducts = [SKProduct]()
     
     static let IAPHelperPurchaseNotification = "IAPHelperPurchaseNotification"
     
@@ -65,7 +66,8 @@ extension IAPHelper: SKProductsRequestDelegate {
         clearRequestAndHandler()
         
         for p in products {
-            print("Found product: \(p.productIdentifier) \(p.localizedTitle) \(p.price.floatValue)")
+            print("Found product: \(p.productIdentifier) \(p.localizedTitle) \(p.localizedPrice())")
+            self.allProducts.append(p)
         }
     }
     

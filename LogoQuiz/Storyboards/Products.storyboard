@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JTp-it-Lyd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Eurostile.ttf">
+            <string>EurostileRegular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Products View Controller-->
+        <scene sceneID="OPJ-nm-WwB">
+            <objects>
+                <viewController id="JTp-it-Lyd" customClass="ProductsViewController" customModule="LogoQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kFo-PR-wOI"/>
+                        <viewControllerLayoutGuide type="bottom" id="f5o-Nu-Urp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NJE-Qk-CPb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJD-9k-yfU">
+                                <rect key="frame" x="0.0" y="667" width="375" height="333.5"/>
+                                <subviews>
+                                    <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="72" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nip-JQ-jNh">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="334"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cashProduct" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cashProduct" rowHeight="72" id="ctg-Oz-xcT" customClass="ProductCell" customModule="LogoQuiz" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="72"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ctg-Oz-xcT" id="j2t-Ky-uUI">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💵99999 Cash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhX-G2-Grx">
+                                                            <rect key="frame" x="20" y="25" width="130.5" height="23.5"/>
+                                                            <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhX-aI-feK">
+                                                            <rect key="frame" x="285" y="21" width="70" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="SaX-T9-c8m"/>
+                                                                <constraint firstAttribute="width" constant="70" id="km6-Sg-do5"/>
+                                                            </constraints>
+                                                            <state key="normal" title="£0.99" backgroundImage="Button"/>
+                                                            <connections>
+                                                                <action selector="buyPressed:" destination="ctg-Oz-xcT" eventType="touchUpInside" id="uyd-Rb-Zak"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="lhX-aI-feK" firstAttribute="centerY" secondItem="j2t-Ky-uUI" secondAttribute="centerY" id="eoB-Pw-yoH"/>
+                                                        <constraint firstItem="lhX-aI-feK" firstAttribute="trailing" secondItem="j2t-Ky-uUI" secondAttribute="trailingMargin" constant="-12" id="lum-rS-XxI"/>
+                                                        <constraint firstItem="rhX-G2-Grx" firstAttribute="leading" secondItem="j2t-Ky-uUI" secondAttribute="leadingMargin" constant="12" id="p4M-ah-DQs"/>
+                                                        <constraint firstItem="rhX-G2-Grx" firstAttribute="centerY" secondItem="j2t-Ky-uUI" secondAttribute="centerY" id="vVM-me-bdC"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <outlet property="productButton" destination="lhX-aI-feK" id="LkD-lj-wuH"/>
+                                                    <outlet property="productName" destination="rhX-G2-Grx" id="Avi-uW-8uo"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="JTp-it-Lyd" id="gzK-YV-VzZ"/>
+                                            <outlet property="delegate" destination="JTp-it-Lyd" id="dpa-6U-Lkw"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.32333067710000002" green="0.58589772659999995" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Nip-JQ-jNh" firstAttribute="leading" secondItem="rJD-9k-yfU" secondAttribute="leading" id="MWl-z2-zaO"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nip-JQ-jNh" secondAttribute="trailing" id="UVd-W4-604"/>
+                                    <constraint firstItem="Nip-JQ-jNh" firstAttribute="top" secondItem="rJD-9k-yfU" secondAttribute="top" id="k7N-Lw-zBM"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nip-JQ-jNh" secondAttribute="bottom" id="qQb-VU-k4o"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69897795376712324" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rJD-9k-yfU" secondAttribute="trailing" id="H35-EM-vso"/>
+                            <constraint firstItem="rJD-9k-yfU" firstAttribute="height" secondItem="NJE-Qk-CPb" secondAttribute="height" multiplier="0.5" id="dMb-aw-rUH"/>
+                            <constraint firstItem="rJD-9k-yfU" firstAttribute="centerY" secondItem="NJE-Qk-CPb" secondAttribute="centerY" multiplier="2.5" id="lS6-jW-Yhl"/>
+                            <constraint firstItem="rJD-9k-yfU" firstAttribute="leading" secondItem="NJE-Qk-CPb" secondAttribute="leading" id="qmg-Lp-huh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Nip-JQ-jNh" id="omR-HR-FqV"/>
+                        <outlet property="tableViewContainer" destination="rJD-9k-yfU" id="8hI-Wb-oWV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="POd-wo-cQC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="375.19999999999999" y="-351.27436281859076"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Button" width="218" height="61"/>
+    </resources>
+</document>

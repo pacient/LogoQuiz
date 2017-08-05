@@ -11,6 +11,10 @@ import UIKit
 class MainViewController: MasterViewController {
     @IBOutlet weak var blueBar: BlueNavBar!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     fileprivate func presentCongratsAlert() {
         let alert = UserManager.congratulationsAlert()
         self.present(alert, animated: true, completion: nil)

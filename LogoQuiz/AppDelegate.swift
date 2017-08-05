@@ -21,9 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        CashProducts.store.requestProducts { (_, _) in }
+        
         let ud = UserDefaults.standard
-//        ud.set(0, forKey: Constants.levelsCompleted)
-
+        
         if ud.object(forKey: Constants.firstLaunch) == nil {
             ud.set(0, forKey: Constants.levelsCompleted)
             ud.set(1500, forKey: Constants.cash)

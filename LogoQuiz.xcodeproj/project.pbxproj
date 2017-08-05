@@ -48,6 +48,10 @@
 		38921FAD1F2A1B84003A8F3A /* Eurostile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38921FAC1F2A1B83003A8F3A /* Eurostile.ttf */; };
 		38921FB01F2A2F52003A8F3A /* PlaySceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38921FAF1F2A2F52003A8F3A /* PlaySceneViewController.swift */; };
 		38B212951F2F735F001F3C10 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B212941F2F735F001F3C10 /* UIView.swift */; };
+		38B23C551F35BE7800010C9B /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B23C531F35BE7800010C9B /* ProductsViewController.swift */; };
+		38B23C581F35C0E000010C9B /* Products.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B23C571F35C0E000010C9B /* Products.storyboard */; };
+		38B23C5A1F35EB2500010C9B /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B23C591F35EB2500010C9B /* ProductCell.swift */; };
+		38B23C5C1F35F28900010C9B /* SKProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B23C5B1F35F28900010C9B /* SKProduct.swift */; };
 		38E1CD261F3099CC00950F9B /* BottomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E1CD251F3099CC00950F9B /* BottomStackView.swift */; };
 		5E3480304804A33145FC942A /* Pods_LogoQuizUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E5253817C1B5DCB3750CB6 /* Pods_LogoQuizUITests.framework */; };
 		8F2B40FB94D083593B54452A /* Pods_LogoQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7098A565D7083051DD5D91 /* Pods_LogoQuiz.framework */; };
@@ -119,6 +123,10 @@
 		38921FAC1F2A1B83003A8F3A /* Eurostile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Eurostile.ttf; path = ../../../../Downloads/eurostile/Eurostile.ttf; sourceTree = "<group>"; };
 		38921FAF1F2A2F52003A8F3A /* PlaySceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySceneViewController.swift; sourceTree = "<group>"; };
 		38B212941F2F735F001F3C10 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		38B23C531F35BE7800010C9B /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		38B23C571F35C0E000010C9B /* Products.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Products.storyboard; sourceTree = "<group>"; };
+		38B23C591F35EB2500010C9B /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		38B23C5B1F35F28900010C9B /* SKProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKProduct.swift; sourceTree = "<group>"; };
 		38E1CD251F3099CC00950F9B /* BottomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomStackView.swift; sourceTree = "<group>"; };
 		7B7098A565D7083051DD5D91 /* Pods_LogoQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogoQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		890C53136AF8D27EB1D0C58E /* Pods_LogoQuizTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogoQuizTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +178,7 @@
 				38548FCE1F332B310048DC5F /* CashLabel.swift */,
 				383307F21F33353E00EEFAC5 /* BlueNavBar.swift */,
 				3888FC991F3379E600DBCA41 /* CelebrationView.swift */,
+				38B23C591F35EB2500010C9B /* ProductCell.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -208,6 +217,7 @@
 				381647BC1F307C7F0038926E /* UIStackView.swift */,
 				383307F41F3336BA00EEFAC5 /* UIFont.swift */,
 				3847A6271F3473EE002962E2 /* UIColor.swift */,
+				38B23C5B1F35F28900010C9B /* SKProduct.swift */,
 			);
 			name = Extensions;
 			path = Extension;
@@ -276,6 +286,7 @@
 			children = (
 				38921F7D1F2A17D6003A8F3A /* Main.storyboard */,
 				38921FA91F2A1801003A8F3A /* PlayScene.storyboard */,
+				38B23C571F35C0E000010C9B /* Products.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -298,6 +309,7 @@
 				388F42861F2CAFD000509033 /* MasterViewController.swift */,
 				388F428C1F2CBD4600509033 /* MainViewController.swift */,
 				388F428E1F2CC37600509033 /* SettingsViewController.swift */,
+				38B23C531F35BE7800010C9B /* ProductsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -445,6 +457,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38B23C581F35C0E000010C9B /* Products.storyboard in Resources */,
 				3888FC9C1F337A8700DBCA41 /* Celebration.xcassets in Resources */,
 				38921FAD1F2A1B84003A8F3A /* Eurostile.ttf in Resources */,
 				38921F841F2A17D6003A8F3A /* LaunchScreen.storyboard in Resources */,
@@ -628,6 +641,7 @@
 				381647BD1F307C7F0038926E /* UIStackView.swift in Sources */,
 				38E1CD261F3099CC00950F9B /* BottomStackView.swift in Sources */,
 				38921F7A1F2A17D6003A8F3A /* AppDelegate.swift in Sources */,
+				38B23C5A1F35EB2500010C9B /* ProductCell.swift in Sources */,
 				381647BF1F30836F0038926E /* MiddleStackView.swift in Sources */,
 				388F428F1F2CC37700509033 /* SettingsViewController.swift in Sources */,
 				38265B1C1F2D2A6F009020FC /* Notifications.swift in Sources */,
@@ -645,6 +659,8 @@
 				388F42871F2CAFD000509033 /* MasterViewController.swift in Sources */,
 				383BB9611F351707005F919E /* CashProducts.swift in Sources */,
 				38281D031F2A74B8009E41D7 /* SquareView.swift in Sources */,
+				38B23C5C1F35F28900010C9B /* SKProduct.swift in Sources */,
+				38B23C551F35BE7800010C9B /* ProductsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
