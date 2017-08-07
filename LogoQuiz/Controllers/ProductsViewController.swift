@@ -7,6 +7,12 @@
 //
 
 import UIKit
+import Firebase
+
+enum DataSourceItem {
+    case cash
+    case ad
+}
 
 class ProductsViewController: UIViewController {
     @IBOutlet weak var tableViewContainer: UIView!
@@ -15,8 +21,18 @@ class ProductsViewController: UIViewController {
     let products = CashProducts.store.allProducts.sorted { (first, second) -> Bool in
         return first.price.floatValue < second.price.floatValue
     }
+    
+    fileprivate var dataSource = [DataSourceItem]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        GADRewardBasedVideoAd.sharedInstance().delegate = self
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        GADRewardBasedVideoAd.sharedInstance().load(request, withAdUnitID: "ca-app-pub-9037734016404410/4581503149")
+        
+        products.forEach({ _ in
+            dataSource.append(.cash)
+        })
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -51,40 +67,56 @@ extension ProductsViewController:  UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return CashProducts.store.allProducts.count
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cashProduct") as! ProductCell
-        cell.product = self.products[indexPath.row]
+        switch dataSource[indexPath.row] {
+        case .cash:
+            cell.product = self.products[indexPath.row]
+        case .ad:
+            cell.productName.text = "💵 80 Cash"
+            cell.productButton.setTitle("Video", for: .normal)
+            cell.isAd = true
+            cell.delegate = self
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return tableView.frame.height / CGFloat(CashProducts.store.allProducts.count) - 10
+        return tableView.frame.height / CGFloat(dataSource.count) - 10
     }
 }
 
+extension ProductsViewController: RewardAdProtocol {
+    func presentRewardAd() {
+        if GADRewardBasedVideoAd.sharedInstance().isReady == true {
+            GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: self)
+        }else {
+            let alert = UIAlertController(title: "Oops", message: "The ad is not ready yet. Please try again later.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK 😞", style: .cancel, handler: nil)
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+        }
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+extension ProductsViewController: GADRewardBasedVideoAdDelegate {
+    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
+        print("Reward received with currency: \(reward.type), amount \(reward.amount).")
+    }
+    
+    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didFailToLoadWithError error: Error) {
+        print("Reward based video ad failed to load with error: \(error.localizedDescription)")
+    }
+    
+    func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        print("Reward based video ad received successfully!")
+        dataSource.append(.ad)
+        tableView.reloadData()
+    }
+    
+}
 

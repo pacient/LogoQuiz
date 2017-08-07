@@ -8,12 +8,20 @@
 
 import UIKit
 import StoreKit
+import Firebase
+
+protocol RewardAdProtocol {
+    func presentRewardAd()
+}
 
 class ProductCell: UITableViewCell {
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productButton: UIButton!
     
-    var product: SKProduct!
+    var delegate: RewardAdProtocol?
+    
+    var product: SKProduct?
+    var isAd = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,19 +30,21 @@ class ProductCell: UITableViewCell {
     
     override func didMoveToWindow() {
         super.didMoveToWindow()
-        self.productName.text = "💵 \(product.localizedTitle)"
-        self.productButton.setTitle(product.localizedPrice(), for: .normal)
+        if let product = product {
+            self.productName.text = "💵 \(product.localizedTitle)"
+            self.productButton.setTitle(product.localizedPrice(), for: .normal)
+        }else if isAd {
+            
+        }
     }
     
     @IBAction func buyPressed(_ sender: Any) {
-        CashProducts.store.buyProduct(product)
+        if let product = product {
+            CashProducts.store.buyProduct(product)
+        }else if isAd{
+            delegate?.presentRewardAd()
+        }
     }
     
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
 
 }
