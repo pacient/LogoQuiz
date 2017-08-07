@@ -25,14 +25,16 @@ class ProductsViewController: UIViewController {
     fileprivate var dataSource = [DataSourceItem]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        GADRewardBasedVideoAd.sharedInstance().delegate = self
-        let request = GADRequest()
-        request.testDevices = [kGADSimulatorID]
-        GADRewardBasedVideoAd.sharedInstance().load(request, withAdUnitID: "ca-app-pub-9037734016404410/4581503149")
-        
         products.forEach({ _ in
             dataSource.append(.cash)
         })
+        RewardAdManager.instance.rootVC = self
+        
+        if RewardAdManager.instance.isAdLoaded {
+            dataSource.append(.ad)
+        }else {
+            RewardAdManager.instance.loadAd()
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -79,7 +81,6 @@ extension ProductsViewController:  UITableViewDelegate, UITableViewDataSource {
             cell.productName.text = "💵 80 Cash"
             cell.productButton.setTitle("Video", for: .normal)
             cell.isAd = true
-            cell.delegate = self
         }
         
         return cell
@@ -90,33 +91,4 @@ extension ProductsViewController:  UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension ProductsViewController: RewardAdProtocol {
-    func presentRewardAd() {
-        if GADRewardBasedVideoAd.sharedInstance().isReady == true {
-            GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: self)
-        }else {
-            let alert = UIAlertController(title: "Oops", message: "The ad is not ready yet. Please try again later.", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK 😞", style: .cancel, handler: nil)
-            alert.addAction(action)
-            present(alert, animated: true, completion: nil)
-        }
-    }
-}
-
-extension ProductsViewController: GADRewardBasedVideoAdDelegate {
-    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
-        print("Reward received with currency: \(reward.type), amount \(reward.amount).")
-    }
-    
-    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didFailToLoadWithError error: Error) {
-        print("Reward based video ad failed to load with error: \(error.localizedDescription)")
-    }
-    
-    func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
-        print("Reward based video ad received successfully!")
-        dataSource.append(.ad)
-        tableView.reloadData()
-    }
-    
-}
 

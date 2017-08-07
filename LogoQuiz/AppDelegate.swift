@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         UIApplication.shared.statusBarStyle = .lightContent
+        
+        RewardAdManager.instance.loadAd()
+        
         BrandManager.decodeJSON { (stored) in
             if stored {
                 //dissmiss splash screen here

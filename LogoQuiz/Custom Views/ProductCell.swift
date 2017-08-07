@@ -34,7 +34,7 @@ class ProductCell: UITableViewCell {
             self.productName.text = "💵 \(product.localizedTitle)"
             self.productButton.setTitle(product.localizedPrice(), for: .normal)
         }else if isAd {
-            
+            delegate = RewardAdManager.instance
         }
     }
     
