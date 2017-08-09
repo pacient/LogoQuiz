@@ -21,6 +21,12 @@ class LevelsCollectionViewController: MasterViewController, UICollectionViewDele
         super.viewWillAppear(animated)
         collectionView.reloadData()
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        collectionView.reloadItems(at: collectionView.indexPathsForVisibleItems) //this fixes the cells that are not marked as done when you rotate the device on the iPad
+    }
+    
     @IBAction func backPressed(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
