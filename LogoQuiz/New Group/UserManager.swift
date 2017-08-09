@@ -22,8 +22,8 @@ class UserManager {
     }
     
     class func resetProgressAlert() -> UIAlertController {
-        let alert = UIAlertController(title: "Warning!", message: "If you reset the progress your cash will be set to 💵1500 and you will be set back to level 1. Do you want to continue?", preferredStyle: .alert)
-        let continueAction = UIAlertAction(title: "Continue", style: .default) { (action) in
+        let alert = UIAlertController(title: "Warning!", message: "If you reset the progress your cash will be set to 💵\(CashManager.instance.startingCash) and you will lose the whole progress so far.", preferredStyle: .alert)
+        let continueAction = UIAlertAction(title: "Reset", style: .destructive) { (action) in
             CashManager.resetCash()
             GameStateManager.gameStates = [:]
         }
@@ -50,7 +50,7 @@ class UserManager {
     }
     
     class func giveLetterHintAlert() -> UIAlertController {
-        let alert = UIAlertController(title: "Letter Hint", message: "Show correct letter for 💵60?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Letter Hint", message: "Show correct letter for 💵\(HintCost.correctLetter.rawValue)?", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
             let purchased = CashManager.decreaseCash(for: .correctLetter)
             if purchased {
@@ -66,7 +66,7 @@ class UserManager {
     }
     
     class func removeLettersHintAlert() -> UIAlertController {
-        let alert = UIAlertController(title: "Remove Letters Hint", message: "Remove letters that are not part of the solution for 💵80?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Remove Letters Hint", message: "Remove letters that are not part of the solution for 💵\(HintCost.removeLetter.rawValue)?", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { (_) in
             let purchased = CashManager.decreaseCash(for: .removeLetter)
             if purchased {

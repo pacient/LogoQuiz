@@ -30,8 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let ud = UserDefaults.standard
         
         if ud.object(forKey: Constants.firstLaunch) == nil {
-            ud.set(0, forKey: Constants.levelsCompleted)
-            ud.set(1500, forKey: Constants.cash)
+            ud.set(CashManager.instance.startingCash, forKey: Constants.cash)
             ud.set(false, forKey: Constants.firstLaunch)
         }
         

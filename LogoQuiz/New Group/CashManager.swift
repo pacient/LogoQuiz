@@ -9,15 +9,15 @@
 import Foundation
 
 enum HintCost: Int {
-    case correctLetter = 60
-    case removeLetter = 80
+    case correctLetter = 40
+    case removeLetter = 60
 }
 
 class CashManager: NSObject {
     
     static let instance = CashManager()
     private static let ud = UserDefaults.standard
-    
+    private(set) var startingCash = 1000
     private(set) var oldCash: Int?
     @objc private(set) dynamic var cash: Int = CashManager.ud.integer(forKey: Constants.cash) {
         didSet{
@@ -37,7 +37,7 @@ class CashManager: NSObject {
     }
     
     class func resetCash() {
-       instance.cash = 1500
+       instance.cash = instance.startingCash
     }
     
     

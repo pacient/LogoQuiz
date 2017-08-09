@@ -16,7 +16,11 @@ class LevelsCollectionViewController: MasterViewController, UICollectionViewDele
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        collectionView.reloadData()
+    }
     @IBAction func backPressed(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
@@ -42,14 +46,14 @@ class LevelsCollectionViewController: MasterViewController, UICollectionViewDele
     
     //MARK: UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 8
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 8
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width*0.33-8, height: 100)
+        return CGSize(width: collectionView.bounds.width*0.33-2, height: 100)
     }
 }

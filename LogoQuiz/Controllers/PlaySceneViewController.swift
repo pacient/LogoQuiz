@@ -181,13 +181,11 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
     }
     
     fileprivate func nextLevel() {
-        //here we are reseting the view controller so all the views go back to their initial state, you don't want to animate it to look more realistic.
         let storyboard = UIStoryboard(name: "PlayScene", bundle: nil)
         let vc = storyboard.instantiateInitialViewController()!
         guard var viewcontrollers = self.navigationController?.viewControllers else {return}
-        viewcontrollers.removeLast()
-        viewcontrollers.append(vc)
-        navigationController?.setViewControllers(viewcontrollers, animated: false)
+        viewcontrollers.removeLast()//remove the play scene
+        navigationController?.setViewControllers(viewcontrollers, animated: true)
     }
     
     //MARK: Delegates
