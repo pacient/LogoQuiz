@@ -19,7 +19,7 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="LogoQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main" id="BYZ-38-t0r" customClass="MainViewController" customModule="LogoQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -132,7 +132,7 @@
         <!--Navigation Controller-->
         <scene sceneID="4ia-Pb-VCu">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="mh2-Mf-ojL" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="mainNav" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="mh2-Mf-ojL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jhj-KN-Ab1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -288,7 +288,7 @@
         <!--Navigation Controller-->
         <scene sceneID="EiO-uO-p6w">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="tHX-bc-ftn" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="settingsNav" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="tHX-bc-ftn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GOS-IM-Crp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
