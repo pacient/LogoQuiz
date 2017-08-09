@@ -56,9 +56,9 @@
                                     <constraint firstAttribute="bottom" secondItem="hAT-B5-PBR" secondAttribute="bottom" constant="8" id="x3N-Ct-nMj"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DwW-rB-f6J">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DwW-rB-f6J" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="686" width="414" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="PMZ-GX-c4h"/>
                                 </constraints>
@@ -642,6 +642,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="bannerAd" destination="DwW-rB-f6J" id="CoW-SH-fz1"/>
                         <outlet property="blueBar" destination="Sdf-YC-23U" id="kre-zl-sJp"/>
                         <outlet property="bottomVerticalStackView" destination="JMA-up-RNZ" id="jA7-45-Hhp"/>
                         <outlet property="findButton" destination="b38-Ij-kLL" id="cuM-3x-ghf"/>

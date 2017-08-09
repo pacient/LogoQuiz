@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BD2FE7C209722706E907DFD6D613D27B2BDC9967",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "BD2FE7C209722706E907DFD6D613D27B2BDC9967" : 9223372036854775807,
+    "B26D875373B3017B31723E9CC419005F61944889" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9A0B6622-D264-4A66-A886-7E5CDC382B80",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "BD2FE7C209722706E907DFD6D613D27B2BDC9967" : "LogoQuiz\/",
+    "B26D875373B3017B31723E9CC419005F61944889" : "..\/Desktop\/HolidayTime"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "LogoQuiz",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "LogoQuiz.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pacient\/HolidayTime.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B26D875373B3017B31723E9CC419005F61944889"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pacient\/LogoQuiz.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BD2FE7C209722706E907DFD6D613D27B2BDC9967"
+    }
+  ]
+}

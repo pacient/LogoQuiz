@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class PlaySceneViewController: MasterViewController, GameHintDelegate {
     @IBOutlet weak var logoImageView: UIImageView!
@@ -16,12 +17,14 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
     @IBOutlet weak var findButton: UIButton!
     @IBOutlet weak var removeLettersButton: UIButton!
     @IBOutlet weak var blueBar: BlueNavBar!
+    @IBOutlet weak var bannerAd: GADBannerView!
     
     var brandViewModel: BrandViewModel!
     var lettersToShow: [Character]!
     //MARK: View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupAdView()
         NotificationCenter.default.addObserver(self, selector: #selector(hideFindButton), name: Notifications.hideFindButton, object: nil)
         UserManager.delegate = self
         lettersToShow = brandViewModel.lettersToShow
@@ -67,6 +70,15 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
     fileprivate func addTapGestureToSquares() {
         middleVerticalStackView.addGestureRecognizerToSubviews(with: #selector(self.removeLetterFromSquare(_:)), target: self)
         bottomVerticalStackView.addGestureRecognizerToSubviews(with: #selector(self.bottomSquareTapped(_:)), target: self)
+    }
+    
+    fileprivate func setupAdView() {
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        bannerAd.adUnitID = Constants.banner_adID
+        bannerAd.adSize = kGADAdSizeSmartBannerPortrait
+        bannerAd.rootViewController = self
+        bannerAd.load(request)
     }
     
     fileprivate func addCelebrationView(completion: @escaping ()->Void) {
