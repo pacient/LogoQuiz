@@ -48,6 +48,11 @@
 		38921FAA1F2A1801003A8F3A /* PlayScene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38921FA91F2A1801003A8F3A /* PlayScene.storyboard */; };
 		38921FAD1F2A1B84003A8F3A /* Eurostile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38921FAC1F2A1B83003A8F3A /* Eurostile.ttf */; };
 		38921FB01F2A2F52003A8F3A /* PlaySceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38921FAF1F2A2F52003A8F3A /* PlaySceneViewController.swift */; };
+		3895B9D21F3A00A700519DE2 /* LevelsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895B9D11F3A00A700519DE2 /* LevelsCollectionViewController.swift */; };
+		3895B9D41F3A015300519DE2 /* LevelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895B9D31F3A015300519DE2 /* LevelCell.swift */; };
+		3895B9D61F3A0AAC00519DE2 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895B9D51F3A0AAC00519DE2 /* GameState.swift */; };
+		3895B9D81F3A0B3900519DE2 /* GameStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895B9D71F3A0B3900519DE2 /* GameStateManager.swift */; };
+		3895B9DA1F3A1A1600519DE2 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3895B9D91F3A1A1600519DE2 /* Serializable.swift */; };
 		38B212951F2F735F001F3C10 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B212941F2F735F001F3C10 /* UIView.swift */; };
 		38B23C551F35BE7800010C9B /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B23C531F35BE7800010C9B /* ProductsViewController.swift */; };
 		38B23C581F35C0E000010C9B /* Products.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B23C571F35C0E000010C9B /* Products.storyboard */; };
@@ -125,6 +130,11 @@
 		38921FA91F2A1801003A8F3A /* PlayScene.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayScene.storyboard; sourceTree = "<group>"; };
 		38921FAC1F2A1B83003A8F3A /* Eurostile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Eurostile.ttf; path = ../../../../Downloads/eurostile/Eurostile.ttf; sourceTree = "<group>"; };
 		38921FAF1F2A2F52003A8F3A /* PlaySceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySceneViewController.swift; sourceTree = "<group>"; };
+		3895B9D11F3A00A700519DE2 /* LevelsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsCollectionViewController.swift; sourceTree = "<group>"; };
+		3895B9D31F3A015300519DE2 /* LevelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCell.swift; sourceTree = "<group>"; };
+		3895B9D51F3A0AAC00519DE2 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		3895B9D71F3A0B3900519DE2 /* GameStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStateManager.swift; sourceTree = "<group>"; };
+		3895B9D91F3A1A1600519DE2 /* Serializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serializable.swift; sourceTree = "<group>"; };
 		38B212941F2F735F001F3C10 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		38B23C531F35BE7800010C9B /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		38B23C571F35C0E000010C9B /* Products.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Products.storyboard; sourceTree = "<group>"; };
@@ -183,6 +193,7 @@
 				383307F21F33353E00EEFAC5 /* BlueNavBar.swift */,
 				3888FC991F3379E600DBCA41 /* CelebrationView.swift */,
 				38B23C591F35EB2500010C9B /* ProductCell.swift */,
+				3895B9D31F3A015300519DE2 /* LevelCell.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -199,6 +210,8 @@
 				383307F61F33523700EEFAC5 /* CashManager.swift */,
 				383BB95E1F3516C1005F919E /* IAPHelper.swift */,
 				38E18C601F38B071000D8DA4 /* RewardAdManager.swift */,
+				3895B9D71F3A0B3900519DE2 /* GameStateManager.swift */,
+				3895B9D91F3A1A1600519DE2 /* Serializable.swift */,
 			);
 			name = Helpers;
 			path = "New Group";
@@ -210,6 +223,7 @@
 				388F42911F2CD45400509033 /* Brand.swift */,
 				3873EB211F2CE41100AAC196 /* BrandViewModel.swift */,
 				383BB9601F351707005F919E /* CashProducts.swift */,
+				3895B9D51F3A0AAC00519DE2 /* GameState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -316,6 +330,7 @@
 				388F428C1F2CBD4600509033 /* MainViewController.swift */,
 				388F428E1F2CC37600509033 /* SettingsViewController.swift */,
 				38B23C531F35BE7800010C9B /* ProductsViewController.swift */,
+				3895B9D11F3A00A700519DE2 /* LevelsCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -646,12 +661,16 @@
 				3873EB1C1F2CDD2900AAC196 /* BrandManager.swift in Sources */,
 				3873EB221F2CE41100AAC196 /* BrandViewModel.swift in Sources */,
 				381647BD1F307C7F0038926E /* UIStackView.swift in Sources */,
+				3895B9D21F3A00A700519DE2 /* LevelsCollectionViewController.swift in Sources */,
 				38E1CD261F3099CC00950F9B /* BottomStackView.swift in Sources */,
+				3895B9D81F3A0B3900519DE2 /* GameStateManager.swift in Sources */,
 				38921F7A1F2A17D6003A8F3A /* AppDelegate.swift in Sources */,
 				38B23C5A1F35EB2500010C9B /* ProductCell.swift in Sources */,
 				381647BF1F30836F0038926E /* MiddleStackView.swift in Sources */,
+				3895B9D61F3A0AAC00519DE2 /* GameState.swift in Sources */,
 				388F428F1F2CC37700509033 /* SettingsViewController.swift in Sources */,
 				38265B1C1F2D2A6F009020FC /* Notifications.swift in Sources */,
+				3895B9D41F3A015300519DE2 /* LevelCell.swift in Sources */,
 				388F428B1F2CBB5B00509033 /* CircleNavView.swift in Sources */,
 				3888FC9A1F3379E600DBCA41 /* CelebrationView.swift in Sources */,
 				3873EB201F2CE20200AAC196 /* Constants.swift in Sources */,
@@ -664,6 +683,7 @@
 				388F428D1F2CBD4600509033 /* MainViewController.swift in Sources */,
 				381647BB1F3079820038926E /* LogoImageView.swift in Sources */,
 				388F42871F2CAFD000509033 /* MasterViewController.swift in Sources */,
+				3895B9DA1F3A1A1600519DE2 /* Serializable.swift in Sources */,
 				383BB9611F351707005F919E /* CashProducts.swift in Sources */,
 				38281D031F2A74B8009E41D7 /* SquareView.swift in Sources */,
 				38E18C611F38B071000D8DA4 /* RewardAdManager.swift in Sources */,

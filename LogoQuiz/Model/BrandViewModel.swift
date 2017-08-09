@@ -10,7 +10,29 @@ import Foundation
 
 struct BrandViewModel {
     private(set) var brand: Brand
+    private(set) var gameState: GameState {
+        didSet{
+            GameStateManager.gameStates[brandLevel] = gameState
+        }
+    }
     
+    var isDone: Bool {
+        get {
+            return gameState.isDone
+        }
+        mutating set {
+            gameState.isDone = newValue
+        }
+    }
+    
+    var hasRemovedLetters: Bool {
+        get {
+            return gameState.hasRemovedLetters
+        }
+        mutating set {
+            gameState.hasRemovedLetters = newValue
+        }
+    }
     var brandName: String {
         return brand.name
     }
@@ -37,7 +59,9 @@ struct BrandViewModel {
         return charArray
     }
     
-    var foundLetters: [[String]]
+    var foundLetters: [[String]] {
+        return gameState.lettersFound
+    }
     var shouldHideFindButton: Bool {
         return foundLetters.joined().filter({$0 == " "}).count <= 1
     }
@@ -59,9 +83,8 @@ struct BrandViewModel {
         
         words[index.row].remove(at: index.section)
         words[index.row].insert("|", at: index.section)
-        foundLetters[index.row].remove(at: index.section)
-        foundLetters[index.row].insert(String(randomChar), at: index.section)
-        UserDefaults.standard.set(foundLetters, forKey: Constants.foundLetters)
+        gameState.lettersFound[index.row].remove(at: index.section)
+        gameState.lettersFound[index.row].insert(String(randomChar), at: index.section)
         if words.count > 1 {
             self.helperChars = Array(words[0] + [" "] + words[1]).map({String($0)})
         }else {
@@ -82,10 +105,10 @@ struct BrandViewModel {
     init(brand: Brand) {
         self.brand = brand
         self.helperChars = Array(brand.name.characters).map{String($0)}
-        if let letters = UserDefaults.standard.array(forKey: Constants.foundLetters) as? [[String]] {
-            foundLetters = letters
-        }else {
-            foundLetters = brand.name.components(separatedBy: " ").map({$0.characters.map({ _ in " "})})
+        self.gameState = GameStateManager.gameStates[brand.level] ?? GameState()
+        if gameState.lettersFound.count == 0 {
+            gameState.lettersFound = brand.name.components(separatedBy: " ").map({$0.characters.map({ _ in " "})})
         }
+        
     }
 }

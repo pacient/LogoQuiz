@@ -21,12 +21,7 @@ class MainViewController: MasterViewController {
     }
     
     @IBAction func playPressed(_ sender: Any) {
-        guard let brand = UserManager.brandToFind else {
-            presentCongratsAlert()
-            return
-        }
-        let playVC = UIStoryboard(name: "PlayScene", bundle: nil).instantiateInitialViewController() as! PlaySceneViewController
-        playVC.brandViewModel = BrandViewModel(brand: brand)
+        let playVC = UIStoryboard(name: "PlayScene", bundle: nil).instantiateInitialViewController() as! LevelsCollectionViewController
         navigationController?.pushViewController(playVC, animated: true)
     }
     

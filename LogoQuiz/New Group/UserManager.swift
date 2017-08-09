@@ -12,29 +12,8 @@ class UserManager {
     private static let instance = UserManager()
     private static let ud = UserDefaults.standard
     static var delegate: GameHintDelegate?
-    //MARK: Variables
-    static var levelsCompleted: Int {
-        return ud.integer(forKey: Constants.levelsCompleted)
-    }
-    
-    static var brandToFind: Brand? {
-        return BrandManager.brands.first(where: {$0.level == levelsCompleted+1})
-    }
-
-    static var hasRemovedLettersForLevel: Bool {
-        return ud.bool(forKey: Constants.hasRemovedLetters)
-    }
     
     //MARK: Functions
-    fileprivate class func increaseLevel() {
-        ud.set(levelsCompleted+1, forKey: Constants.levelsCompleted)
-    }
-    
-    fileprivate class func resetHintsForLevel() {
-        ud.removeObject(forKey: Constants.foundLetters)
-        ud.removeObject(forKey: Constants.hasRemovedLetters)
-    }
-    
     fileprivate class func noCashAlert() -> UIAlertController {
         let alert = UIAlertController(title: "Ooops!", message: "You don't have enough 💵. Solve levels to get more 💵 or go to the menu to purchase more.", preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -46,8 +25,7 @@ class UserManager {
         let alert = UIAlertController(title: "Warning!", message: "If you reset the progress your cash will be set to 💵1500 and you will be set back to level 1. Do you want to continue?", preferredStyle: .alert)
         let continueAction = UIAlertAction(title: "Continue", style: .default) { (action) in
             CashManager.resetCash()
-            ud.set(0, forKey: Constants.levelsCompleted)
-            resetHintsForLevel()
+            GameStateManager.gameStates = [:]
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(continueAction)
@@ -69,8 +47,6 @@ class UserManager {
     }
     class func setValuesForNextLevel() {
         CashManager.bumpCash()
-        increaseLevel()
-        resetHintsForLevel()
     }
     
     class func giveLetterHintAlert() -> UIAlertController {

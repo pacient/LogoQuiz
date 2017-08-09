@@ -22,31 +22,32 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
     //MARK: View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let brand = UserManager.brandToFind else {
-            self.navigationController?.popViewController(animated: false)
-            return
-        }
         NotificationCenter.default.addObserver(self, selector: #selector(hideFindButton), name: Notifications.hideFindButton, object: nil)
         UserManager.delegate = self
-        brandViewModel = BrandViewModel(brand: brand)
         lettersToShow = brandViewModel.lettersToShow
         addTapGestureToSquares()
-        middleVerticalStackView.configure(with: brandViewModel.brandName, foundLetter: brandViewModel.foundLetters)
+        if brandViewModel.isDone {
+            let allCorrectLetters = brandViewModel.brandName.components(separatedBy: " ").map({$0.characters.map{String($0)}})
+            middleVerticalStackView.configure(with: brandViewModel.brandName, foundLetter: allCorrectLetters)
+            removeLettersButton.isHidden = true
+            hideFindButton()
+        }else {
+            middleVerticalStackView.configure(with: brandViewModel.brandName, foundLetter: brandViewModel.foundLetters)
+        }
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        guard UserManager.brandToFind != nil else {return}
         bottomVerticalStackView.configure(with: lettersToShow)
         logoImageView.image = UIImage(named: brandViewModel.imageName)
-        if brandViewModel.shouldHideFindButton {
+        if brandViewModel.shouldHideFindButton  {
             hideFindButton()
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if UserManager.hasRemovedLettersForLevel {
+        if  brandViewModel.gameState.hasRemovedLetters { //UserManager.hasRemovedLettersForLevel {
             removeLetters()
         }
         
@@ -169,6 +170,7 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
         if typedWord == brandViewModel.brandName {
             //Proceed to next level
             UserManager.setValuesForNextLevel()
+            brandViewModel.isDone = true
             addCelebrationView {
                 self.nextLevel()
             }
@@ -179,14 +181,6 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
     }
     
     fileprivate func nextLevel() {
-        guard BrandManager.brands.count > UserManager.levelsCompleted else {
-            //Present a screen congratulating the user that they wont the game 🎉
-            let alert = UserManager.congratulationsAlert(completion: {
-                self.navigationController?.popViewController(animated: true)
-            })
-            self.present(alert, animated: true, completion: nil)
-            return
-        }
         //here we are reseting the view controller so all the views go back to their initial state, you don't want to animate it to look more realistic.
         let storyboard = UIStoryboard(name: "PlayScene", bundle: nil)
         let vc = storyboard.instantiateInitialViewController()!
@@ -210,7 +204,7 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
                     square.label.text = nil
                 }
             }
-            UserManager.removedLetters()
+            self.brandViewModel.hasRemovedLetters = true
             self.removeLettersButton.isHidden = true
         }
     }

@@ -14,4 +14,5 @@ struct Constants {
     static let cash = "cash"
     static let foundLetters = "foundLetters"
     static let hasRemovedLetters = "hasRemovedLetters"
+    static let gameStates = "gameStates"
 }
