@@ -9,27 +9,23 @@
 import UIKit
 
 class LevelsCollectionViewController: MasterViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
-    
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         collectionView.reloadData()
     }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        collectionView.reloadItems(at: collectionView.indexPathsForVisibleItems) //this fixes the cells that are not marked as done when you rotate the device on the iPad
-    }
-    
     @IBAction func backPressed(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
+    
+    func configure(cell: LevelCell, with brandModel: BrandViewModel) {
+        cell.levelLogoImageView.image = UIImage(named: brandModel.imageName)
+        if brandModel.isDone {
+            cell.doneOverlay.isHidden = false
+        }
+    }
+    
     //MARK: UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return BrandManager.brands.count
@@ -37,11 +33,10 @@ class LevelsCollectionViewController: MasterViewController, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "levelCell", for: indexPath) as! LevelCell
-        let brandViewModel = BrandViewModel(brand: BrandManager.brands[indexPath.row])
-        cell.levelLogoImageView.image = UIImage(named: brandViewModel.imageName)
-        cell.alpha = brandViewModel.isDone ? 0.3 : 1
+        configure(cell: cell, with: BrandViewModel(brand: BrandManager.brands[indexPath.row]))
         return cell
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let brandViewModel = BrandViewModel(brand: BrandManager.brands[indexPath.row])

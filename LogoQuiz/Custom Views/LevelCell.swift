@@ -9,6 +9,11 @@
 import UIKit
 
 class LevelCell: UICollectionViewCell {
+    @IBOutlet weak var doneOverlay: UIView!
     @IBOutlet weak var levelLogoImageView: UIImageView!
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        doneOverlay.isHidden = true
+    }
 }

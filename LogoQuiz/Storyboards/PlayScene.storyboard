@@ -617,10 +617,10 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=regular">
                             <mask key="constraints">
+                                <exclude reference="OmB-gm-czr"/>
                                 <include reference="Dpz-uJ-veK"/>
                                 <exclude reference="gHd-ZW-bRO"/>
                                 <exclude reference="ehw-o4-oEK"/>
-                                <exclude reference="OmB-gm-czr"/>
                             </mask>
                         </variation>
                     </view>
@@ -698,15 +698,24 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="148" height="133"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
+                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryc-wx-E9J">
+                                                    <rect key="frame" x="0.0" y="0.0" width="148" height="133"/>
+                                                    <color key="backgroundColor" red="0.15802018088901471" green="0.53575111040609136" blue="0.20045858941547984" alpha="0.30139661815068491" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </view>
                                             </subviews>
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="ZZG-mX-qRM" secondAttribute="trailing" id="7jc-tk-6Ia"/>
+                                            <constraint firstAttribute="trailing" secondItem="ryc-wx-E9J" secondAttribute="trailing" id="A5P-FQ-M8w"/>
                                             <constraint firstAttribute="bottom" secondItem="ZZG-mX-qRM" secondAttribute="bottom" id="QHT-7z-hwz"/>
                                             <constraint firstItem="ZZG-mX-qRM" firstAttribute="top" secondItem="bKc-JU-jYu" secondAttribute="top" id="RvL-Ls-Bwf"/>
+                                            <constraint firstAttribute="bottom" secondItem="ryc-wx-E9J" secondAttribute="bottom" id="WDe-3O-n3y"/>
                                             <constraint firstItem="ZZG-mX-qRM" firstAttribute="leading" secondItem="bKc-JU-jYu" secondAttribute="leading" id="a4N-f1-pEM"/>
+                                            <constraint firstItem="ryc-wx-E9J" firstAttribute="top" secondItem="bKc-JU-jYu" secondAttribute="top" id="cla-DR-09S"/>
+                                            <constraint firstItem="ryc-wx-E9J" firstAttribute="leading" secondItem="bKc-JU-jYu" secondAttribute="leading" id="ojd-5C-Add"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="doneOverlay" destination="ryc-wx-E9J" id="adA-gs-aSQ"/>
                                             <outlet property="levelLogoImageView" destination="ZZG-mX-qRM" id="tS5-Dh-6in"/>
                                         </connections>
                                     </collectionViewCell>
@@ -734,7 +743,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l09-ta-FVm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1108.6956521739132" y="78.260869565217391"/>
+            <point key="canvasLocation" x="1108.59375" y="77.9296875"/>
         </scene>
     </scenes>
     <resources>
