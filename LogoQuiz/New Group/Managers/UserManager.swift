@@ -15,9 +15,7 @@ class UserManager {
     
     //MARK: Functions
     fileprivate class func noCashAlert() -> UIAlertController {
-        let alert = UIAlertController(title: "Ooops!", message: "You don't have enough 💵. Solve levels to get more 💵 or go to the menu to purchase more.", preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alert.addAction(action)
+        let alert = UIAlertController(title: "Ooops!", message: "You don't have enough 💵. Solve levels to get more 💵 or go to the menu to purchase more.", style: .alert, cancelText: "OK")
         return alert
     }
     

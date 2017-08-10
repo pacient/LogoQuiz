@@ -40,9 +40,7 @@ class CashLabel: UILabel {
     @objc func cashLabelTapped() {
         //here we are going to present a small alert like view with all our in-app purchases
         guard CashProducts.store.allProducts.count > 0 else {
-            let alert = UIAlertController(title: "Oops!", message: "Something went wrong. Please try again later.", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alert.addAction(action)
+            let alert = UIAlertController(title: "Oops!", message: "Something went wrong. Please try again later.", style: .alert, cancelText: "OK")
             UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: false, completion: nil)
             return
         }

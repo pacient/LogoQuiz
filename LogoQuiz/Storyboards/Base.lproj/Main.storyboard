@@ -39,7 +39,7 @@
                                 <rect key="frame" x="167" y="20" width="80" height="80.666666666666671"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNG-sQ-iZ0">
-                                        <rect key="frame" x="10.333333333333343" y="28" width="59.666666666666657" height="25"/>
+                                        <rect key="frame" x="10.333333333333343" y="28.333333333333332" width="59.666666666666657" height="24.999999999999996"/>
                                         <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -209,42 +209,51 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="WbQ-HX-bs5">
-                                <rect key="frame" x="72.333333333333314" y="248.33333333333331" width="269.33333333333337" height="239.99999999999994"/>
+                                <rect key="frame" x="72.333333333333314" y="248" width="269.33333333333337" height="240"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6g-PZ-8KA" customClass="YellowButton" customModule="LogoQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="62.666666666666686" y="0.0" width="144" height="39.999999999999972"/>
+                                        <rect key="frame" x="69.333333333333329" y="0.0" width="131.00000000000006" height="40"/>
                                         <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="28"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Reset Game">
+                                        <state key="normal" title="Rate Game">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="resetGamePressed:" destination="RAQ-G3-LSN" eventType="touchUpInside" id="WZH-Q5-9F1"/>
+                                            <action selector="rateGamePressed:" destination="RAQ-G3-LSN" eventType="touchUpInside" id="8XE-w6-CDH"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBK-mx-yf7" customClass="YellowButton" customModule="LogoQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="69.666666666666686" y="67.999999999999972" width="130" height="40"/>
+                                        <rect key="frame" x="69.666666666666686" y="68" width="130" height="40"/>
                                         <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="28"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Contact Us">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="contactUsPressed:" destination="RAQ-G3-LSN" eventType="touchUpInside" id="TWn-Dg-FaN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFE-5p-R0p" customClass="YellowButton" customModule="LogoQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="61.666666666666686" y="135.99999999999997" width="146" height="40"/>
+                                        <rect key="frame" x="61.666666666666686" y="136" width="146" height="40"/>
                                         <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="28"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Remove Ads">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="removeAdsPressed:" destination="RAQ-G3-LSN" eventType="touchUpInside" id="2me-vE-KHD"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYb-r8-CGP" customClass="YellowButton" customModule="LogoQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="44.666666666666686" y="203.99999999999997" width="180" height="36"/>
+                                        <rect key="frame" x="44.666666666666686" y="204" width="180" height="36"/>
                                         <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="24"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Buy In-Game Cash">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buyCashPressed:" destination="RAQ-G3-LSN" eventType="touchUpInside" id="Mmf-Zg-Rcq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <variation key="heightClass=regular-widthClass=regular" spacing="50"/>

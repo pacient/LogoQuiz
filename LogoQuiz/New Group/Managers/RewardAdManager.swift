@@ -49,9 +49,7 @@ class RewardAdManager: NSObject, GADRewardBasedVideoAdDelegate, RewardAdProtocol
         if GADRewardBasedVideoAd.sharedInstance().isReady == true {
             GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: rootVC)
         }else {
-            let alert = UIAlertController(title: "Oops", message: "The ad is not ready yet. Please try again later.", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK 😞", style: .cancel, handler: nil)
-            alert.addAction(action)
+            let alert = UIAlertController(title: "Oops", message: "The ad is not ready yet. Please try again later.", style: .alert, cancelText: "OK 😞")
             rootVC.present(alert, animated: true, completion: nil)
         }
     }

@@ -10,6 +10,7 @@
 		2E0D3A8596EB92F6B1564F78 /* Pods_LogoQuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890C53136AF8D27EB1D0C58E /* Pods_LogoQuizTests.framework */; };
 		3812DADE1F3C6E36009E9D79 /* applause3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3812DADD1F3C6E35009E9D79 /* applause3.wav */; };
 		3812DAE11F3C72B4009E9D79 /* InterstitialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3812DAE01F3C72B4009E9D79 /* InterstitialManager.swift */; };
+		3812DAE31F3C8E89009E9D79 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3812DAE21F3C8E89009E9D79 /* UIAlertController.swift */; };
 		381647BB1F3079820038926E /* LogoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381647BA1F3079820038926E /* LogoImageView.swift */; };
 		381647BD1F307C7F0038926E /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381647BC1F307C7F0038926E /* UIStackView.swift */; };
 		381647BF1F30836F0038926E /* MiddleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381647BE1F30836F0038926E /* MiddleStackView.swift */; };
@@ -88,6 +89,7 @@
 		320065C6D98917D2FD006956 /* Pods-LogoQuizUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogoQuizUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LogoQuizUITests/Pods-LogoQuizUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3812DADD1F3C6E35009E9D79 /* applause3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = applause3.wav; path = ../../../Downloads/applause3.wav; sourceTree = "<group>"; };
 		3812DAE01F3C72B4009E9D79 /* InterstitialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialManager.swift; sourceTree = "<group>"; };
+		3812DAE21F3C8E89009E9D79 /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
 		381647BA1F3079820038926E /* LogoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImageView.swift; sourceTree = "<group>"; };
 		381647BC1F307C7F0038926E /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		381647BE1F30836F0038926E /* MiddleStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleStackView.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				383307F41F3336BA00EEFAC5 /* UIFont.swift */,
 				3847A6271F3473EE002962E2 /* UIColor.swift */,
 				38B23C5B1F35F28900010C9B /* SKProduct.swift */,
+				3812DAE21F3C8E89009E9D79 /* UIAlertController.swift */,
 			);
 			name = Extensions;
 			path = Extension;
@@ -691,6 +694,7 @@
 				3888FC9A1F3379E600DBCA41 /* CelebrationView.swift in Sources */,
 				3873EB201F2CE20200AAC196 /* Constants.swift in Sources */,
 				388F42831F2CAEB700509033 /* RadialGradientLayer.swift in Sources */,
+				3812DAE31F3C8E89009E9D79 /* UIAlertController.swift in Sources */,
 				383307F71F33523700EEFAC5 /* CashManager.swift in Sources */,
 				383307F51F3336BA00EEFAC5 /* UIFont.swift in Sources */,
 				388F42891F2CB2C400509033 /* YellowButton.swift in Sources */,
