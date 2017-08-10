@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import AVFoundation
 
 class PlaySceneViewController: MasterViewController, GameHintDelegate {
     @IBOutlet weak var logoImageView: UIImageView!
@@ -21,6 +22,8 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
     
     var brandViewModel: BrandViewModel!
     var lettersToShow: [Character]!
+    var player: AVAudioPlayer? //Used for the sounds
+    
     //MARK: View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,8 +88,12 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
         let celebrationView = CelebrationView(frame: view.bounds)
         view.addSubview(celebrationView)
         celebrationView.startConfetti()
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0) {
+        playApplauseSound()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3.0) {
             completion()
+            if let player = self.player {
+                player.stop()
+            }
         }
     }
     
@@ -232,6 +239,22 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
                 square.alpha = 0.5
             }
             self.checkIfWinner()
+        }
+    }
+    
+    //MARK: Sound Effects
+    fileprivate func playApplauseSound() {
+        guard let url = Bundle.main.url(forResource: "applause3", withExtension: "wav") else { return }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            player = try AVAudioPlayer(contentsOf: url)
+            guard let player = player else { return }
+            
+            player.play()
+        } catch let error {
+            print(error.localizedDescription)
         }
     }
 }
