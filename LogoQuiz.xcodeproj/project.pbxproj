@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2E0D3A8596EB92F6B1564F78 /* Pods_LogoQuizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890C53136AF8D27EB1D0C58E /* Pods_LogoQuizTests.framework */; };
 		3812DADE1F3C6E36009E9D79 /* applause3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3812DADD1F3C6E35009E9D79 /* applause3.wav */; };
+		3812DAE11F3C72B4009E9D79 /* InterstitialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3812DAE01F3C72B4009E9D79 /* InterstitialManager.swift */; };
 		381647BB1F3079820038926E /* LogoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381647BA1F3079820038926E /* LogoImageView.swift */; };
 		381647BD1F307C7F0038926E /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381647BC1F307C7F0038926E /* UIStackView.swift */; };
 		381647BF1F30836F0038926E /* MiddleStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381647BE1F30836F0038926E /* MiddleStackView.swift */; };
@@ -86,6 +87,7 @@
 		1BAD9D58E87DE919F5C64DC2 /* Pods-LogoQuizTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogoQuizTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LogoQuizTests/Pods-LogoQuizTests.debug.xcconfig"; sourceTree = "<group>"; };
 		320065C6D98917D2FD006956 /* Pods-LogoQuizUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogoQuizUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LogoQuizUITests/Pods-LogoQuizUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3812DADD1F3C6E35009E9D79 /* applause3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = applause3.wav; path = ../../../Downloads/applause3.wav; sourceTree = "<group>"; };
+		3812DAE01F3C72B4009E9D79 /* InterstitialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialManager.swift; sourceTree = "<group>"; };
 		381647BA1F3079820038926E /* LogoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImageView.swift; sourceTree = "<group>"; };
 		381647BC1F307C7F0038926E /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		381647BE1F30836F0038926E /* MiddleStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleStackView.swift; sourceTree = "<group>"; };
@@ -182,6 +184,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3812DADF1F3C7293009E9D79 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3873EB1B1F2CDD2900AAC196 /* BrandManager.swift */,
+				3873EB231F2CE86100AAC196 /* UserManager.swift */,
+				387917D11F32046D003FD82E /* GameHintDelegate.swift */,
+				383307F61F33523700EEFAC5 /* CashManager.swift */,
+				383BB95E1F3516C1005F919E /* IAPHelper.swift */,
+				38E18C601F38B071000D8DA4 /* RewardAdManager.swift */,
+				3895B9D71F3A0B3900519DE2 /* GameStateManager.swift */,
+				3812DAE01F3C72B4009E9D79 /* InterstitialManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		38281D011F2A7498009E41D7 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,16 +220,10 @@
 		388F42811F2CAEA500509033 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				3812DADF1F3C7293009E9D79 /* Managers */,
 				388F42821F2CAEB700509033 /* RadialGradientLayer.swift */,
 				3873EB1F1F2CE20200AAC196 /* Constants.swift */,
-				3873EB1B1F2CDD2900AAC196 /* BrandManager.swift */,
-				3873EB231F2CE86100AAC196 /* UserManager.swift */,
 				38265B1B1F2D2A6F009020FC /* Notifications.swift */,
-				387917D11F32046D003FD82E /* GameHintDelegate.swift */,
-				383307F61F33523700EEFAC5 /* CashManager.swift */,
-				383BB95E1F3516C1005F919E /* IAPHelper.swift */,
-				38E18C601F38B071000D8DA4 /* RewardAdManager.swift */,
-				3895B9D71F3A0B3900519DE2 /* GameStateManager.swift */,
 				3895B9D91F3A1A1600519DE2 /* Serializable.swift */,
 			);
 			name = Helpers;
@@ -657,6 +668,7 @@
 				38921FB01F2A2F52003A8F3A /* PlaySceneViewController.swift in Sources */,
 				3847A6281F3473EE002962E2 /* UIColor.swift in Sources */,
 				38920D3D1F2A8E2B00824E5F /* Array.swift in Sources */,
+				3812DAE11F3C72B4009E9D79 /* InterstitialManager.swift in Sources */,
 				388F42921F2CD45400509033 /* Brand.swift in Sources */,
 				38548FCF1F332B310048DC5F /* CashLabel.swift in Sources */,
 				387917D21F32046D003FD82E /* GameHintDelegate.swift in Sources */,

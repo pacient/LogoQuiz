@@ -23,11 +23,13 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
     var brandViewModel: BrandViewModel!
     var lettersToShow: [Character]!
     var player: AVAudioPlayer? //Used for the sounds
+    var interstitial: GADInterstitial!
     
     //MARK: View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAdView()
+        setupInterstitial()
         NotificationCenter.default.addObserver(self, selector: #selector(hideFindButton), name: Notifications.hideFindButton, object: nil)
         UserManager.delegate = self
         lettersToShow = brandViewModel.lettersToShow
@@ -40,6 +42,7 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
         }else {
             middleVerticalStackView.configure(with: brandViewModel.brandName, foundLetter: brandViewModel.foundLetters)
         }
+        InterstitialManager.trackViewCount()
     }
     
     override func viewDidLayoutSubviews() {
@@ -51,11 +54,24 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
         }
     }
     
+    fileprivate func presentInterstitialIfNeeded() {
+        if InterstitialManager.shouldShowInterstitial() {
+            if interstitial.isReady {
+                interstitial.present(fromRootViewController: self)
+                InterstitialManager.resetViewCount()
+            }else {
+                print("ad was not ready")
+            }
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if  brandViewModel.gameState.hasRemovedLetters { //UserManager.hasRemovedLettersForLevel {
             removeLetters()
         }
+        
+        presentInterstitialIfNeeded()
         
         UIView.animate(withDuration: 0.3) {
             self.bottomVerticalStackView.alpha = 1
@@ -82,6 +98,13 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
         bannerAd.adSize = kGADAdSizeSmartBannerPortrait
         bannerAd.rootViewController = self
         bannerAd.load(request)
+    }
+    
+    fileprivate func setupInterstitial() {
+        interstitial = GADInterstitial(adUnitID: Constants.interstitial_adID)
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        interstitial.load(request)
     }
     
     fileprivate func addCelebrationView(completion: @escaping ()->Void) {
@@ -188,6 +211,7 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
         
         if typedWord == brandViewModel.brandName {
             //Proceed to next level
+            presentInterstitialIfNeeded()
             UserManager.setValuesForNextLevel()
             brandViewModel.isDone = true
             addCelebrationView {
