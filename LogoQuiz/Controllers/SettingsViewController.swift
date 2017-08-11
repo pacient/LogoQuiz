@@ -30,7 +30,7 @@ class SettingsViewController: MasterViewController, MFMailComposeViewControllerD
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
         
-        mailComposerVC.setToRecipients(["vnunev2@gmail.com"])
+        mailComposerVC.setToRecipients(["logoquizfeedback@gmail.com "])
         mailComposerVC.setSubject("Logo Quiz Ultimate Feedback!")
         return mailComposerVC
     }
@@ -41,9 +41,8 @@ class SettingsViewController: MasterViewController, MFMailComposeViewControllerD
     }
     
     //MARK: Button Actions
-    //TODO: Change the id to the current game!!!
     @IBAction func rateGamePressed(_ sender: Any) {
-        let url = URL(string: "https://itunes.apple.com/us/app/holitime/id1263932027")!
+        let url = URL(string: "https://itunes.apple.com/us/app/holitime/id1268071798")!
         if UIApplication.shared.canOpenURL(url) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }else {
