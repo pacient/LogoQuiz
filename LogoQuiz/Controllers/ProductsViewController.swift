@@ -18,7 +18,7 @@ class ProductsViewController: UIViewController {
     @IBOutlet weak var tableViewContainer: UIView!
     @IBOutlet weak var tableView: UITableView!
     
-    let products = CashProducts.store.allProducts.sorted { (first, second) -> Bool in
+    let products = CashProducts.store.allProducts.filter({$0.productIdentifier.contains("Cash")}).sorted { (first, second) -> Bool in
         return first.price.floatValue < second.price.floatValue
     }
     

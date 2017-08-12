@@ -59,6 +59,19 @@ class SettingsViewController: MasterViewController, MFMailComposeViewControllerD
     }
     
     @IBAction func removeAdsPressed(_ sender: Any) {
+        guard let product = CashProducts.store.allProducts.first(where: {$0.productIdentifier.contains("AdRemoval")}) else {return}
+        let alert = UIAlertController(title: "Remove Ads", message: "Do you want to remove ads from the gameplay for \(product.localizedPrice())?", preferredStyle: .alert)
+        let removeAction = UIAlertAction(title: "Remove", style: .default) { (_) in
+            CashProducts.store.buyProduct(product)
+        }
+        let restoreAction = UIAlertAction(title: "Restore", style: .default) { (_) in
+            CashProducts.store.restorePurchases()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(removeAction)
+        alert.addAction(restoreAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func buyCashPressed(_ sender: Any) {

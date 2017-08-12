@@ -22,6 +22,15 @@ open class IAPHelper : NSObject  {
     
     public init(productIds: Set<ProductIdentifier>) {
         productIdentifiers = productIds
+        for productIdentifier in productIds {
+            let purchased = UserDefaults.standard.bool(forKey: productIdentifier)
+            if purchased {
+                purchasedProductIdentifiers.insert(productIdentifier)
+                print("Previously purchased: \(productIdentifier)")
+            } else {
+                print("Not purchased: \(productIdentifier)")
+            }
+        }
         super.init()
         SKPaymentQueue.default().add(self)
     }
@@ -46,15 +55,17 @@ extension IAPHelper {
         SKPaymentQueue.default().add(payment)
     }
     
-    public func isProductPurchased(_ productIdentifier: ProductIdentifier) -> Bool {
-        return false
+    public func isAdRemovalPurchased() -> Bool {
+        return purchasedProductIdentifiers.contains(CashProducts.adRemoval)
     }
     
     public class func canMakePayments() -> Bool {
         return true
     }
     
-    public func restorePurchases() { }
+    public func restorePurchases() {
+        SKPaymentQueue.default().restoreCompletedTransactions()
+    }
 }
 
 // MARK: - SKProductsRequestDelegate
@@ -112,6 +123,8 @@ extension IAPHelper: SKPaymentTransactionObserver {
         print("restore... \(productIdentifier)")
         deliverPurchaseNotificationFor(identifier: productIdentifier)
         SKPaymentQueue.default().finishTransaction(transaction)
+        let alert = UIAlertController(title: "Restore Completed", message: "We've restored your purchases! 🎉", style: .alert, cancelText: "OK")
+        UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
     }
     
     private func fail(transaction: SKPaymentTransaction) {
@@ -124,11 +137,9 @@ extension IAPHelper: SKPaymentTransactionObserver {
     
     private func deliverPurchaseNotificationFor(identifier: String?) {
         guard let identifier = identifier else { return }
-        
         if identifier.contains("Cash") { // User bought cash
             guard let amount = identifier.components(separatedBy: ".").last else {return}
             CashManager.bumpCash(amount: Int(amount)!)
-            
         }else {//User removed ads
             purchasedProductIdentifiers.insert(identifier)
             UserDefaults.standard.set(true, forKey: identifier)

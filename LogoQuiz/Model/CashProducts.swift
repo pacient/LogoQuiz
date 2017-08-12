@@ -13,8 +13,9 @@ public struct CashProducts {
     public static let cash1000 = "com.nunev.LogoQuiz.Cash.1000"
     public static let cash3000 = "com.nunev.LogoQuiz.Cash.3000"
     public static let cash15000 = "com.nunev.LogoQuiz.Cash.15000"
+    public static let adRemoval = "com.nunev.LogoQuiz.AdRemoval"
         
-    fileprivate static let productIdentifiers: Set<ProductIdentifier> = [CashProducts.cash1000, CashProducts.cash3000, CashProducts.cash15000]
+    fileprivate static let productIdentifiers: Set<ProductIdentifier> = [CashProducts.cash1000, CashProducts.cash3000, CashProducts.cash15000, CashProducts.adRemoval]
     
     public static let store = IAPHelper(productIds: CashProducts.productIdentifiers)
 }
