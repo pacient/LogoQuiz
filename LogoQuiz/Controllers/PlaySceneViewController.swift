@@ -19,6 +19,7 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
     @IBOutlet weak var removeLettersButton: UIButton!
     @IBOutlet weak var blueBar: BlueNavBar!
     @IBOutlet weak var bannerAd: GADBannerView!
+    @IBOutlet weak var bannerAdHeightConstraint: NSLayoutConstraint!
     
     var brandViewModel: BrandViewModel!
     var lettersToShow: [Character]!
@@ -28,8 +29,10 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
     //MARK: View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupAdView()
-        setupInterstitial()
+        if !CashProducts.store.isAdRemovalPurchased() {
+            setupAdView()
+            setupInterstitial()
+        }
         NotificationCenter.default.addObserver(self, selector: #selector(hideFindButton), name: Notifications.hideFindButton, object: nil)
         UserManager.delegate = self
         lettersToShow = brandViewModel.lettersToShow
@@ -55,7 +58,7 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
     }
     
     fileprivate func presentInterstitialIfNeeded() {
-        if InterstitialManager.shouldShowInterstitial() {
+        if !CashProducts.store.isAdRemovalPurchased(), InterstitialManager.shouldShowInterstitial() {
             if interstitial.isReady {
                 interstitial.present(fromRootViewController: self)
                 InterstitialManager.resetViewCount()
@@ -97,6 +100,7 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
         bannerAd.adUnitID = Constants.banner_adID
         bannerAd.adSize = kGADAdSizeSmartBannerPortrait
         bannerAd.rootViewController = self
+        bannerAdHeightConstraint.constant = 50
         bannerAd.load(request)
     }
     
