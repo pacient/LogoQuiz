@@ -65,13 +65,12 @@ struct BrandViewModel {
     var shouldHideFindButton: Bool {
         return foundLetters.joined().filter({$0 == " "}).count <= 1
     }
-    private var helperChars: [String]
     
     //TODO: Refactor me!!!!!!
     mutating func getCorrectLetter() -> [IndexPath : Character] {
-        let randomChar = randomLetter(from: helperChars.filter({$0 != "|"}).joined())
+        let randomChar = randomLetter(from: gameState.helperLetters.filter({$0 != "|"}).joined())
         guard randomChar != " " else { return getCorrectLetter() }
-        var words = helperChars.split(separator: " ").map({Array($0)})
+        var words = gameState.helperLetters.split(separator: " ").map({Array($0)})
         let index: IndexPath
         if let indx = words[0].index(of: String(randomChar)){
             index = IndexPath(row: 0, section: indx)
@@ -86,9 +85,9 @@ struct BrandViewModel {
         gameState.lettersFound[index.row].remove(at: index.section)
         gameState.lettersFound[index.row].insert(String(randomChar), at: index.section)
         if words.count > 1 {
-            self.helperChars = Array(words[0] + [" "] + words[1]).map({String($0)})
+            gameState.helperLetters = Array(words[0] + [" "] + words[1]).map({String($0)})
         }else {
-            self.helperChars = Array(words[0]).map({String($0)})
+            gameState.helperLetters = Array(words[0]).map({String($0)})
         }
         if shouldHideFindButton {
             NotificationCenter.default.post(name: Notifications.hideFindButton, object: nil)
@@ -104,11 +103,8 @@ struct BrandViewModel {
     
     init(brand: Brand) {
         self.brand = brand
-        self.helperChars = Array(brand.name.characters).map{String($0)}
-        self.gameState = GameStateManager.gameStates[brand.level] ?? GameState()
-        if gameState.lettersFound.count == 0 {
-            gameState.lettersFound = brand.name.components(separatedBy: " ").map({$0.characters.map({ _ in " "})})
-        }
-        
+        let initialLettersFound = brand.name.components(separatedBy: " ").map({$0.characters.map({ _ in " "})})
+        let initialHelperChars = Array(brand.name.characters).map{String($0)}
+        self.gameState = GameStateManager.gameStates[brand.level] ?? GameState(hasRemovedLetters: false, lettersFound: initialLettersFound, helperLetters: initialHelperChars, isDone: false)
     }
 }

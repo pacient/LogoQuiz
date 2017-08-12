@@ -261,11 +261,16 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
             let char = letterToShow.values.first!
             let stackView = self.middleVerticalStackView.arrangedSubviews[inWord] as! UIStackView
             let square = stackView.arrangedSubviews[inSubview] as! SquareView
+            if square.tag < 100 {
+                self.removeFromSquare(with: square.tag)
+            }
             if square.isUserInteractionEnabled {
                 square.label.text = "\(char)"
                 square.isUserInteractionEnabled = false
                 square.alpha = 0.5
+                square.tag = 100
             }
+            
             self.checkIfWinner()
         }
     }

@@ -11,5 +11,6 @@ import Foundation
 struct GameState: Serializable {
     var hasRemovedLetters: Bool = false
     var lettersFound: [[String]] = []
+    var helperLetters: [String] = []
     var isDone: Bool = false
 }
