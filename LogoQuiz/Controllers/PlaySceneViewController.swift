@@ -245,6 +245,7 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
             self.middleVerticalStackView.arrangedSubviews.flatMap({($0 as? UIStackView)?.arrangedSubviews ?? [$0]}).flatMap({$0 as? SquareView}).forEach { (square) in
                 if let char = square.label.text?.characters.first, !self.brandViewModel.brandName.contains(char) {
                     square.label.text = nil
+                    square.tag = 100
                 }
             }
             self.brandViewModel.hasRemovedLetters = true
