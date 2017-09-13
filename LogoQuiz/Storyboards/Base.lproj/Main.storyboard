@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mh2-Mf-ojL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mh2-Mf-ojL">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -20,19 +21,23 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="main" id="BYZ-38-t0r" customClass="MainViewController" customModule="LogoQuiz" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ptw-34-NVY" customClass="BlueNavBar" customModule="LogoQuiz" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTw-8l-qsR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <color key="backgroundColor" red="0.077577359969999996" green="0.237015483" blue="0.35893875359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="hXU-o4-kaJ"/>
+                                    <constraint firstAttribute="height" constant="44" id="Dpm-Q5-og6"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="kDy-Ky-0fn"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ptw-34-NVY" customClass="BlueNavBar" customModule="LogoQuiz" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.077577359969999996" green="0.237015483" blue="0.35893875359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="hXU-o4-kaJ"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OtD-Nw-3ta" customClass="CircleNavView" customModule="LogoQuiz" customModuleProvider="target">
@@ -98,16 +103,20 @@
                         </subviews>
                         <color key="backgroundColor" red="0.33371838929999997" green="0.51054686309999997" blue="0.68785446880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="iTw-8l-qsR" firstAttribute="trailing" secondItem="qTC-yg-8A6" secondAttribute="trailing" id="HjP-zi-Ggm"/>
                             <constraint firstItem="P5t-U0-RSL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="SXV-SI-fMf"/>
-                            <constraint firstItem="ptw-34-NVY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="W9e-wm-lDc"/>
+                            <constraint firstItem="ptw-34-NVY" firstAttribute="leading" secondItem="qTC-yg-8A6" secondAttribute="leading" id="W9e-wm-lDc"/>
+                            <constraint firstItem="iTw-8l-qsR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="WHZ-Ot-1gd"/>
                             <constraint firstItem="P5t-U0-RSL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.85" id="Z7f-La-RIp"/>
                             <constraint firstItem="P5t-U0-RSL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.65" id="ax4-yb-LOd"/>
-                            <constraint firstAttribute="trailing" secondItem="ptw-34-NVY" secondAttribute="trailing" id="bHj-3k-Zz7"/>
-                            <constraint firstItem="ptw-34-NVY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eh7-8c-sve"/>
-                            <constraint firstItem="OtD-Nw-3ta" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hPc-e3-jJU"/>
-                            <constraint firstItem="P5t-U0-RSL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lmo-Yc-uRy"/>
-                            <constraint firstItem="OtD-Nw-3ta" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pXz-ja-LDk"/>
+                            <constraint firstItem="qTC-yg-8A6" firstAttribute="trailing" secondItem="ptw-34-NVY" secondAttribute="trailing" id="bHj-3k-Zz7"/>
+                            <constraint firstItem="iTw-8l-qsR" firstAttribute="leading" secondItem="qTC-yg-8A6" secondAttribute="leading" id="eQ1-LK-iFU"/>
+                            <constraint firstItem="ptw-34-NVY" firstAttribute="top" secondItem="qTC-yg-8A6" secondAttribute="top" id="eh7-8c-sve"/>
+                            <constraint firstItem="OtD-Nw-3ta" firstAttribute="top" secondItem="qTC-yg-8A6" secondAttribute="top" id="hPc-e3-jJU"/>
+                            <constraint firstItem="P5t-U0-RSL" firstAttribute="centerX" secondItem="qTC-yg-8A6" secondAttribute="centerX" id="lmo-Yc-uRy"/>
+                            <constraint firstItem="OtD-Nw-3ta" firstAttribute="centerX" secondItem="qTC-yg-8A6" secondAttribute="centerX" id="pXz-ja-LDk"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="qTC-yg-8A6"/>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="SXV-SI-fMf"/>
@@ -135,7 +144,6 @@
                 <navigationController storyboardIdentifier="mainNav" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="mh2-Mf-ojL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jhj-KN-Ab1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -151,19 +159,22 @@
         <scene sceneID="o0m-Jc-v7C">
             <objects>
                 <viewController storyboardIdentifier="settingsVC" id="RAQ-G3-LSN" customClass="SettingsViewController" customModule="LogoQuiz" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xeM-6a-IuF"/>
-                        <viewControllerLayoutGuide type="bottom" id="gcI-jq-sXp"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Esm-w2-ikD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGg-gN-9Va">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.077577359969999996" green="0.237015483" blue="0.35893875359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="mrs-GR-SD0"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atB-Li-LFN" customClass="BlueNavBar" customModule="LogoQuiz" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zc-VG-VpO" customClass="YellowButton" customModule="LogoQuiz" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="26" width="55" height="30"/>
+                                        <rect key="frame" x="8" y="6" width="55" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="55" id="WdL-Pr-Rro"/>
                                             <constraint firstAttribute="height" constant="30" id="gle-HL-Qqx"/>
@@ -180,7 +191,7 @@
                                 <color key="backgroundColor" red="0.077577359969999996" green="0.237015483" blue="0.35893875359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="9zc-VG-VpO" firstAttribute="leading" secondItem="atB-Li-LFN" secondAttribute="leading" constant="8" id="O1u-e1-7RZ"/>
-                                    <constraint firstAttribute="height" constant="64" id="mge-cs-hMt"/>
+                                    <constraint firstAttribute="height" constant="44" id="mge-cs-hMt"/>
                                     <constraint firstAttribute="bottom" secondItem="9zc-VG-VpO" secondAttribute="bottom" constant="8" id="xic-tC-NHM"/>
                                 </constraints>
                             </view>
@@ -262,16 +273,20 @@
                         <color key="backgroundColor" red="0.33371838929999997" green="0.51054686309999997" blue="0.68785446880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="WbQ-HX-bs5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="CJw-YA-T5W" secondAttribute="bottom" constant="8" id="1aO-wy-rdB"/>
-                            <constraint firstAttribute="trailing" secondItem="atB-Li-LFN" secondAttribute="trailing" id="6GY-aY-i0i"/>
+                            <constraint firstItem="pGg-gN-9Va" firstAttribute="top" secondItem="Esm-w2-ikD" secondAttribute="top" id="2Sz-OU-zwU"/>
+                            <constraint firstItem="yj6-51-may" firstAttribute="trailing" secondItem="atB-Li-LFN" secondAttribute="trailing" id="6GY-aY-i0i"/>
                             <constraint firstItem="WbQ-HX-bs5" firstAttribute="width" secondItem="Esm-w2-ikD" secondAttribute="width" multiplier="0.5" id="6Sr-LW-qNB"/>
-                            <constraint firstItem="CJw-YA-T5W" firstAttribute="centerX" secondItem="Esm-w2-ikD" secondAttribute="centerX" id="6kf-Hb-4RO"/>
-                            <constraint firstItem="CJw-YA-T5W" firstAttribute="top" secondItem="xeM-6a-IuF" secondAttribute="bottom" id="DYY-qH-boj"/>
+                            <constraint firstItem="CJw-YA-T5W" firstAttribute="centerX" secondItem="yj6-51-may" secondAttribute="centerX" id="6kf-Hb-4RO"/>
+                            <constraint firstItem="CJw-YA-T5W" firstAttribute="top" secondItem="yj6-51-may" secondAttribute="top" id="DYY-qH-boj"/>
                             <constraint firstItem="WbQ-HX-bs5" firstAttribute="centerY" secondItem="Esm-w2-ikD" secondAttribute="centerY" id="JNM-Gn-sIV"/>
-                            <constraint firstItem="atB-Li-LFN" firstAttribute="leading" secondItem="Esm-w2-ikD" secondAttribute="leading" id="Oat-qp-P5V"/>
-                            <constraint firstItem="WbQ-HX-bs5" firstAttribute="centerX" secondItem="Esm-w2-ikD" secondAttribute="centerX" id="SeL-yQ-Ik7"/>
+                            <constraint firstItem="atB-Li-LFN" firstAttribute="leading" secondItem="yj6-51-may" secondAttribute="leading" id="Oat-qp-P5V"/>
+                            <constraint firstItem="WbQ-HX-bs5" firstAttribute="centerX" secondItem="yj6-51-may" secondAttribute="centerX" id="SeL-yQ-Ik7"/>
                             <constraint firstItem="WbQ-HX-bs5" firstAttribute="width" secondItem="Esm-w2-ikD" secondAttribute="width" multiplier="0.65" id="W2J-yg-tFM"/>
-                            <constraint firstItem="atB-Li-LFN" firstAttribute="top" secondItem="Esm-w2-ikD" secondAttribute="top" id="wQN-yq-XMi"/>
+                            <constraint firstItem="pGg-gN-9Va" firstAttribute="leading" secondItem="yj6-51-may" secondAttribute="leading" id="fX8-nJ-NvP"/>
+                            <constraint firstItem="pGg-gN-9Va" firstAttribute="trailing" secondItem="yj6-51-may" secondAttribute="trailing" id="q71-8e-2o1"/>
+                            <constraint firstItem="atB-Li-LFN" firstAttribute="top" secondItem="yj6-51-may" secondAttribute="top" id="wQN-yq-XMi"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="yj6-51-may"/>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="6Sr-LW-qNB"/>
@@ -300,7 +315,6 @@
                 <navigationController storyboardIdentifier="settingsNav" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="tHX-bc-ftn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GOS-IM-Crp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
