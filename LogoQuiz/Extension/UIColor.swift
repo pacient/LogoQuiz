@@ -10,6 +10,6 @@ import UIKit
 
 extension UIColor {
     class var darkBlue: UIColor {
-        return UIColor(colorLiteralRed: 20/255, green: 60/255, blue: 92/255, alpha: 1)
+        return UIColor(displayP3Red: 20/255, green: 60/255, blue: 92/255, alpha: 1)
     }
 }
