@@ -90,6 +90,7 @@
 		3812DADD1F3C6E35009E9D79 /* applause3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = applause3.wav; path = ../../../Downloads/applause3.wav; sourceTree = "<group>"; };
 		3812DAE01F3C72B4009E9D79 /* InterstitialManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialManager.swift; sourceTree = "<group>"; };
 		3812DAE21F3C8E89009E9D79 /* UIAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
+		38153BF21F75504F008DF502 /* LogoQuiz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LogoQuiz.entitlements; sourceTree = "<group>"; };
 		381647BA1F3079820038926E /* LogoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImageView.swift; sourceTree = "<group>"; };
 		381647BC1F307C7F0038926E /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		381647BE1F30836F0038926E /* MiddleStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleStackView.swift; sourceTree = "<group>"; };
@@ -283,6 +284,7 @@
 		38921F781F2A17D6003A8F3A /* LogoQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				38153BF21F75504F008DF502 /* LogoQuiz.entitlements */,
 				388F42901F2CD43800509033 /* Model */,
 				388F42811F2CAEA500509033 /* Helpers */,
 				38920D3B1F2A8E1300824E5F /* Extensions */,
@@ -456,6 +458,9 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 						};
@@ -875,6 +880,7 @@
 			baseConfigurationReference = BF662306E16D1EA6D06F5AAB /* Pods-LogoQuiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LogoQuiz/LogoQuiz.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TPWG8G6ELX;
@@ -895,6 +901,7 @@
 			baseConfigurationReference = CCFAFE20D2BD3CE6EE5D0A08 /* Pods-LogoQuiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LogoQuiz/LogoQuiz.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TPWG8G6ELX;
