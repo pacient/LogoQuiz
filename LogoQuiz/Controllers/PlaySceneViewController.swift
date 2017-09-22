@@ -111,16 +111,21 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
         interstitial.load(request)
     }
     
+    fileprivate func stopPlayerIfNeeded() {
+        if let player = self.player {
+            player.stop()
+        }
+    }
+    
     fileprivate func addCelebrationView(completion: @escaping ()->Void) {
         let celebrationView = CelebrationView(frame: view.bounds)
         view.addSubview(celebrationView)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(nextLevel))
+        celebrationView.addGestureRecognizer(tap)
         celebrationView.startConfetti()
         playApplauseSound()
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3.0) {
             completion()
-            if let player = self.player {
-                player.stop()
-            }
         }
     }
     
@@ -227,7 +232,8 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
         }
     }
     
-    fileprivate func nextLevel() {
+    @objc fileprivate func nextLevel() {
+        stopPlayerIfNeeded()
         guard var viewcontrollers = self.navigationController?.viewControllers else {return}
         viewcontrollers.removeLast()//remove the play scene
         navigationController?.setViewControllers(viewcontrollers, animated: true)
@@ -285,7 +291,7 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
             
             player = try AVAudioPlayer(contentsOf: url)
             guard let player = player else { return }
-            
+            player.volume = UserManager.instance.isSoundDisabled ? 0 : 1
             player.play()
         } catch let error {
             print(error.localizedDescription)
