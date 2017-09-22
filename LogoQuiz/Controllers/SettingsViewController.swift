@@ -12,28 +12,41 @@ import MessageUI
 class SettingsViewController: MasterViewController, MFMailComposeViewControllerDelegate {
     @IBOutlet weak var stackview: UIStackView!
     @IBOutlet weak var blueBar: BlueNavBar!
+    @IBOutlet weak var audioButton: UIButton!
+    private var token: NSKeyValueObservation!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        token = UserManager.instance.observe(\.isSoundDisabled) { [weak self](manager, _) in
+            self?.audioButton.setTitle(manager.isSoundDisabled ? "🔇" : "🔊", for: .normal)
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.audioButton.setTitle(UserManager.instance.isSoundDisabled ? "🔇" : "🔊", for: .normal)
         stackview.bounds.origin.x -= self.view.bounds.width
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: {
             self.stackview.bounds.origin.x += self.view.bounds.width
         }, completion: nil)
     }
     
+    deinit {
+        token = nil
+    }
+    
     func configuredMailComposeViewController() -> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
-        
         mailComposerVC.setToRecipients(["logoquizfeedback@gmail.com "])
         mailComposerVC.setSubject("Logo Quiz Ultimate Feedback!")
         return mailComposerVC
     }
+    
     
     // MARK: MFMailComposeViewControllerDelegate Method
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
@@ -85,6 +98,10 @@ class SettingsViewController: MasterViewController, MFMailComposeViewControllerD
         let vc = UIStoryboard(name: "Products", bundle: nil).instantiateInitialViewController()!
         vc.modalPresentationStyle = .overCurrentContext
         present(vc, animated: false, completion: nil)
+    }
+    
+    @IBAction func audioButtonPressed(_ sender: Any) {
+        UserManager.toggleAudio()
     }
     
     @IBAction func backPressed(_ sender: Any) {

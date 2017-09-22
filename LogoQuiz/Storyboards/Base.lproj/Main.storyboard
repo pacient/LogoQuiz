@@ -44,7 +44,7 @@
                                 <rect key="frame" x="167" y="20" width="80" height="80.666666666666671"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNG-sQ-iZ0">
-                                        <rect key="frame" x="10.333333333333343" y="28.333333333333332" width="59.666666666666657" height="24.999999999999996"/>
+                                        <rect key="frame" x="10" y="28.666666666666668" width="59.666666666666657" height="25.000000000000004"/>
                                         <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -269,6 +269,21 @@
                                 </subviews>
                                 <variation key="heightClass=regular-widthClass=regular" spacing="50"/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1o-8o-Ig4">
+                                <rect key="frame" x="356" y="72" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="2ce-gK-GOS"/>
+                                    <constraint firstAttribute="width" secondItem="u1o-8o-Ig4" secondAttribute="height" multiplier="1:1" id="ZAg-hN-jak"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="35"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="🔈">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="audioButtonPressed:" destination="RAQ-G3-LSN" eventType="touchUpInside" id="05z-yO-ZPP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.33371838929999997" green="0.51054686309999997" blue="0.68785446880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -282,6 +297,8 @@
                             <constraint firstItem="atB-Li-LFN" firstAttribute="leading" secondItem="yj6-51-may" secondAttribute="leading" id="Oat-qp-P5V"/>
                             <constraint firstItem="WbQ-HX-bs5" firstAttribute="centerX" secondItem="yj6-51-may" secondAttribute="centerX" id="SeL-yQ-Ik7"/>
                             <constraint firstItem="WbQ-HX-bs5" firstAttribute="width" secondItem="Esm-w2-ikD" secondAttribute="width" multiplier="0.65" id="W2J-yg-tFM"/>
+                            <constraint firstItem="u1o-8o-Ig4" firstAttribute="top" secondItem="atB-Li-LFN" secondAttribute="bottom" constant="8" id="cXj-4P-hCE"/>
+                            <constraint firstItem="yj6-51-may" firstAttribute="trailing" secondItem="u1o-8o-Ig4" secondAttribute="trailing" constant="8" id="dcm-fv-nCn"/>
                             <constraint firstItem="pGg-gN-9Va" firstAttribute="leading" secondItem="yj6-51-may" secondAttribute="leading" id="fX8-nJ-NvP"/>
                             <constraint firstItem="pGg-gN-9Va" firstAttribute="trailing" secondItem="yj6-51-may" secondAttribute="trailing" id="q71-8e-2o1"/>
                             <constraint firstItem="atB-Li-LFN" firstAttribute="top" secondItem="yj6-51-may" secondAttribute="top" id="wQN-yq-XMi"/>
@@ -301,6 +318,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ccg-gz-CaH"/>
                     <connections>
+                        <outlet property="audioButton" destination="u1o-8o-Ig4" id="KGo-ie-tpG"/>
                         <outlet property="blueBar" destination="atB-Li-LFN" id="1Gt-8L-qEs"/>
                         <outlet property="stackview" destination="WbQ-HX-bs5" id="RpJ-eD-43M"/>
                     </connections>

@@ -8,10 +8,15 @@
 
 import UIKit
 
-class UserManager {
-    private static let instance = UserManager()
+class UserManager: NSObject {
+    static let instance = UserManager()
     private static let ud = UserDefaults.standard
     static var delegate: GameHintDelegate?
+    @objc private(set) dynamic var isSoundDisabled: Bool = UserManager.ud.bool(forKey: Constants.audioDisabled) {
+        didSet{
+            UserManager.ud.set(isSoundDisabled, forKey: Constants.audioDisabled)
+        }
+    }
     
     //MARK: Functions
     fileprivate class func noCashAlert() -> UIAlertController {
@@ -79,5 +84,7 @@ class UserManager {
         return alert
     }
     
-    
+    class func toggleAudio() {
+        instance.isSoundDisabled = !instance.isSoundDisabled
+    }
 }

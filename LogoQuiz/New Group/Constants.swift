@@ -17,4 +17,5 @@ struct Constants {
     static let gameStates = "gameStates"
     static let banner_adID = "ca-app-pub-9037734016404410/8085789411"
     static let interstitial_adID = "ca-app-pub-9037734016404410/7104891997"
+    static let audioDisabled = "audioDisabled"
 }
