@@ -71,7 +71,7 @@
                                 <rect key="frame" x="344" y="20" width="80" height="80.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agb-s3-v7b">
-                                        <rect key="frame" x="22" y="8" width="35.5" height="17.5"/>
+                                        <rect key="frame" x="24" y="8" width="31.5" height="15"/>
                                         <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -89,7 +89,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8M-ob-yZ3">
-                                <rect key="frame" x="384.5" y="45" width="0.0" height="0.0"/>
+                                <rect key="frame" x="384.5" y="50.5" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="EurostileRegular" family="Eurostile" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -744,7 +744,7 @@
                             <constraint firstItem="QSQ-F7-tUb" firstAttribute="trailing" secondItem="xTu-Yl-s6E" secondAttribute="trailing" id="3f1-iE-pMR"/>
                             <constraint firstItem="QSQ-F7-tUb" firstAttribute="trailing" secondItem="mP2-Jj-gmy" secondAttribute="trailing" id="86P-ms-zxj"/>
                             <constraint firstItem="cBE-XL-DUY" firstAttribute="top" secondItem="wMt-lW-jHh" secondAttribute="top" id="AF5-Zv-Zga"/>
-                            <constraint firstItem="QSQ-F7-tUb" firstAttribute="bottom" secondItem="xTu-Yl-s6E" secondAttribute="bottom" id="FvP-HU-8ya"/>
+                            <constraint firstAttribute="bottom" secondItem="xTu-Yl-s6E" secondAttribute="bottom" id="FvP-HU-8ya"/>
                             <constraint firstItem="cBE-XL-DUY" firstAttribute="trailing" secondItem="QSQ-F7-tUb" secondAttribute="trailing" id="H7Z-3C-e7b"/>
                             <constraint firstItem="mP2-Jj-gmy" firstAttribute="top" secondItem="QSQ-F7-tUb" secondAttribute="top" id="c6j-R3-YP3"/>
                             <constraint firstItem="cBE-XL-DUY" firstAttribute="leading" secondItem="QSQ-F7-tUb" secondAttribute="leading" id="pDM-To-rMD"/>
