@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 import UserNotifications
+import Crashlytics
+import Fabric
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate {
@@ -18,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         FirebaseApp.configure()
         UIApplication.shared.statusBarStyle = .lightContent
         RewardAdManager.instance.loadAd()
-        
+        Fabric.with([Crashlytics.self])
         BrandManager.decodeJSON { (stored) in
             if stored {
                 //dissmiss splash screen here

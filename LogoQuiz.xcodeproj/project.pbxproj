@@ -391,6 +391,7 @@
 				38921F741F2A17D6003A8F3A /* Resources */,
 				DA363A186F88C71C1047E3F1 /* [CP] Embed Pods Frameworks */,
 				33F8F29DB618C88487153694 /* [CP] Copy Pods Resources */,
+				38153BF41F755B69008DF502 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -575,6 +576,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LogoQuizTests/Pods-LogoQuizTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		38153BF41F755B69008DF502 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" ff90fc5ca5e705b935a3cdda8fbc7fa721ec891a 3d32602b27825ba352d95d75578d7aef850844d2aa59031b7b298dfd66945492";
 		};
 		50342A2D0478FBDC7B91B9A8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

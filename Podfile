@@ -9,6 +9,8 @@ target 'LogoQuiz' do
   pod 'Firebase/Core'
   pod 'Firebase/AdMob'
   pod 'Firebase/Messaging'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
   target 'LogoQuizTests' do
     inherit! :search_paths

@@ -1,4 +1,7 @@
 PODS:
+  - Crashlytics (3.8.6):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.13)
   - Firebase/AdMob (4.0.3):
     - Firebase/Core
     - Google-Mobile-Ads-SDK (= 7.21.0)
@@ -31,11 +34,15 @@ PODS:
   - Protobuf (3.4.0)
 
 DEPENDENCIES:
+  - Crashlytics
+  - Fabric
   - Firebase/AdMob
   - Firebase/Core
   - Firebase/Messaging
 
 SPEC CHECKSUMS:
+  Crashlytics: 95d05f4e4c19a771250c4bd9ce344d996de32bbf
+  Fabric: 2fb5676bc811af011a04513451f463dac6803206
   Firebase: 9e33fdfbca37cab635c693883caa90a4475b842b
   FirebaseAnalytics: ad41720e3e67fc63fbe3d2948d3e26932a8de311
   FirebaseCore: c709067051de07bdaffdc4e735cd7299a23c463a
@@ -45,6 +52,6 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   Protobuf: 03eef2ee0b674770735cf79d9c4d3659cf6908e8
 
-PODFILE CHECKSUM: 8f5211108dc2ff9d3596c28d93f0b02a084075e9
+PODFILE CHECKSUM: 2d6a510db60b5b6a8602e2af3f776f178125d7df
 
 COCOAPODS: 1.2.1.beta.1
