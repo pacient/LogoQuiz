@@ -588,15 +588,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1k-FP-zzR" customClass="YellowButton" customModule="LogoQuiz" customModuleProvider="target">
                                 <rect key="frame" x="697" y="966" width="55" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="AFg-L1-gnz">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="35"/>
-                                    </constraint>
-                                    <constraint firstAttribute="height" constant="50" id="gir-Ua-ysR">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="30"/>
-                                    </constraint>
-                                </constraints>
-                                <state key="normal" image="SHARE"/>
+                                <state key="normal" image="Share"/>
                                 <connections>
                                     <action selector="sharePressed:" destination="Yuj-gz-2bH" eventType="touchUpInside" id="aqN-H9-fx1"/>
                                 </connections>
@@ -611,6 +603,7 @@
                             <constraint firstItem="wij-Go-XJS" firstAttribute="trailing" secondItem="DwW-rB-f6J" secondAttribute="trailing" id="3S0-zb-vUX"/>
                             <constraint firstItem="rHt-ON-cre" firstAttribute="height" secondItem="lAm-8R-gor" secondAttribute="height" multiplier="0.3" id="4hy-QX-JiN"/>
                             <constraint firstItem="Df4-ub-jlq" firstAttribute="leading" secondItem="b38-Ij-kLL" secondAttribute="trailing" constant="8" id="5Cw-ZT-FwI"/>
+                            <constraint firstItem="z1k-FP-zzR" firstAttribute="width" secondItem="Df4-ub-jlq" secondAttribute="width" id="5gV-Hi-Ehy"/>
                             <constraint firstItem="JMA-up-RNZ" firstAttribute="top" secondItem="Yzm-KS-bQ1" secondAttribute="bottom" constant="70" id="Dpz-uJ-veK"/>
                             <constraint firstItem="wij-Go-XJS" firstAttribute="trailing" secondItem="Sdf-YC-23U" secondAttribute="trailing" id="FOw-nr-7Mj"/>
                             <constraint firstItem="wij-Go-XJS" firstAttribute="trailing" secondItem="F8G-aJ-ekB" secondAttribute="trailing" id="GMk-mt-mSS"/>
@@ -621,6 +614,7 @@
                             <constraint firstAttribute="trailing" secondItem="z1k-FP-zzR" secondAttribute="trailing" constant="16" id="RTI-xW-3mK"/>
                             <constraint firstItem="rHt-ON-cre" firstAttribute="top" secondItem="36e-ae-RRF" secondAttribute="bottom" constant="8" id="TCm-UM-dQI"/>
                             <constraint firstItem="S8M-ob-yZ3" firstAttribute="centerX" secondItem="36e-ae-RRF" secondAttribute="centerX" id="UFe-g1-lDn"/>
+                            <constraint firstItem="z1k-FP-zzR" firstAttribute="height" secondItem="Df4-ub-jlq" secondAttribute="height" id="Wdh-MB-eRE"/>
                             <constraint firstItem="36e-ae-RRF" firstAttribute="baseline" secondItem="S8M-ob-yZ3" secondAttribute="firstBaseline" constant="22" id="Wqf-Ax-1uX"/>
                             <constraint firstItem="36e-ae-RRF" firstAttribute="centerX" secondItem="wij-Go-XJS" secondAttribute="centerX" id="YSK-b8-clg"/>
                             <constraint firstItem="wij-Go-XJS" firstAttribute="bottom" secondItem="DwW-rB-f6J" secondAttribute="bottom" id="bAR-N8-d4w"/>
@@ -782,7 +776,7 @@
     </scenes>
     <resources>
         <image name="FACEBOOK_logo" width="600" height="350"/>
-        <image name="SHARE" width="55" height="50"/>
+        <image name="Share" width="55" height="47"/>
         <image name="find" width="55" height="48"/>
         <image name="remove-iPad" width="55" height="48"/>
     </resources>
