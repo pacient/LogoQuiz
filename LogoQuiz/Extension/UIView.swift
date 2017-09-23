@@ -33,4 +33,14 @@ extension UIView {
         animation.values = [1.0, 0.9, 0.8, 0.7, 0.8, 0.9, 1.0]
         layer.add(animation, forKey: kCATransitionPush)
     }
+    
+    func takeScreenshot() -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.main.scale)
+        drawHierarchy(in: self.bounds, afterScreenUpdates: true)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return image ?? nil
+    }
 }

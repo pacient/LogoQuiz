@@ -170,6 +170,15 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
         navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func sharePressed(_ sender: UIButton) {
+        guard let image = view.takeScreenshot() else {return}
+        let activityVC = UIActivityViewController(activityItems: ["Do you know which brand logo this is?",image], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        activityVC.popoverPresentationController?.sourceRect = sender.frame
+        activityVC.excludedActivityTypes = [.assignToContact, .addToReadingList,]
+        self.present(activityVC, animated: true, completion: nil)
+    }
+    
     //MARK: Helper Functions
     fileprivate func insertToSquare(letter: String, tag: Int, completion: @escaping () -> Void) {
         for stackview in middleVerticalStackView.arrangedSubviews as! [UIStackView] {
