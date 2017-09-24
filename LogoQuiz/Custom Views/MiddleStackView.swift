@@ -9,7 +9,6 @@
 import UIKit
 
 class MiddleStackView: UIStackView {
-    
     func configure(with brandName: String, foundLetter: [[String]]) {
         let wordsInBrand = brandName.split(separator: " ")
         guard wordsInBrand.count > 0 else { return }

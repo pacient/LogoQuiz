@@ -1,4 +1,4 @@
-[  
+[
    {  
       "imageName":"ZYNGA_logo.png",
       "name":"ZYNGA",
@@ -1223,5 +1223,285 @@
       "imageName":"ADIDAS_logo.png",
       "name":"ADIDAS",
       "level":245
+   },  
+   {  
+      "imageName":"ACTIVISION_logo.png",
+      "name":"ACTIVISION",
+      "level":246
+   },
+   {  
+      "imageName":"ANDROID_logo.png",
+      "name":"ANDROID",
+      "level":247
+   },
+   {  
+      "imageName":"ARGOS_logo.png",
+      "name":"ARGOS",
+      "level":248
+   },
+   {  
+      "imageName":"ALDI_logo.png",
+      "name":"ALDI",
+      "level":249
+   },
+   {  
+      "imageName":"CHEETOS_logo.png",
+      "name":"CHEETOS",
+      "level":250
+   },
+   {  
+      "imageName":"ARDUINO_logo.png",
+      "name":"ARDUINO",
+      "level":251
+   },
+   {  
+      "imageName":"ATT_logo.png",
+      "name":"ATT",
+      "level":252
+   },
+   {  
+      "imageName":"BLIZZARD_logo.png",
+      "name":"BLIZZARD",
+      "level":253
+   },
+   {  
+      "imageName":"CBS_logo.png",
+      "name":"CBS",
+      "level":254
+   },
+   {  
+      "imageName":"BECKS_logo.png",
+      "name":"BECKS",
+      "level":255
+   },
+   {  
+      "imageName":"AVG_logo.png",
+      "name":"AVG",
+      "level":256
+   },
+   {  
+      "imageName":"UBER_logo.png",
+      "name":"UBER",
+      "level":257
+   },
+   {  
+      "imageName":"COMPAQ_logo.png",
+      "name":"COMPAQ",
+      "level":258
+   },
+   {  
+      "imageName":"SPAR_logo.png",
+      "name":"SPAR",
+      "level":259
+   },
+   {  
+      "imageName":"SANTANDER_logo.png",
+      "name":"SANTANDER",
+      "level":260
+   },
+   {  
+      "imageName":"THQ_logo.png",
+      "name":"THQ",
+      "level":261
+   },
+   {  
+      "imageName":"NETFLIX_logo.png",
+      "name":"NETFLIX",
+      "level":262
+   },
+   {  
+      "imageName":"WIFI_logo.png",
+      "name":"WIFI",
+      "level":263
+   },
+   {  
+      "imageName":"TINDER_logo.png",
+      "name":"TINDER",
+      "level":264
+   },
+   {  
+      "imageName":"SEVEN ELEVEN_logo.png",
+      "name":"SEVEN ELEVEN",
+      "level":265
+   },
+   {  
+      "imageName":"STAR WARS_logo.png",
+      "name":"STAR WARS",
+      "level":266
+   },
+   {  
+      "imageName":"TIVO_logo.png",
+      "name":"TIVO",
+      "level":267
+   },
+   {  
+      "imageName":"DISNEY_logo.png",
+      "name":"DISNEY",
+      "level":268
+   },
+   {  
+      "imageName":"VERIZON_logo.png",
+      "name":"VERIZON",
+      "level":269
+   },
+   {  
+      "imageName":"LEGO_logo.png",
+      "name":"LEGO",
+      "level":270
+   },
+   {  
+      "imageName":"SLACK_logo.png",
+      "name":"SLACK",
+      "level":271
+   },
+   {  
+      "imageName":"COMEDY CENTRAL_logo.png",
+      "name":"COMEDY CENTRAL",
+      "level":272
+   },
+   {  
+      "imageName":"TAG HEUER_logo.png",
+      "name":"TAG HEUER",
+      "level":273
+   },
+   {  
+      "imageName":"SPRINT_logo.png",
+      "name":"SPRINT",
+      "level":274
+   },
+   {  
+      "imageName":"SHAZAM_logo.png",
+      "name":"SHAZAM",
+      "level":275
+   },
+   {  
+      "imageName":"FAMILY GUY_logo.png",
+      "name":"FAMILY GUY",
+      "level":276
+   },
+   {  
+      "imageName":"THE PUNISHER_logo.png",
+      "name":"THE PUNISHER",
+      "level":277
+   },
+   {  
+      "imageName":"PINK FLOYD_logo.png",
+      "name":"PINK FLOYD",
+      "level":278
+   },
+   {  
+      "imageName":"METALLICA_logo.png",
+      "name":"METALLICA",
+      "level":279
+   },
+   {  
+      "imageName":"DUREX_logo.png",
+      "name":"DUREX",
+      "level":280
+   },
+   {  
+      "imageName":"TACO BELL_logo.png",
+      "name":"TACO BELL",
+      "level":281
+   },
+   {  
+      "imageName":"MONOPOLY_logo.png",
+      "name":"MONOPOLY",
+      "level":282
+   },
+   {  
+      "imageName":"RED HAT_logo.png",
+      "name":"RED HAT",
+      "level":283
+   },
+   {  
+      "imageName":"VIRGIN_logo.png",
+      "name":"VIRGIN",
+      "level":284
+   },
+   {  
+      "imageName":"GENERAL ELECTRIC_logo.png",
+      "name":"GENERAL ELECTRIC",
+      "level":285
+   },
+   {  
+      "imageName":"QUORA_logo.png",
+      "name":"QUORA",
+      "level":286
+   },
+   {  
+      "imageName":"GODADDY_logo.png",
+      "name":"GODADDY",
+      "level":287
+   },
+   {  
+      "imageName":"EUROVISION_logo.png",
+      "name":"EUROVISION",
+      "level":288
+   },
+   {  
+      "imageName":"ROLLING STONES_logo.png",
+      "name":"ROLLING STONES",
+      "level":289
+   },
+   {  
+      "imageName":"LOGITECH_logo.png",
+      "name":"LOGITECH",
+      "level":290
+   },
+   {  
+      "imageName":"UTORRENT_logo.png",
+      "name":"UTORRENT",
+      "level":291
+   },
+   {  
+      "imageName":"JOHN DEERE_logo.png",
+      "name":"JOHN DEERE",
+      "level":292
+   },
+   {  
+      "imageName":"PERSIL_logo.png",
+      "name":"PERSIL",
+      "level":293
+   },
+   {  
+      "imageName":"UNILEVER_logo.png",
+      "name":"UNILEVER",
+      "level":294
+   },
+   {  
+      "imageName":"WWE_logo.png",
+      "name":"WWE",
+      "level":295
+   },
+   {  
+      "imageName":"HISTORY CHANNEL_logo.png",
+      "name":"HISTORY CHANNEL",
+      "level":296
+   },
+   {  
+      "imageName":"DISCOVERY CHANNEL_logo.png",
+      "name":"DISCOVERY CHANNEL",
+      "level":297
+   },
+   {  
+      "imageName":"PIRATE BAY_logo.png",
+      "name":"PIRATE BAY",
+      "level":298
+   },
+   {  
+      "imageName":"UNITED NATIONS_logo.png",
+      "name":"UNITED NATIONS",
+      "level":299
+   },
+   {  
+      "imageName":"SAFARI_logo.png",
+      "name":"SAFARI",
+      "level":300
+   },
+   {  
+      "imageName":"ITUNES_logo.png",
+      "name":"ITUNES",
+      "level":301
    }
 ]
