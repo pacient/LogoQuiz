@@ -9,8 +9,8 @@
 import Foundation
 
 enum HintCost: Int {
-    case correctLetter = 40
-    case removeLetter = 60
+    case correctLetter = 20
+    case removeLetter = 70
 }
 
 class CashManager: NSObject {
