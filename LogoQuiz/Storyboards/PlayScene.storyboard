@@ -532,7 +532,7 @@
                                     <constraint firstItem="9um-2k-pOp" firstAttribute="width" secondItem="CnA-Wf-U8c" secondAttribute="width" id="wPH-dp-ILN"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b38-Ij-kLL">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b38-Ij-kLL">
                                 <rect key="frame" x="20" y="966" width="55" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="7mz-5f-YQf"/>
@@ -559,7 +559,7 @@
                                     <action selector="findLettersPressed:" destination="Yuj-gz-2bH" eventType="touchUpInside" id="S34-8R-LK3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Df4-ub-jlq">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Df4-ub-jlq">
                                 <rect key="frame" x="83" y="966" width="55" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="096-9G-OQ2"/>
@@ -586,7 +586,7 @@
                                     <action selector="removeLettersPressed:" destination="Yuj-gz-2bH" eventType="touchUpInside" id="yKt-q4-L7p"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1k-FP-zzR" customClass="YellowButton" customModule="LogoQuiz" customModuleProvider="target">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1k-FP-zzR">
                                 <rect key="frame" x="697" y="966" width="55" height="50"/>
                                 <state key="normal" image="Share"/>
                                 <connections>
@@ -654,6 +654,7 @@
                         <outlet property="logoImageView" destination="rHt-ON-cre" id="aKN-rO-alS"/>
                         <outlet property="middleVerticalStackView" destination="Yzm-KS-bQ1" id="XQq-9g-Pym"/>
                         <outlet property="removeLettersButton" destination="Df4-ub-jlq" id="5H3-bF-VYQ"/>
+                        <outlet property="shareButton" destination="z1k-FP-zzR" id="AkI-Cx-8RL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GFi-Eq-2uA" userLabel="First Responder" sceneMemberID="firstResponder"/>

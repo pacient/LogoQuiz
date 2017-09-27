@@ -10,12 +10,13 @@ import UIKit
 import Firebase
 import AVFoundation
 
-class PlaySceneViewController: MasterViewController, GameHintDelegate {
+class PlaySceneViewController: MasterViewController, GameHintDelegate, GADBannerViewDelegate {
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var levelLabel: UILabel!
     @IBOutlet weak var middleVerticalStackView: MiddleStackView!
     @IBOutlet weak var bottomVerticalStackView: BottomStackView!
     @IBOutlet weak var findButton: UIButton!
+    @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var removeLettersButton: UIButton!
     @IBOutlet weak var blueBar: BlueNavBar!
     @IBOutlet weak var bannerAd: GADBannerView!
@@ -75,11 +76,9 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
         }
         
         presentInterstitialIfNeeded()
-        
+        let viewsToShow: [UIView] = [bottomVerticalStackView,middleVerticalStackView,logoImageView,findButton,removeLettersButton,shareButton]
         UIView.animate(withDuration: 0.3) {
-            self.bottomVerticalStackView.alpha = 1
-            self.middleVerticalStackView.alpha = 1
-            self.logoImageView.alpha = 1
+            viewsToShow.forEach{$0.alpha = 1}
         }
     }
 
@@ -97,10 +96,10 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
     fileprivate func setupAdView() {
         let request = GADRequest()
         request.testDevices = [kGADSimulatorID]
+        bannerAd.delegate = self
         bannerAd.adUnitID = Constants.banner_adID
         bannerAd.adSize = kGADAdSizeSmartBannerPortrait
         bannerAd.rootViewController = self
-        bannerAdHeightConstraint.constant = 50
         bannerAd.load(request)
     }
     
@@ -249,6 +248,16 @@ class PlaySceneViewController: MasterViewController, GameHintDelegate {
     }
     
     //MARK: Delegates
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("ad correctly received")
+        bannerAdHeightConstraint.constant = 50
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        print("Ad failed with error: \(error.localizedDescription)")
+        bannerAdHeightConstraint.constant = 0
+    }
+    
     func removeLetters() {
         DispatchQueue.main.async {
             self.bottomVerticalStackView.arrangedSubviews.flatMap({($0 as? UIStackView)?.arrangedSubviews ?? [$0]}).flatMap({$0 as? SquareView}).forEach { (square) in

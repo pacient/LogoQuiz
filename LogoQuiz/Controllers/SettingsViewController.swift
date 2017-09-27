@@ -88,16 +88,7 @@ class SettingsViewController: MasterViewController, MFMailComposeViewControllerD
     }
     
     @IBAction func buyCashPressed(_ sender: Any) {
-        guard CashProducts.store.allProducts.count > 0 else {
-            let alert = UIAlertController(title: "Oops!", message: "Something went wrong. Please try again later.", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alert.addAction(action)
-            present(alert, animated: false, completion: nil)
-            return
-        }
-        let vc = UIStoryboard(name: "Products", bundle: nil).instantiateInitialViewController()!
-        vc.modalPresentationStyle = .overCurrentContext
-        present(vc, animated: false, completion: nil)
+        self.presentProducts()
     }
     
     @IBAction func audioButtonPressed(_ sender: Any) {

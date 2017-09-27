@@ -39,15 +39,8 @@ class CashLabel: UILabel {
     //TODO: Implement me
     @objc func cashLabelTapped() {
         //here we are going to present a small alert like view with all our in-app purchases
-        guard CashProducts.store.allProducts.count > 0 else {
-            let alert = UIAlertController(title: "Oops!", message: "Something went wrong. Please try again later.", style: .alert, cancelText: "OK")
-            UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: false, completion: nil)
-            return
-        }
-        let vc = UIStoryboard(name: "Products", bundle: nil).instantiateInitialViewController()!
-        vc.modalPresentationStyle = .overCurrentContext
-        
-        UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: false, completion: nil)
+        guard let vc = UIApplication.shared.keyWindow?.rootViewController else {return}
+        vc.presentProducts()
     }
     
     var animationDuration = 30.0
