@@ -20,4 +20,7 @@ struct StageViewModel {
     var toUnlockStage: Int {
         return stage.toUnlock
     }
+    var stageIsLocked: Bool {
+        return BrandManager.foundLogos < toUnlockStage
+    }
 }

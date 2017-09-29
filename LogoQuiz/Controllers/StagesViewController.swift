@@ -13,8 +13,10 @@ class StagesViewController: MasterViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableview.reloadData()
     }
 
     
@@ -38,12 +40,10 @@ class StagesViewController: MasterViewController, UITableViewDelegate, UITableVi
     
     func configure(cell: StageCell, at indexPath: IndexPath) {
         let stageModel = StageViewModel(stage: BrandManager.stages[indexPath.row])
-        let isLocked = BrandManager.foundLogos < stageModel.toUnlockStage
         cell.index = indexPath.row
         cell.stageButton.setTitle("Stage \(stageModel.stageNumber)", for: .normal)
         cell.presenter = self
-        cell.stageIsLocked = isLocked
-        cell.stageButton.alpha = isLocked ? 0.65 : 1.0
+        cell.stageButton.alpha = stageModel.stageIsLocked ? 0.65 : 1.0
     }
     
     @IBAction func backPressed(_ sender: Any) {

@@ -11,7 +11,6 @@ import UIKit
 class StageCell: UITableViewCell {
     @IBOutlet weak var stageButton: YellowButton!
     var index: Int?
-    var stageIsLocked: Bool!
     weak var presenter: StagesViewController?
     
     override func awakeFromNib() {
@@ -21,7 +20,7 @@ class StageCell: UITableViewCell {
     @IBAction func stageBtnPressed(_ sender: Any) {
         guard let index = index else {return}
         let stageModel = StageViewModel(stage: BrandManager.stages[index])
-        if stageIsLocked {
+        if stageModel.stageIsLocked {
             let alert = UIAlertController(title: "This stage is locked!🔒", message: "To unlock this stage you need \(stageModel.toUnlockStage) solved logos, you've got \(BrandManager.foundLogos).", style: .alert, cancelText: "OK")
             presenter?.present(alert, animated: true, completion: nil)
         } else {
