@@ -10,6 +10,7 @@ import UIKit
 
 class LevelsCollectionViewController: MasterViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
+    var stageModel: StageViewModel!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -28,18 +29,18 @@ class LevelsCollectionViewController: MasterViewController, UICollectionViewDele
     
     //MARK: UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return BrandManager.brands.count
+        return stageModel.brands.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "levelCell", for: indexPath) as! LevelCell
-        configure(cell: cell, with: BrandViewModel(brand: BrandManager.brands[indexPath.row]))
+        configure(cell: cell, with: BrandViewModel(brand: stageModel.brands[indexPath.row]))
         return cell
     }
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let brandViewModel = BrandViewModel(brand: BrandManager.brands[indexPath.row])
+        let brandViewModel = BrandViewModel(brand: stageModel.brands[indexPath.row])
         let vc = UIStoryboard(name: "PlayScene", bundle: nil).instantiateViewController(withIdentifier: "playScene") as! PlaySceneViewController
         vc.brandViewModel = brandViewModel
         navigationController?.pushViewController(vc, animated: true)

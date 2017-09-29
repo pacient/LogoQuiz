@@ -21,8 +21,8 @@ class MainViewController: MasterViewController {
     }
     
     @IBAction func playPressed(_ sender: Any) {
-        let playVC = UIStoryboard(name: "PlayScene", bundle: nil).instantiateInitialViewController() as! LevelsCollectionViewController
-        navigationController?.pushViewController(playVC, animated: true)
+        let stagesVC = UIStoryboard(name: "Stages", bundle: nil).instantiateInitialViewController()!
+        navigationController?.pushViewController(stagesVC, animated: true)
     }
     
     @IBAction func resetProgressPressed(_ sender: Any) {

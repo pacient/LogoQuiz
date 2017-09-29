@@ -33,6 +33,7 @@
 		3873EB241F2CE86100AAC196 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873EB231F2CE86100AAC196 /* UserManager.swift */; };
 		387917D21F32046D003FD82E /* GameHintDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387917D11F32046D003FD82E /* GameHintDelegate.swift */; };
 		387917D41F322006003FD82E /* Logos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 387917D31F322006003FD82E /* Logos.xcassets */; };
+		387C5EE81F7E771C00E73B29 /* stages.json in Resources */ = {isa = PBXBuildFile; fileRef = 38D5EFCE1F7E750800C51D64 /* stages.json */; };
 		3888FC9A1F3379E600DBCA41 /* CelebrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3888FC991F3379E600DBCA41 /* CelebrationView.swift */; };
 		3888FC9C1F337A8700DBCA41 /* Celebration.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3888FC9B1F337A8700DBCA41 /* Celebration.xcassets */; };
 		388F42831F2CAEB700509033 /* RadialGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388F42821F2CAEB700509033 /* RadialGradientLayer.swift */; };
@@ -62,6 +63,11 @@
 		38B23C581F35C0E000010C9B /* Products.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B23C571F35C0E000010C9B /* Products.storyboard */; };
 		38B23C5A1F35EB2500010C9B /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B23C591F35EB2500010C9B /* ProductCell.swift */; };
 		38B23C5C1F35F28900010C9B /* SKProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B23C5B1F35F28900010C9B /* SKProduct.swift */; };
+		38D5EFC61F7E5A8500C51D64 /* Stages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D5EFC51F7E5A8500C51D64 /* Stages.storyboard */; };
+		38D5EFC81F7E5C1200C51D64 /* StagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5EFC71F7E5C1200C51D64 /* StagesViewController.swift */; };
+		38D5EFCB1F7E5C7F00C51D64 /* StageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5EFCA1F7E5C7F00C51D64 /* StageCell.swift */; };
+		38D5EFCD1F7E74DB00C51D64 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5EFCC1F7E74DB00C51D64 /* Stage.swift */; };
+		38D5EFD01F7E757900C51D64 /* StageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5EFCF1F7E757900C51D64 /* StageViewModel.swift */; };
 		38E18C611F38B071000D8DA4 /* RewardAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E18C601F38B071000D8DA4 /* RewardAdManager.swift */; };
 		38E1CD261F3099CC00950F9B /* BottomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E1CD251F3099CC00950F9B /* BottomStackView.swift */; };
 		5E3480304804A33145FC942A /* Pods_LogoQuizUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E5253817C1B5DCB3750CB6 /* Pods_LogoQuizUITests.framework */; };
@@ -149,6 +155,12 @@
 		38B23C571F35C0E000010C9B /* Products.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Products.storyboard; sourceTree = "<group>"; };
 		38B23C591F35EB2500010C9B /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		38B23C5B1F35F28900010C9B /* SKProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKProduct.swift; sourceTree = "<group>"; };
+		38D5EFC51F7E5A8500C51D64 /* Stages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stages.storyboard; sourceTree = "<group>"; };
+		38D5EFC71F7E5C1200C51D64 /* StagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StagesViewController.swift; sourceTree = "<group>"; };
+		38D5EFCA1F7E5C7F00C51D64 /* StageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageCell.swift; sourceTree = "<group>"; };
+		38D5EFCC1F7E74DB00C51D64 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
+		38D5EFCE1F7E750800C51D64 /* stages.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = stages.json; sourceTree = "<group>"; };
+		38D5EFCF1F7E757900C51D64 /* StageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageViewModel.swift; sourceTree = "<group>"; };
 		38E18C601F38B071000D8DA4 /* RewardAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardAdManager.swift; sourceTree = "<group>"; };
 		38E1CD251F3099CC00950F9B /* BottomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomStackView.swift; sourceTree = "<group>"; };
 		7B7098A565D7083051DD5D91 /* Pods_LogoQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LogoQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +219,7 @@
 		38281D011F2A7498009E41D7 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				38D5EFC91F7E5C6000C51D64 /* Cells */,
 				38281D021F2A74B8009E41D7 /* SquareView.swift */,
 				388F42881F2CB2C400509033 /* YellowButton.swift */,
 				388F428A1F2CBB5B00509033 /* CircleNavView.swift */,
@@ -216,8 +229,6 @@
 				38548FCE1F332B310048DC5F /* CashLabel.swift */,
 				383307F21F33353E00EEFAC5 /* BlueNavBar.swift */,
 				3888FC991F3379E600DBCA41 /* CelebrationView.swift */,
-				38B23C591F35EB2500010C9B /* ProductCell.swift */,
-				3895B9D31F3A015300519DE2 /* LevelCell.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -240,8 +251,10 @@
 			children = (
 				388F42911F2CD45400509033 /* Brand.swift */,
 				3873EB211F2CE41100AAC196 /* BrandViewModel.swift */,
+				38D5EFCF1F7E757900C51D64 /* StageViewModel.swift */,
 				383BB9601F351707005F919E /* CashProducts.swift */,
 				3895B9D51F3A0AAC00519DE2 /* GameState.swift */,
+				38D5EFCC1F7E74DB00C51D64 /* Stage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -329,6 +342,7 @@
 				38921F7D1F2A17D6003A8F3A /* Main.storyboard */,
 				38921FA91F2A1801003A8F3A /* PlayScene.storyboard */,
 				38B23C571F35C0E000010C9B /* Products.storyboard */,
+				38D5EFC51F7E5A8500C51D64 /* Stages.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -336,6 +350,7 @@
 		38921FAB1F2A1B72003A8F3A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				38D5EFCE1F7E750800C51D64 /* stages.json */,
 				3873EB1D1F2CDE7000AAC196 /* app.json */,
 				38921FAC1F2A1B83003A8F3A /* Eurostile.ttf */,
 				387917D31F322006003FD82E /* Logos.xcassets */,
@@ -353,8 +368,19 @@
 				388F428E1F2CC37600509033 /* SettingsViewController.swift */,
 				38B23C531F35BE7800010C9B /* ProductsViewController.swift */,
 				3895B9D11F3A00A700519DE2 /* LevelsCollectionViewController.swift */,
+				38D5EFC71F7E5C1200C51D64 /* StagesViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		38D5EFC91F7E5C6000C51D64 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				38B23C591F35EB2500010C9B /* ProductCell.swift */,
+				3895B9D31F3A015300519DE2 /* LevelCell.swift */,
+				38D5EFCA1F7E5C7F00C51D64 /* StageCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		85AFF869020DE6BBFD066C02 /* Frameworks */ = {
@@ -507,9 +533,11 @@
 				38B23C581F35C0E000010C9B /* Products.storyboard in Resources */,
 				3888FC9C1F337A8700DBCA41 /* Celebration.xcassets in Resources */,
 				38921FAD1F2A1B84003A8F3A /* Eurostile.ttf in Resources */,
+				38D5EFC61F7E5A8500C51D64 /* Stages.storyboard in Resources */,
 				3812DADE1F3C6E36009E9D79 /* applause3.wav in Resources */,
 				38921F841F2A17D6003A8F3A /* LaunchScreen.storyboard in Resources */,
 				38921F811F2A17D6003A8F3A /* Assets.xcassets in Resources */,
+				387C5EE81F7E771C00E73B29 /* stages.json in Resources */,
 				38921F7F1F2A17D6003A8F3A /* Main.storyboard in Resources */,
 				38921FAA1F2A1801003A8F3A /* PlayScene.storyboard in Resources */,
 				387917D41F322006003FD82E /* Logos.xcassets in Resources */,
@@ -708,8 +736,10 @@
 				3895B9D81F3A0B3900519DE2 /* GameStateManager.swift in Sources */,
 				38921F7A1F2A17D6003A8F3A /* AppDelegate.swift in Sources */,
 				38B23C5A1F35EB2500010C9B /* ProductCell.swift in Sources */,
+				38D5EFCB1F7E5C7F00C51D64 /* StageCell.swift in Sources */,
 				381647BF1F30836F0038926E /* MiddleStackView.swift in Sources */,
 				3895B9D61F3A0AAC00519DE2 /* GameState.swift in Sources */,
+				38D5EFD01F7E757900C51D64 /* StageViewModel.swift in Sources */,
 				388F428F1F2CC37700509033 /* SettingsViewController.swift in Sources */,
 				38265B1C1F2D2A6F009020FC /* Notifications.swift in Sources */,
 				3895B9D41F3A015300519DE2 /* LevelCell.swift in Sources */,
@@ -726,7 +756,9 @@
 				388F428D1F2CBD4600509033 /* MainViewController.swift in Sources */,
 				381647BB1F3079820038926E /* LogoImageView.swift in Sources */,
 				388F42871F2CAFD000509033 /* MasterViewController.swift in Sources */,
+				38D5EFC81F7E5C1200C51D64 /* StagesViewController.swift in Sources */,
 				3895B9DA1F3A1A1600519DE2 /* Serializable.swift in Sources */,
+				38D5EFCD1F7E74DB00C51D64 /* Stage.swift in Sources */,
 				383BB9611F351707005F919E /* CashProducts.swift in Sources */,
 				38281D031F2A74B8009E41D7 /* SquareView.swift in Sources */,
 				38E18C611F38B071000D8DA4 /* RewardAdManager.swift in Sources */,

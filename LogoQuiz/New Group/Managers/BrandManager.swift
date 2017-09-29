@@ -10,17 +10,21 @@ import Foundation
 
 class BrandManager {
     private static let instance = BrandManager()
-    static var brands = [Brand]()
+    static var stages = [Stage]()
+    static var foundLogos: Int {
+        return GameStateManager.gameStates.filter{$0.value.isDone == true}.count
+    }
     
     class func decodeJSON(_ completion: (Bool)->Void) {
-        guard let path = Bundle.main.url(forResource: "app", withExtension: "json") else {return}
+        guard let path = Bundle.main.url(forResource: "stages", withExtension: "json") else {return}
         do {
             let data = try Data(contentsOf: path)
-            brands = try JSONDecoder().decode([Brand].self, from: data)
+            stages = try JSONDecoder().decode([Stage].self, from: data)
             completion(true)
         }catch let error {
             print(error.localizedDescription)
             completion(false)
         }
     }
+    
 }
