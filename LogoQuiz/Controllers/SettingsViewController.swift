@@ -41,9 +41,9 @@ class SettingsViewController: MasterViewController, MFMailComposeViewControllerD
     
     func configuredMailComposeViewController() -> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
-        mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
-        mailComposerVC.setToRecipients(["logoquizfeedback@gmail.com "])
-        mailComposerVC.setSubject("Logo Quiz - Ultimate Game Feedback!")
+        mailComposerVC.mailComposeDelegate = self
+        mailComposerVC.setToRecipients(["logoquizhelp@gmail.com"])
+        mailComposerVC.setSubject("Logo Quiz - Feedback!")
         return mailComposerVC
     }
     
