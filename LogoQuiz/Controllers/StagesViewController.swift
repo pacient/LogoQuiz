@@ -41,7 +41,11 @@ class StagesViewController: MasterViewController, UITableViewDelegate, UITableVi
     func configure(cell: StageCell, at indexPath: IndexPath) {
         let stageModel = StageViewModel(stage: BrandManager.stages[indexPath.row])
         cell.index = indexPath.row
-        cell.stageButton.setTitle("Stage \(stageModel.stageNumber)", for: .normal)
+        if stageModel.stageIsLocked {
+            cell.stageButton.setTitle("Stage \(stageModel.stageNumber)🔒", for: .normal)
+        }else {
+            cell.stageButton.setTitle("Stage \(stageModel.stageNumber) (\(stageModel.logosCompleted)/\(stageModel.brands.count))", for: .normal)
+        }
         cell.presenter = self
         cell.stageButton.alpha = stageModel.stageIsLocked ? 0.65 : 1.0
     }

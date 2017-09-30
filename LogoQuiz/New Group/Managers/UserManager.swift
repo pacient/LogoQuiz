@@ -23,7 +23,7 @@ class UserManager: NSObject {
         let alert = UIAlertController(title: "Ooops!", message: "You don't have enough 💵. Solve levels to get more 💵 or purchase more now.", style: .alert, cancelText: "OK")
         let action = UIAlertAction(title: "Purchase Now!", style: .default) { (_) in
             guard let vc = UIApplication.shared.keyWindow?.rootViewController else {return}
-            UIApplication.shared.keyWindow?.rootViewController?.presentProducts()
+            vc.presentProducts()
         }
         alert.addAction(action)
         return alert

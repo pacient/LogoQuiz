@@ -23,4 +23,14 @@ struct StageViewModel {
     var stageIsLocked: Bool {
         return BrandManager.foundLogos < toUnlockStage
     }
+    var logosCompleted: Int {
+        var completed = 0
+        for brand in brands {
+            guard let isDone = GameStateManager.gameStates[brand.level]?.isDone else {continue}
+            if isDone {
+                completed += 1
+            }
+        }
+        return completed
+    }
 }
