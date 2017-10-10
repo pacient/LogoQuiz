@@ -61,10 +61,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DwW-rB-f6J" customClass="GADBannerView">
-                                <rect key="frame" x="0.0" y="1024" width="768" height="0.0"/>
+                                <rect key="frame" x="0.0" y="974" width="768" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" id="PMZ-GX-c4h"/>
+                                    <constraint firstAttribute="height" constant="50" id="PMZ-GX-c4h"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="36e-ae-RRF" customClass="CircleNavView" customModule="LogoQuiz" customModuleProvider="target">
@@ -533,7 +533,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b38-Ij-kLL">
-                                <rect key="frame" x="20" y="966" width="55" height="50"/>
+                                <rect key="frame" x="20" y="916" width="55" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="7mz-5f-YQf"/>
                                     <constraint firstAttribute="height" constant="50" id="Atz-nY-Pg9"/>
@@ -560,7 +560,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Df4-ub-jlq">
-                                <rect key="frame" x="83" y="966" width="55" height="50"/>
+                                <rect key="frame" x="83" y="916" width="55" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="096-9G-OQ2"/>
                                     <constraint firstAttribute="width" constant="35" id="VRX-m4-OQq"/>
@@ -587,7 +587,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" alpha="0.0" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1k-FP-zzR">
-                                <rect key="frame" x="697" y="966" width="55" height="50"/>
+                                <rect key="frame" x="697" y="916" width="55" height="50"/>
                                 <state key="normal" image="Share"/>
                                 <connections>
                                     <action selector="sharePressed:" destination="Yuj-gz-2bH" eventType="touchUpInside" id="aqN-H9-fx1"/>

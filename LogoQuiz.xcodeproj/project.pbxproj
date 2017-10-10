@@ -22,7 +22,6 @@
 		383BB95D1F351628005F919E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383BB95C1F351628005F919E /* StoreKit.framework */; };
 		383BB95F1F3516C1005F919E /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BB95E1F3516C1005F919E /* IAPHelper.swift */; };
 		383BB9611F351707005F919E /* CashProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BB9601F351707005F919E /* CashProducts.swift */; };
-		38478EE51F364A4600EB306E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38478EE41F364A4600EB306E /* GoogleService-Info.plist */; };
 		3847A6281F3473EE002962E2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3847A6271F3473EE002962E2 /* UIColor.swift */; };
 		38548FCF1F332B310048DC5F /* CashLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38548FCE1F332B310048DC5F /* CashLabel.swift */; };
 		386D4D7A1F7C010700A61740 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386D4D791F7C010700A61740 /* UIViewController.swift */; };
@@ -63,6 +62,7 @@
 		38B23C581F35C0E000010C9B /* Products.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B23C571F35C0E000010C9B /* Products.storyboard */; };
 		38B23C5A1F35EB2500010C9B /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B23C591F35EB2500010C9B /* ProductCell.swift */; };
 		38B23C5C1F35F28900010C9B /* SKProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B23C5B1F35F28900010C9B /* SKProduct.swift */; };
+		38CEE1A51F8B912D00BD35DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38CEE1A41F8B912900BD35DC /* GoogleService-Info.plist */; };
 		38D5EFC61F7E5A8500C51D64 /* Stages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D5EFC51F7E5A8500C51D64 /* Stages.storyboard */; };
 		38D5EFC81F7E5C1200C51D64 /* StagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5EFC71F7E5C1200C51D64 /* StagesViewController.swift */; };
 		38D5EFCB1F7E5C7F00C51D64 /* StageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5EFCA1F7E5C7F00C51D64 /* StageCell.swift */; };
@@ -70,6 +70,7 @@
 		38D5EFD01F7E757900C51D64 /* StageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D5EFCF1F7E757900C51D64 /* StageViewModel.swift */; };
 		38E18C611F38B071000D8DA4 /* RewardAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E18C601F38B071000D8DA4 /* RewardAdManager.swift */; };
 		38E1CD261F3099CC00950F9B /* BottomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E1CD251F3099CC00950F9B /* BottomStackView.swift */; };
+		38F382871F8BF27300659B26 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38921F851F2A17D6003A8F3A /* Info.plist */; };
 		5E3480304804A33145FC942A /* Pods_LogoQuizUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E5253817C1B5DCB3750CB6 /* Pods_LogoQuizUITests.framework */; };
 		8F2B40FB94D083593B54452A /* Pods_LogoQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7098A565D7083051DD5D91 /* Pods_LogoQuiz.framework */; };
 /* End PBXBuildFile section */
@@ -109,7 +110,6 @@
 		383BB95C1F351628005F919E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		383BB95E1F3516C1005F919E /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		383BB9601F351707005F919E /* CashProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashProducts.swift; sourceTree = "<group>"; };
-		38478EE41F364A4600EB306E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3847A6271F3473EE002962E2 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		38548FCE1F332B310048DC5F /* CashLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashLabel.swift; sourceTree = "<group>"; };
 		386D4D791F7C010700A61740 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +155,7 @@
 		38B23C571F35C0E000010C9B /* Products.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Products.storyboard; sourceTree = "<group>"; };
 		38B23C591F35EB2500010C9B /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		38B23C5B1F35F28900010C9B /* SKProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKProduct.swift; sourceTree = "<group>"; };
+		38CEE1A41F8B912900BD35DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		38D5EFC51F7E5A8500C51D64 /* Stages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Stages.storyboard; sourceTree = "<group>"; };
 		38D5EFC71F7E5C1200C51D64 /* StagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StagesViewController.swift; sourceTree = "<group>"; };
 		38D5EFCA1F7E5C7F00C51D64 /* StageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageCell.swift; sourceTree = "<group>"; };
@@ -311,8 +312,8 @@
 				38921F791F2A17D6003A8F3A /* AppDelegate.swift */,
 				38921F801F2A17D6003A8F3A /* Assets.xcassets */,
 				38921F821F2A17D6003A8F3A /* LaunchScreen.storyboard */,
-				38478EE41F364A4600EB306E /* GoogleService-Info.plist */,
 				38921F851F2A17D6003A8F3A /* Info.plist */,
+				38CEE1A41F8B912900BD35DC /* GoogleService-Info.plist */,
 				3812DADD1F3C6E35009E9D79 /* applause3.wav */,
 			);
 			path = LogoQuiz;
@@ -536,13 +537,14 @@
 				38D5EFC61F7E5A8500C51D64 /* Stages.storyboard in Resources */,
 				3812DADE1F3C6E36009E9D79 /* applause3.wav in Resources */,
 				38921F841F2A17D6003A8F3A /* LaunchScreen.storyboard in Resources */,
+				38F382871F8BF27300659B26 /* Info.plist in Resources */,
 				38921F811F2A17D6003A8F3A /* Assets.xcassets in Resources */,
 				387C5EE81F7E771C00E73B29 /* stages.json in Resources */,
 				38921F7F1F2A17D6003A8F3A /* Main.storyboard in Resources */,
 				38921FAA1F2A1801003A8F3A /* PlayScene.storyboard in Resources */,
 				387917D41F322006003FD82E /* Logos.xcassets in Resources */,
-				38478EE51F364A4600EB306E /* GoogleService-Info.plist in Resources */,
 				3873EB1E1F2CDE7000AAC196 /* app.json in Resources */,
+				38CEE1A51F8B912D00BD35DC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
